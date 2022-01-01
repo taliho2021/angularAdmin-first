@@ -1,0 +1,108 @@
+  [
+      {
+        "id": "1",
+        "label": "Air AMS",
+        "iconname": "recent_actors",
+        "route": "/pages/airAms",
+        "isTitle" : "true"
+      },
+      {
+        "id": "2",
+        "label": "Air Export",
+        "iconname": "recent_actors",
+        "route": "/pages/airExport",
+        "isTitle" : "true"
+      },
+      {
+        "id": "3",
+        "label": "Air Import",
+        "iconname": "recent_actors",
+        "route": "/pages/airImport",
+        "isTitle" : "true"
+      },
+      {
+        "id": "4",
+        "label": "CMSQ",
+        "iconname": "recent_actors",
+        "route": "/pages/cmsq",
+        "isTitle" : "true"
+      },
+      {
+        "id": "5",
+        "label": "Customs Brokerage",
+        "iconname": "recent_actors",
+        "route": "/pages/customsBrokerage",
+        "isTitle" : "true"
+      },
+      {
+        "id": "6",
+        "label": "ISF",
+        "iconname": "recent_actors",
+        "route": "/pages/isf",
+        "isTitle" : "true"
+      },
+      {
+        "id": "7",
+        "label": "Ocean Export",
+        "iconname": "recent_actors",
+        "route": "/pages/oceanExport",
+        "isTitle" : "true"
+      },
+      {
+        "id": "8",
+        "label": "Ocean Import",
+        "iconname": "recent_actors",
+        "route": "/pages/oceanImport",
+        "isTitle" : "true"
+      },
+      {
+        "id": "9",
+        "label": "Parties",
+        "iconname": "recent_actors",
+        "route": "/pages/parties",
+        "isTitle" : "true"
+      },
+      {
+        "id": "10",
+        "label": "Reports",
+        "iconname": "recent_actors",
+        "route": "/pages/reports",
+        "isTitle" : "true"
+      },
+      {
+        "id": "11",
+        "label": "Sea AMS",
+        "iconname": "recent_actors",
+        "route": "/pages/seaAms",
+        "isTitle" : "true"
+      },
+      {
+        "id": "12",
+        "label": "Tables",
+        "iconname": "recent_actors",
+        "route": "/pages/tables",
+        "isTitle" : "true"
+      },
+      {
+        "id": "13",
+        "label": "Track And Trace",
+        "iconname": "recent_actors",
+        "route": "/pages/trackTrace",
+        "isTitle" : "true"
+      },
+      {
+        "id": "14",
+        "label": "Truck AMS",
+        "iconname": "recent_actors",
+        "route": "/pages/truckAms",
+        "isTitle" : "true"
+      },
+      {
+        "id": "15",
+        "label": "Trucking",
+        "iconname": "recent_actors",
+        "route": "/pages/trucking",
+        "isTitle" : "true"
+      }
+  ]
+

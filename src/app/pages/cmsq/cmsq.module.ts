@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { CmsqRoutingModule } from './cmsq-routing.module';
 import { CmsqComponent } from './cmsq.component';
-
+import { CmsqRoutingModule } from './cmsq-routing.module';
+import { CommonModule } from '@angular/common';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,8 @@ import { CmsqComponent } from './cmsq.component';
   ],
   imports: [
     CommonModule,
-    CmsqRoutingModule
+    CmsqRoutingModule,
+    MatTabsModule
   ]
 })
 export class CmsqModule { }

@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { AirAmsRoutingModule } from './air-ams-routing.module';
 import { AirAmsComponent } from './air-ams.component';
-
+import { AirAmsRoutingModule } from './air-ams-routing.module';
+import { CommonModule } from '@angular/common';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,8 @@ import { AirAmsComponent } from './air-ams.component';
   ],
   imports: [
     CommonModule,
-    AirAmsRoutingModule
+    AirAmsRoutingModule,
+    MatTabsModule
   ]
 })
 export class AirAmsModule { }

@@ -1,0 +1,38 @@
+<h1>ANA Link, Ltd</h1>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list *ngFor = 'let menu of menuItem' [ngStyle]="{'padding-left': '10px'}" >
+      <a mat-list-item routerLink="{{menu.route}}" >{{menu.label}}</a>
+
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>angularAdmin-first</span>
+
+      <span class="toolbar-filler"></span>
+      <button id="button-logout" md-button>Log Out</button>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <app-pages></app-pages>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

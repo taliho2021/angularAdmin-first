@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { IsfRoutingModule } from './isf-routing.module';
 import { IsfComponent } from './isf.component';
-
+import { IsfRoutingModule } from './isf-routing.module';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,8 @@ import { IsfComponent } from './isf.component';
   ],
   imports: [
     CommonModule,
-    IsfRoutingModule
+    IsfRoutingModule,
+    MatTabsModule
   ]
 })
 export class IsfModule { }

@@ -1,17 +1,35 @@
-import { NgModule } from '@angular/core';
+import { CarriersComponent } from './carriers/carriers.component';
+import { ClientsComponent } from './clients/clients.component';
 import { CommonModule } from '@angular/common';
-
-import { PartiesRoutingModule } from './parties-routing.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgModule } from '@angular/core';
 import { PartiesComponent } from './parties.component';
-
+import { PartiesRoutingModule } from './parties-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { VendorsComponent } from './vendors/vendors.component';
 
 @NgModule({
   declarations: [
-    PartiesComponent
+    PartiesComponent,
+    ClientsComponent,
+    VendorsComponent,
+    CarriersComponent
   ],
   imports: [
     CommonModule,
-    PartiesRoutingModule
+    PartiesRoutingModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    MatTabsModule,
+    ReactiveFormsModule
   ]
 })
 export class PartiesModule { }

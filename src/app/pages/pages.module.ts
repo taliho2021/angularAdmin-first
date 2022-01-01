@@ -1,19 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button'
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
   declarations: [
-    PagesComponent
+    PagesComponent,
+
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatTabsModule
+  ],
+  exports: [
+    PagesComponent
   ]
 })
 export class PagesModule { }

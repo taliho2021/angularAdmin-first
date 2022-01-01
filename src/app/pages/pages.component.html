@@ -1,4 +1,5 @@
-<mat-card class="example-card">
+<div class="container">
+  <mat-card class="example-card col">
     <mat-card-header>
         <mat-card-title>ISF</mat-card-title>
         <mat-card-subtitle>Importer Security Filing</mat-card-subtitle>
@@ -7,13 +8,13 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="primary" routerLink="/pages/isf">
+          ISF Filing
         </button>
     </mat-card-actions>
-</mat-card>
+  </mat-card>
 
-<mat-card class="example-card">
+  <mat-card class="example-card col">
     <mat-card-header>
         <mat-card-title>Air-AMS</mat-card-title>
         <mat-card-subtitle>Air Automated Manifest System</mat-card-subtitle>
@@ -22,13 +23,13 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="warn" routerLink="/pages/airAms">
+          AMS Filing
         </button>
     </mat-card-actions>
-</mat-card>
+  </mat-card>
 
-<mat-card class="example-card">
+  <mat-card class="example-card col">
     <mat-card-header>
         <mat-card-title>Air Export</mat-card-title>
         <mat-card-subtitle>Importer Security Filing</mat-card-subtitle>
@@ -37,26 +38,31 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="accent" routerLink="/pages/airExport">
+          Air Export
         </button>
     </mat-card-actions>
-</mat-card>
+  </mat-card>
 
 <mat-card class="example-card">
-    <mat-card-header>
-        <mat-card-title>Air-Import</mat-card-title>
-        <mat-card-subtitle>Air Automated Manifest System</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        All air shipments to U.S. must file the manifest information 4 hours prior to departure.
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>
-
-        </button>
-    </mat-card-actions>
+  <mat-card-header>
+      <mat-card-title>Air-Import</mat-card-title>
+      <mat-card-subtitle>Air Automated Manifest System</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+      All air shipments to U.S. must file the manifest information 4 hours prior to departure.
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button color="primary" routerLink="/pages/airImport">
+        Air Import
+      </button>
+  </mat-card-actions>
 </mat-card>
+
+</div>
+
+
+<div class="container">
 
 <mat-card class="example-card">
     <mat-card-header>
@@ -67,8 +73,8 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="primary" routerLink="/pages/cmsq">
+          CMSQ
         </button>
     </mat-card-actions>
 </mat-card>
@@ -82,8 +88,8 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="warn" routerLink="/pages/customsBrokerage">
+          Customs Brokerage
         </button>
     </mat-card-actions>
 </mat-card>
@@ -97,8 +103,8 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="accent"routerLink="/pages/oceanExport">
+          Ocean Export
         </button>
     </mat-card-actions>
 </mat-card>
@@ -112,12 +118,15 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="primary" routerLink="/pages/oceanImport">
+          Ocean Import
         </button>
     </mat-card-actions>
 </mat-card>
 
+</div>
+
+<div class="container">
 <mat-card class="example-card">
     <mat-card-header>
         <mat-card-title>Parties</mat-card-title>
@@ -127,8 +136,8 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="primary" routerLink="/pages/parties">
+          Parties
         </button>
     </mat-card-actions>
 </mat-card>
@@ -142,8 +151,8 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="accent" routerLink="/pages/reports">
+          Reports
         </button>
     </mat-card-actions>
 </mat-card>
@@ -157,8 +166,8 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="accent" routerLink="/pages/seaAms">
+          Sea AMS
         </button>
     </mat-card-actions>
 </mat-card>
@@ -172,12 +181,15 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="primary" routerLink="/pages/tables">
+          Tables
         </button>
     </mat-card-actions>
 </mat-card>
 
+</div>
+
+<div class="container">
 <mat-card class="example-card">
     <mat-card-header>
         <mat-card-title>Track & Trace</mat-card-title>
@@ -187,8 +199,8 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="primary" routerLink="/pages/trackAndTrace">
+          Track & Trace
         </button>
     </mat-card-actions>
 </mat-card>
@@ -202,8 +214,8 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="accent" routerLink="/pages/truckAms">
+          Truck AMS
         </button>
     </mat-card-actions>
 </mat-card>
@@ -217,10 +229,10 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button>
-
+        <button mat-raised-button color="warn" routerLink="/pages/trucking">
+          Trucking
         </button>
     </mat-card-actions>
 </mat-card>
-
+</div>
 

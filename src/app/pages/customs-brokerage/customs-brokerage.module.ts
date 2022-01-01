@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { CustomsBrokerageRoutingModule } from './customs-brokerage-routing.module';
 import { CustomsBrokerageComponent } from './customs-brokerage.component';
-
+import { CustomsBrokerageRoutingModule } from './customs-brokerage-routing.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,9 @@ import { CustomsBrokerageComponent } from './customs-brokerage.component';
   ],
   imports: [
     CommonModule,
-    CustomsBrokerageRoutingModule
+    CustomsBrokerageRoutingModule,
+    MatIconModule,
+    MatTabsModule
   ]
 })
 export class CustomsBrokerageModule { }

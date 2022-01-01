@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { OceanExportRoutingModule } from './ocean-export-routing.module';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgModule } from '@angular/core';
 import { OceanExportComponent } from './ocean-export.component';
-
+import { OceanExportRoutingModule } from './ocean-export-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +10,8 @@ import { OceanExportComponent } from './ocean-export.component';
   ],
   imports: [
     CommonModule,
-    OceanExportRoutingModule
+    OceanExportRoutingModule,
+    MatTabsModule
   ]
 })
 export class OceanExportModule { }
