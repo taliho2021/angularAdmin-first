@@ -51,7 +51,9 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
 
   exports: [
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule
   ],
 
 
