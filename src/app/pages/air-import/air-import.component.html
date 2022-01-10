@@ -1,9 +1,32 @@
-<h1 style="max-width: 100%; max-height: 100%">Air Import Works</h1>
+<h1 style="font-weight: bolder; background-color: yellow; text-align: center;">Air Import Works</h1>
 
 <mat-tab-group mat-align-tabs="start">
-  <mat-tab label="First">Content 1</mat-tab>
-  <mat-tab label="Second">Content 2</mat-tab>
-  <mat-tab label="Third">Content 3</mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <span class="my-tab-class">Ports</span>
+    </ng-template>
+    <ag-grid-angular
+      style="width: auto; height: 500px;"
+      class="ag-theme-alpine-dark"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      rowSelection="multiple"
+    >
+    </ag-grid-angular>
+  </mat-tab>
+
+  <mat-tab style="background-color: blue; padding:1em" label="Second">
+
+    <tr *ngFor = "let port of rowData">
+      <td>{{port.ID}}</td>
+      <td>{{port.Name}}</td>
+      <td>{{port.City}}</td>
+      <td>{{port.State}}</td>
+      <td>{{port.Zip_Code}}</td>
+    </tr>
+
+  </mat-tab>
+  <mat-tab style="background-color:green" label="Third">Content 3</mat-tab>
 </mat-tab-group>
 
 

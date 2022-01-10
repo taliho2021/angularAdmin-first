@@ -1,3 +1,4 @@
+import { AgGridModule } from 'ag-grid-angular';
 import { CommonModule } from '@angular/common';
 import { MatAutocompleteModule } from '@angular/material/autocomplete'
 import { MatButtonModule } from '@angular/material/button'
@@ -19,7 +20,8 @@ import { PagesRoutingModule } from './pages-routing.module';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatTabsModule
+    MatTabsModule,
+    AgGridModule
   ],
   exports: [
     PagesComponent
