@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HtsComponent } from './hts/hts.component';
 import { IsfComponent } from './isf.component';
 import { IsfRoutingModule } from './isf-routing.module';
@@ -25,7 +26,8 @@ import { ShipmentComponent } from './shipment/shipment.component';
     MatInputModule,
     MatFormFieldModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
   ]
 })
 export class IsfModule { }

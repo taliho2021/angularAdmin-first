@@ -10,20 +10,20 @@ import { FormBuilder } from '@angular/forms';
 export class ShipmentComponent implements OnInit {
 
   isfShipment = this.fb.group({
-    ISFNo!:[''],
-    ISFType!:[''],
-    MOT!:[''],
-    ShptType!:[''],
-    Action!: [''],
-    AmsBL!:[''],
-    Add1AmsBL!:[''],
-    Add2AmsBL!:[''],
-    Add3AmsBL!:[''],
-    Add4AmsBL!:[''],
-    MasterBL!:[''],
-    FileNo!:[''],
-    CustRefNo!: [''],
-    ImporterID!:['']
+    ISFNo:[''],
+    ISFType:[''],
+    MOT:[''],
+    ShptType:[''],
+    Action: [''],
+    AmsBL:[''],
+    Add1AmsBL:[''],
+    Add2AmsBL:[''],
+    Add3AmsBL:[''],
+    Add4AmsBL:[''],
+    MasterBL:[''],
+    FileNo:[''],
+    CustRefNo: [''],
+    ImporterID:['']
   })
   constructor(private fb: FormBuilder) { }
 
