@@ -1,59 +1,12 @@
-<h1 style="max-width: 100%; max-height: 100%">Air AMS Works</h1>
+<h1 style="max-width: 100%; max-height: 100%">Air AMS</h1>
 
 <mat-tab-group mat-align-tabs="start" style="color:pink;">
-  <mat-tab label="First" >
-    <form class="example-form">
-
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Number</mat-label>
-        <input type="text"
-               placeholder="Pick one"
-               aria-label="Number"
-               matInput
-               [formControl]="myControl"
-               [matAutocomplete]="auto">
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of options" [value]="option">
-            {{option}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Number</mat-label>
-          <input type="text"
-                 placeholder="Pick one"
-                 aria-label="Number"
-                 matInput
-                 [formControl]="myControl"
-                 [matAutocomplete]="auto">
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of options" [value]="option">
-              {{option}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Number</mat-label>
-            <input type="text"
-                   placeholder="Pick one"
-                   aria-label="Number"
-                   matInput
-                   [formControl]="myControl"
-                   [matAutocomplete]="auto">
-            <mat-autocomplete #auto="matAutocomplete">
-              <mat-option *ngFor="let option of options" [value]="option">
-                {{option}}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-
-    </form>
+  <mat-tab label="Air AMS Summary" >
+    <app-ams-summary></app-ams-summary>
   </mat-tab>
 
 
-  <mat-tab label="Second">
+  <mat-tab label="New Air AMS">
     <form class="example-form">
 
       <mat-form-field class="example-full-width" appearance="fill">
