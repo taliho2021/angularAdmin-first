@@ -23,10 +23,12 @@
       [opened]="(isHandset$ | async) === false">
 
 
-    <mat-nav-list *ngFor = 'let menu of menuItem' [ngStyle]="{'padding-left': '10px'}" >
-      <a mat-list-item routerLink="{{menu.route}}" >{{menu.label}}</a>
+    <mat-menu-item *ngFor = 'let menu of menuItem' [ngStyle]="{'padding-left': '10px'}" >
+      <a mat-list-item routerLink="{{menu.route}}" >
+        <mat-icon>{{menu.iconName}}</mat-icon>
+        {{menu.label}}</a>
 
-    </mat-nav-list>
+    </mat-menu-item>
 
     <mat-divider></mat-divider>
 
@@ -35,7 +37,6 @@
 
 
     <!-- Add Content Here -->
-    <app-pages></app-pages>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

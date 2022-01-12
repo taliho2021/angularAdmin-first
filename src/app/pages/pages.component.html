@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <mat-card class="example-card col">
     <mat-card-header>
         <mat-card-title>ISF</mat-card-title>
@@ -8,7 +8,7 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="primary" routerLink="/pages/isf">
+        <button mat-raised-button color="primary" routerLink="isf">
           ISF Filing
         </button>
     </mat-card-actions>
@@ -23,7 +23,7 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="warn" routerLink="/pages/airAms">
+        <button mat-raised-button color="warn" routerLink="airAms">
           AMS Filing
         </button>
     </mat-card-actions>
@@ -38,7 +38,7 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="accent" routerLink="/pages/airExport">
+        <button mat-raised-button color="accent" routerLink="airExport">
           Air Export
         </button>
     </mat-card-actions>
@@ -53,7 +53,7 @@
       All air shipments to U.S. must file the manifest information 4 hours prior to departure.
   </mat-card-content>
   <mat-card-actions>
-      <button mat-raised-button color="primary" routerLink="/pages/airImport">
+      <button mat-raised-button color="primary" routerLink="airImport">
         Air Import
       </button>
   </mat-card-actions>
@@ -73,7 +73,7 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="primary" routerLink="/pages/cmsq">
+        <button mat-raised-button color="primary" routerLink="cmsq">
           CMSQ
         </button>
     </mat-card-actions>
@@ -88,7 +88,7 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="warn" routerLink="/pages/customsBrokerage">
+        <button mat-raised-button color="warn" routerLink="customsBrokerage">
           Customs Brokerage
         </button>
     </mat-card-actions>
@@ -103,7 +103,7 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="accent"routerLink="/pages/oceanExport">
+        <button mat-raised-button color="accent"routerLink="oceanExport">
           Ocean Export
         </button>
     </mat-card-actions>
@@ -118,7 +118,7 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="primary" routerLink="/pages/oceanImport">
+        <button mat-raised-button color="primary" routerLink="oceanImport">
           Ocean Import
         </button>
     </mat-card-actions>
@@ -136,7 +136,7 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="primary" routerLink="/pages/parties">
+        <button mat-raised-button color="primary" routerLink="parties">
           Parties
         </button>
     </mat-card-actions>
@@ -151,9 +151,10 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="accent" routerLink="/pages/reports">
+        <button mat-raised-button color="accent" routerLink="reports">
           Reports
         </button>
+
     </mat-card-actions>
 </mat-card>
 
@@ -166,7 +167,7 @@
         Importers are required to file the Importer Security Filing before the vessel departs to U.S. ports.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="accent" routerLink="/pages/seaAms">
+        <button mat-raised-button color="accent" routerLink="seaAms">
           Sea AMS
         </button>
     </mat-card-actions>
@@ -181,7 +182,7 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="primary" routerLink="/pages/tables">
+        <button mat-raised-button color="primary" routerLink="tables">
           Tables
         </button>
     </mat-card-actions>
@@ -199,7 +200,7 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="primary" routerLink="/pages/trackAndTrace">
+        <button mat-raised-button color="primary" routerLink="trackAndTrace">
           Track & Trace
         </button>
     </mat-card-actions>
@@ -214,7 +215,7 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="accent" routerLink="/pages/truckAms">
+        <button mat-raised-button color="accent" routerLink="truckAms">
           Truck AMS
         </button>
     </mat-card-actions>
@@ -229,10 +230,58 @@
         All air shipments to U.S. must file the manifest information 4 hours prior to departure.
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="warn" routerLink="/pages/trucking">
+        <button mat-raised-button color="warn" routerLink="trucking">
           Trucking
         </button>
     </mat-card-actions>
 </mat-card>
-</div>
+</div> -->
+
+<!-- <h1>ANA Link, Ltd</h1>
+
+<mat-toolbar color="primary">
+  <h3>Menu</h3>
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    TOGGLE
+  </button>
+
+  <span class="example-spacer"></span>
+  <button id="button-logout" md-button>Log Out</button>
+
+  <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+
+
+    <mat-nav-list *ngFor = 'let menu of menuItem' [ngStyle]="{'padding-left': '10px'}" >
+      <a mat-list-item routerLink="{{menu.route}}" >
+        <mat-icon>{{menu.iconName}}</mat-icon>
+        {{menu.label}}</a>
+
+    </mat-nav-list>
+
+    <mat-divider></mat-divider>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+
+    <!-- Add Content Here -->
+    <!-- <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<router-outlet></router-outlet>
+
 

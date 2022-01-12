@@ -1,0 +1,60 @@
+<h1>Shipment Info</h1>
+
+  <table class="container-fluid example-full-width" >
+    <tr>
+      <mat-form-field  appearance="fill">
+        <mat-label>ISF No.</mat-label>
+        <input matInput id="ISFNo" type="text" >
+      </mat-form-field>
+    </tr>
+
+    <tr>
+
+      <mat-label>ISF Type</mat-label>
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">ISF-10</mat-radio-button>
+        <mat-radio-button value="2">ISF-5</mat-radio-button>
+        <mat-radio-button value="3">ISF-5 to ISF-10</mat-radio-button>
+        <mat-radio-button value="4">ISF-10 to ISF-5</mat-radio-button>
+      </mat-radio-group>
+
+    </tr>
+
+    <tr>
+        <mat-label>MOT</mat-label>
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">11 - Containerized</mat-radio-button>
+          <mat-radio-button value="2">10 - Breakbulk</mat-radio-button>
+        </mat-radio-group>
+    </tr>
+
+  </table>
+
+  <p>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Address 2</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>City</mat-label>
+      <input matInput placeholder="Ex. San Francisco">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>State</mat-label>
+      <input matInput placeholder="Ex. California">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Postal Code</mat-label>
+      <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    </mat-form-field></td>
+  </tr>
+
+</table>

@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule), canActivate: [AuthGuard] },
   { path: 'extra-pages', loadChildren: () => import('./extrapages/extrapages.module').then(m => m.ExtrapagesModule), canActivate: [AuthGuard] },
   { path: 'dashboard', component: DashboardComponent},
-  { path: 'nav', component: NavigationComponent},
+  { path: 'nav', component: NavigationComponent,
+           children: [{ path: 'pages', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) }]},
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
   { path: '**', component: Page404Component }];
 

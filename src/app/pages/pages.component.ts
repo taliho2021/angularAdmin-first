@@ -1,4 +1,11 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
+import { map, shareReplay } from 'rxjs/operators';
+
+import { MenuService } from '../services/menu.service';
+import { Observable } from 'rxjs';
+// Import interface
+import { SideBarMenuItem } from '../layouts/sidebar/sidebar.menu.model';
 
 @Component({
   selector: 'app-pages',
@@ -7,9 +14,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
-  ngOnInit(): void {
+    menuItem! : SideBarMenuItem[]
+    constructor(private breakpointObserver: BreakpointObserver,
+                private menuService: MenuService) {}
+
+    hasChild = (_: number, node: SideBarMenuItem) => !!node.children && node.children.length >0;
+
+    ngOnInit(): void {
+      this.menuService.getMenuitems().subscribe((data: SideBarMenuItem[]) =>
+      {
+        this.menuItem = data;
+      })
+    }
   }
 
-}
+
+

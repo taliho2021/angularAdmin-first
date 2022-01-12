@@ -17,22 +17,23 @@ import { TablesComponent } from './tables.component';
 import { VesselComponent } from './vessel/vessel.component';
 
 const routes: Routes = [
-  { path: '', component: TablesComponent },
-  { path: 'carriers', component: CarriersComponent},
-  { path: 'ports', component: PortsComponent},
-  { path: 'foreignPorts', component: ForeignPortsComponent},
-  { path: 'country', component: CountryComponent},
-  { path: 'states', component: StatesComponent},
-  { path: 'firms', component: FirmsComponent},
-  { path: 'hts', component: HTSComponent},
-  { path: 'manufacturers', component: ManufacturersComponent},
-  { path: 'add-cvd', component:AddCvdComponent},
-  { path: 'fdaProduct', component: FdaProductComponent},
-  { path: 'currency', component: CurrencyComponent},
-  { path: 'vessel', component: VesselComponent},
-  { path: 'products', component: ProductsComponent}
-  ];
-
+  { path: '', component: TablesComponent,
+    children: [
+      { path: 'carriers', component: CarriersComponent},
+      { path: 'ports', component: PortsComponent},
+      { path: 'foreignPorts', component: ForeignPortsComponent},
+      { path: 'country', component: CountryComponent},
+      { path: 'states', component: StatesComponent},
+      { path: 'firms', component: FirmsComponent},
+      { path: 'hts', component: HTSComponent},
+      { path: 'manufacturers', component: ManufacturersComponent},
+      { path: 'add-cvd', component:AddCvdComponent},
+      { path: 'fdaProduct', component: FdaProductComponent},
+      { path: 'currency', component: CurrencyComponent},
+      { path: 'vessel', component: VesselComponent},
+      { path: 'products', component: ProductsComponent}
+      ]}
+    ]
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

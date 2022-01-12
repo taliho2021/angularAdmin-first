@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { TruckingRoutingModule } from './trucking-routing.module';
+import { NgModule } from '@angular/core';
 import { TruckingComponent } from './trucking.component';
-
+import { TruckingRoutingModule } from './trucking-routing.module';
 
 @NgModule({
   declarations: [
