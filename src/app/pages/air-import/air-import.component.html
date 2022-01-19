@@ -16,15 +16,21 @@
   </mat-tab>
 
   <mat-tab style="background-color: blue; padding:1em" label="Second">
-
-    <tr *ngFor = "let port of rowData">
-      <td>{{port.ID}}</td>
-      <td>{{port.Name}}</td>
-      <td>{{port.City}}</td>
-      <td>{{port.State}}</td>
-      <td>{{port.Zip_Code}}</td>
-    </tr>
-
+    <table id='air'>
+      <th>Port ID</th>
+      <th>Port Name</th>
+      <th>Port City</th>
+      <th>Port State</th>
+      <th>Zip Code</th>
+      <th></th>
+      <tr *ngFor = "let port of rowData">
+        <td>{{port.ID}}</td>
+        <td>{{port.Name}}</td>
+        <td>{{port.City}}</td>
+        <td>{{port.State}}</td>
+        <td>{{port.Zip_Code}}</td>
+      </tr>
+    </table>
   </mat-tab>
   <mat-tab style="background-color:green" label="Third">Content 3</mat-tab>
 </mat-tab-group>

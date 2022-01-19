@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { TruckAmsRoutingModule } from './truck-ams-routing.module';
+import { MatCardModule } from '@angular/material/card';
+import { NgModule } from '@angular/core';
 import { TruckAmsComponent } from './truck-ams.component';
-
+import { TruckAmsRoutingModule } from './truck-ams-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +10,7 @@ import { TruckAmsComponent } from './truck-ams.component';
   ],
   imports: [
     CommonModule,
+    MatCardModule,
     TruckAmsRoutingModule
   ]
 })

@@ -1,3 +1,5 @@
+import { MatCard, MatCardModule } from '@angular/material/card';
+
 import { AddCvdComponent } from './add-cvd/add-cvd.component';
 import { CarriersComponent } from './carriers/carriers.component';
 import { CommonModule } from '@angular/common';
@@ -41,7 +43,8 @@ import { VesselComponent } from './vessel/vessel.component';
     TablesRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatCardModule
   ]
 })
 export class TablesModule { }

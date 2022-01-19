@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SeaAmsRoutingModule } from './sea-ams-routing.module';
+import { MatCardModule } from '@angular/material/card';
+import { NgModule } from '@angular/core';
 import { SeaAmsComponent } from './sea-ams.component';
-
+import { SeaAmsRoutingModule } from './sea-ams-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,6 +10,7 @@ import { SeaAmsComponent } from './sea-ams.component';
   ],
   imports: [
     CommonModule,
+    MatCardModule,
     SeaAmsRoutingModule
   ]
 })
