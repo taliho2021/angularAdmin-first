@@ -37,7 +37,7 @@
 
 
     <!-- Add Content Here -->
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf='isLoggedIn'></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

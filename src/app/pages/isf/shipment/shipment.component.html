@@ -32,14 +32,22 @@
     <tr>
       <mat-form-field  appearance="fill">
         <mat-label>Shpt Type.</mat-label>
-        <input matInput id="ShptTyp" type="text" >
+        <mat-select [(ngModel)]="selectedValue" name="shipment">
+          <mat-option *ngFor =" let shipment of shipTypes" [value]="shipment.value">
+            {{ shipment.value}}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
     </tr>
 
     <tr>
       <mat-form-field  appearance="fill">
         <mat-label>Action</mat-label>
-        <input matInput id="Action" type="text" >
+        <mat-select [(ngModel)]="selectedValue1" name="action">
+          <mat-option *ngFor =" let action of actions" [value]="action.value">
+            {{ action.value}}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
     </tr>
 
