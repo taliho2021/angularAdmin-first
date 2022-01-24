@@ -22,7 +22,11 @@ export class LoginComponent implements OnInit {
 
   // set the currenr year
   year: number = new Date().getFullYear();
-  constructor(private authService: AuthService, private tokenStorage: TokenStorageService
+  constructor(private authService: AuthService,
+              private tokenStorage: TokenStorageService,
+              private route: ActivatedRoute,
+              private router: Router,
+              private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
