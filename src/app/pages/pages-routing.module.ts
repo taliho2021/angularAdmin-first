@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 
-const routes: Routes = [{ path: '', component: PagesComponent,
-                          children: [
+const routes: Routes = [{ path: '', component: PagesComponent},
+            
                               { path: 'isf', loadChildren: () => import('./isf/isf.module').then(m => m.IsfModule) },
                               { path: 'airAms', loadChildren: () => import('./air-ams/air-ams.module').then(m => m.AirAmsModule) },
                               { path: 'seaAms', loadChildren: () => import('./sea-ams/sea-ams.module').then(m => m.SeaAmsModule) },
@@ -20,7 +20,7 @@ const routes: Routes = [{ path: '', component: PagesComponent,
                               { path: 'parties', loadChildren: () => import('./parties/parties.module').then(m => m.PartiesModule) },
                               { path: 'tables', loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule) },
                               { path: 'reports', loadChildren: () => import('./reports/reports.module').then(m => m.ReportsModule) }
-                      ]}
+                      
                     ]
 
 @NgModule({
