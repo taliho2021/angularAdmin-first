@@ -7,11 +7,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
-  { path: '', component: Login02Component, 
-      children: [ 
+  { path: '', component: Login02Component},
       { path: 'home', component: HomeComponent},
       { path: 'nav', component: NavigationComponent},
-      { path: 'dashboard', component: DashboardComponent} ]},
+      { path: 'dashboard', component: DashboardComponent} ,
  ];
 
 @NgModule({
