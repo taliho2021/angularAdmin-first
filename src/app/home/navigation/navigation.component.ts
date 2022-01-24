@@ -2,9 +2,9 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { map, shareReplay } from 'rxjs/operators';
 
-import { MenuService } from '../services/menu.service';
+import { MenuService } from '../../services/menu.service';
 import { Observable } from 'rxjs';
-import { SideBarMenuItem } from '../layouts/sidebar/sidebar.menu.model';
+import { SideBarMenuItem } from '../../layouts/sidebar/sidebar.menu.model';
 
 @Component({
   selector: 'app-navigation',

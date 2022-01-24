@@ -54,7 +54,7 @@ const NAMES: string[] = [
   styleUrls: ['./export-summary.component.scss']
 })
 export class ExportSummaryComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit', 'Price', 'In Stock', 'In Store At'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

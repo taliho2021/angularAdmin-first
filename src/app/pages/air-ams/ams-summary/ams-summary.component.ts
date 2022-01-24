@@ -55,7 +55,7 @@ const NAMES: string[] = [
 })
 export class AmsSummaryComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
+  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit', 'price', 'in-stock', 'store'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

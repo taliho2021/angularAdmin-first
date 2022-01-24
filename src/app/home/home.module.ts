@@ -1,3 +1,4 @@
+import { AuthModule } from '../account/auth/auth.module';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
@@ -8,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { NavigationComponent } from './navigation/navigation.component';
 import { NgModule } from '@angular/core';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
@@ -16,7 +18,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     HomeComponent,
     DashboardComponent,
     HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    NavigationComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    AuthModule
   ]
 })
 export class HomeModule { }

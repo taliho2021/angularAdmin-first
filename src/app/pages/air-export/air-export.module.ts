@@ -2,6 +2,9 @@ import { AirExportComponent } from './air-export.component';
 import { AirExportRoutingModule } from './air-export-routing.module';
 import { CommonModule } from '@angular/common';
 import { ExportSummaryComponent } from './export-summary/export-summary.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,13 +24,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     AirExportRoutingModule,
     ReactiveFormsModule,
+    FlexLayoutModule,
     MatTabsModule,
     MatFormFieldModule,
     MatInputModule,
     MatDividerModule,
     MatIconModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule,
+    MatButtonModule
   ]
 })
 export class AirExportModule { }

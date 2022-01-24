@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { ExtrapagesModule } from './extrapages/extrapages.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HomeModule } from './home/home.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -18,16 +19,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { NavigationComponent } from './navigation/navigation.component';
 import { NgModule } from '@angular/core';
-import { PagesComponent } from './pages/pages.component';
 import { PagesModule } from './pages/pages.module';
 import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
     DashboardComponent
   ],
   imports: [
@@ -47,6 +45,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MatCardModule,
     MatMenuModule,
     PagesModule,
+    HomeModule,
     TranslateModule.forRoot()
   ],
 
