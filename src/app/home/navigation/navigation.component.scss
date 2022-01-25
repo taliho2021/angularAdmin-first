@@ -75,8 +75,8 @@ h1 {
   margin: 0 8px;
 }
 
-mat-sidenav-content {
-  height: 600px;
+mat-sidenav-content, router-outlet  {
+  height: 800px;
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(gray, white);
 }

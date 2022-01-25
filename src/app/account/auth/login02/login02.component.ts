@@ -46,5 +46,4 @@ export class Login02Component implements OnInit {
         this.loading = true;
         this.isLoggedIn = true;
       }
-
 }

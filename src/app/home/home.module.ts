@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NgModule } from '@angular/core';
+import { PagesModule } from '../pages/pages.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
-    AuthModule
+    AuthModule,
+    PagesModule
   ]
 })
 export class HomeModule { }

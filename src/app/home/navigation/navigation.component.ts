@@ -15,7 +15,7 @@ import { SideBarMenuItem } from '../../layouts/sidebar/sidebar.menu.model';
 
 export class NavigationComponent implements OnInit  {
 
-  isLoggedIn=true
+  isLoggedIn=true;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
