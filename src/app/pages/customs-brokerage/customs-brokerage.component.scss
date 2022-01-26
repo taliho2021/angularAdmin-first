@@ -1,5 +1,10 @@
 mat-card {
-    max-width: 500px;
+    max-width: 800px;
     max-height: 400px;
-    margin: 10px 10px 10px 10pxn; 
+    margin: 10px 10px 10px 10px; 
+}
+
+mat-card-header {
+    font-size: 30px;
+    font-family: "Times New Roman", serif ;
 }

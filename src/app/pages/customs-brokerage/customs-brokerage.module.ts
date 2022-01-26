@@ -1,18 +1,25 @@
-import { MatCard, MatCardModule } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CommonModule } from '@angular/common';
 import { CustomsBrokerageComponent } from './customs-brokerage.component';
 import { CustomsBrokerageRoutingModule } from './customs-brokerage-routing.module';
+import { EntriesSummaryComponent } from './entries-summary/entries-summary.component';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
-    CustomsBrokerageComponent
+    CustomsBrokerageComponent,
+    EntriesSummaryComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
     CustomsBrokerageRoutingModule,
     MatIconModule,
     MatTabsModule,
