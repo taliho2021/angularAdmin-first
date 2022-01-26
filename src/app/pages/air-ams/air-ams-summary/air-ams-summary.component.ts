@@ -48,12 +48,13 @@ const NAMES: string[] = [
  * @title Data table with sorting, pagination, and filtering.
  */
 
+
 @Component({
-  selector: 'app-ams-summary',
-  templateUrl: './ams-summary.component.html',
-  styleUrls: ['./ams-summary.component.scss']
+  selector: 'app-air-ams-summary',
+  templateUrl: './air-ams-summary.component.html',
+  styleUrls: ['./air-ams-summary.component.scss']
 })
-export class AmsSummaryComponent implements AfterViewInit {
+export class AirAmsSummaryComponent implements AfterViewInit {
 
   displayedColumns: string[] = ['id', 'name', 'progress', 'fruit', 'price', 'in-stock', 'store'];
   dataSource: MatTableDataSource<UserData>;

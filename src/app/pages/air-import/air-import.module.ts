@@ -8,10 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AirImportDetailComponent } from './air-import-detail/air-import-detail.component';
 
 @NgModule({
   declarations: [
-    AirImportComponent
+    AirImportComponent,
+    AirImportDetailComponent
   ],
   imports: [
     CommonModule,

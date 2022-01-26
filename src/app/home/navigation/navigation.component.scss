@@ -78,5 +78,9 @@ h1 {
 mat-sidenav-content, router-outlet  {
   height: 800px;
   background-color: red; /* For browsers that do not support gradients */
-  background-image: linear-gradient(gray, white);
+  background-image: linear-gradient(gray, rgb(255, 255, 255));
+}
+
+h3, mat-icon {
+  margin: auto;
 }

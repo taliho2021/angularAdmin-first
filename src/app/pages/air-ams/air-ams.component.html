@@ -2,107 +2,12 @@
 
 <mat-tab-group mat-align-tabs="start" style="color:pink;">
   <mat-tab label="Air AMS Summary" >
-    <app-ams-summary></app-ams-summary>
+    <app-air-ams-summary></app-air-ams-summary>
   </mat-tab>
 
 
   <mat-tab label="New Air AMS">
-    <form class="example-form">
-
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Number</mat-label>
-        <input type="text"
-               placeholder="Pick one"
-               aria-label="Number"
-               matInput
-               [formControl]="myControl"
-               [matAutocomplete]="auto">
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of options" [value]="option">
-            {{option}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Number</mat-label>
-          <input type="text"
-                 placeholder="Pick one"
-                 aria-label="Number"
-                 matInput
-                 [formControl]="myControl"
-                 [matAutocomplete]="auto">
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of options" [value]="option">
-              {{option}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Number</mat-label>
-            <input type="text"
-                   placeholder="Pick one"
-                   aria-label="Number"
-                   matInput
-                   [formControl]="myControl"
-                   [matAutocomplete]="auto">
-            <mat-autocomplete #auto="matAutocomplete">
-              <mat-option *ngFor="let option of options" [value]="option">
-                {{option}}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-
-<h1>Dates</h1>
-  <mat-form-field appearance="fill">
-    <mat-label>Angular forms</mat-label>
-    <input matInput [matDatepicker]="picker1" [formControl]="date">
-    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-    <mat-datepicker #picker1></mat-datepicker>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Angular forms (w/ deserialization)</mat-label>
-    <input matInput [matDatepicker]="picker2"
-          [formControl]="serializedDate">
-    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-    <mat-datepicker #picker2></mat-datepicker>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Value binding</mat-label>
-    <input matInput [matDatepicker]="picker3" [value]="date.value">
-    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
-    <mat-datepicker #picker3></mat-datepicker>
-  </mat-form-field>
-
-  <mat-divider>
-    <mat-form-field appearance="fill">
-      <mat-label>Import Date</mat-label>
-      <input matInput [matDatepicker]="picker4" [formControl]="date">
-      <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
-      <mat-datepicker #picker4></mat-datepicker>
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
-      <mat-label>Arrival Date)</mat-label>
-      <input matInput [matDatepicker]="picker5"
-             [formControl]="serializedDate">
-      <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
-      <mat-datepicker #picker5></mat-datepicker>
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
-      <mat-label>Entry Date</mat-label>
-      <input matInput [matDatepicker]="picker6" [value]="date.value">
-      <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
-      <mat-datepicker #picker6></mat-datepicker>
-    </mat-form-field>
-
-  </mat-divider>
-</form>
-
+      <app-ams-detail></app-ams-detail>
   </mat-tab>
 
   <mat-tab label="Third" >

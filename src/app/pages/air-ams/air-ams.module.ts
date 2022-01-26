@@ -1,6 +1,7 @@
 import { AirAmsComponent } from './air-ams.component';
 import { AirAmsRoutingModule } from './air-ams-routing.module';
-import { AmsSummaryComponent } from './ams-summary/ams-summary.component';
+import { AirAmsSummaryComponent } from './air-ams-summary/air-ams-summary.component';
+import { AmsDetailComponent } from './ams-detail/ams-detail.component';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AirAmsComponent,
-    AmsSummaryComponent
+    AmsDetailComponent,
+    AirAmsSummaryComponent
   ],
   imports: [
     CommonModule,

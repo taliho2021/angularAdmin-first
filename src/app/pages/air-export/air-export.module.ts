@@ -14,11 +14,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AirExportDetailComponent } from './air-export-detail/air-export-detail.component';
 
 @NgModule({
   declarations: [
     AirExportComponent,
-    ExportSummaryComponent
+    ExportSummaryComponent,
+    AirExportDetailComponent
   ],
   imports: [
     CommonModule,
