@@ -23,6 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { PagesModule } from './pages/pages.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { WidgetsModule } from './widgets/widgets.module';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { TranslateModule } from '@ngx-translate/core';
     MatMenuModule,
     PagesModule,
     HomeModule,
+    WidgetsModule,
     TranslateModule.forRoot()
   ],
 

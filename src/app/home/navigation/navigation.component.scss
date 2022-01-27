@@ -75,7 +75,7 @@ h1 {
   margin: 0 8px;
 }
 
-mat-sidenav-content, router-outlet  {
+mat-sidenav-content, router-outlet, app-dashboard  {
   height: 800px;
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(gray, rgb(255, 255, 255));

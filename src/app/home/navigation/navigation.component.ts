@@ -4,6 +4,7 @@ import { map, shareReplay } from 'rxjs/operators';
 
 import { MenuService } from '../../services/menu.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { SideBarMenuItem } from '../../layouts/sidebar/sidebar.menu.model';
 
 @Component({
@@ -25,14 +26,24 @@ export class NavigationComponent implements OnInit  {
 
   menuItem! : SideBarMenuItem[]
   constructor(private breakpointObserver: BreakpointObserver,
-              private menuService: MenuService) {}
+              private menuService: MenuService,
+              private route: Router) {}
 
   hasChild = (_: number, node: SideBarMenuItem) => !!node.children && node.children.length >0;
+
+  public showDefaultMessage = true;
 
   ngOnInit(): void {
     this.menuService.getMenuitems().subscribe((data: SideBarMenuItem[]) =>
     {
       this.menuItem = data;
     })
+    
+    // this.route.navigate(['/dashboard'])
+
+  }
+
+  toggleDefaultMessage(state: boolean){
+    this.showDefaultMessage = state;
   }
 }

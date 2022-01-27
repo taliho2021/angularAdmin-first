@@ -1,9 +1,13 @@
 import { AuthModule } from '../account/auth/auth.module';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
@@ -30,8 +34,12 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
+    MatCardModule,
+    MatDividerModule,
+    MatButtonModule,
     AuthModule,
-    PagesModule
+    PagesModule,
+    FlexLayoutModule
   ]
 })
 export class HomeModule { }

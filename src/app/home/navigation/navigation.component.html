@@ -33,12 +33,10 @@
 
   </mat-sidenav>
   <mat-sidenav-content>
-    <div *ngIf ='!isLoggedIn'> <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus aliquid alias tenetur vero cupiditate sequi repellat blanditiis, nemo repudiandae! Laboriosam a, quae nulla tempore iure amet numquam? Repellendus, totam commodi.
-    Tempora, sint fuga? Est rem nam modi ullam nihil et, animi quia hic. Totam, molestias! Similique consequatur explicabo iure quis sunt minima pariatur ratione labore. Sed exercitationem sit ullam. Id.
-    Id autem aut officiis dolorem reiciendis doloremque praesentium provident tempore quis, expedita accusamus alias itaque impedit, recusandae quas iure. Excepturi cum eos deleniti illum quasi vitae sapiente dicta, doloremque aliquid.
-    Non accusantium blanditiis sunt alias. Dignissimos nam, voluptatem doloremque quisquam est ipsa molestiae earum enim optio temporibus. Similique ipsum illum laudantium amet vel aliquid vitae pariatur maiores, quis modi nostrum!
-    Nisi, illo deserunt eos accusantium adipisci soluta aperiam? Provident consequatur, accusamus esse doloribus asperiores eum, harum praesentium distinctio illo perferendis culpa? Nam quae numquam ut iusto, eius provident voluptas cum. </h3></div>
-    <router-outlet *ngIf='isLoggedIn'></router-outlet>
+    <app-dashboard *ngIf ="showDefaultMessage"></app-dashboard>
+  
+
+    <router-outlet (activate) ="toggleDefaultMessage(false)" (deactivate)="toggleDefaultMessage(true)"></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
