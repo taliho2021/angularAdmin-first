@@ -1,11 +1,13 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { AgGridModule } from 'ag-grid-angular';
 import { CommonModule } from '@angular/common';
 import { DomesticComponent } from './domestic/domestic.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ForeignComponent } from './foreign/foreign.component';
 import { HtsComponent } from './hts/hts.component';
 import { IsfComponent } from './isf.component';
+import { IsfGridComponent } from './isf-grid/isf-grid.component';
 import { IsfRoutingModule } from './isf-routing.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -26,7 +28,8 @@ import { ShipmentComponent } from './shipment/shipment.component';
     PartiesComponent,
     HtsComponent,
     DomesticComponent,
-    ForeignComponent
+    ForeignComponent,
+    IsfGridComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +44,8 @@ import { ShipmentComponent } from './shipment/shipment.component';
     FormsModule,
     FlexLayoutModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    AgGridModule
   ]
 })
 export class IsfModule { }

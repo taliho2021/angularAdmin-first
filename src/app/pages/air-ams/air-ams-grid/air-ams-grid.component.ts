@@ -18,12 +18,15 @@ export class AirAmsGridComponent  {
     { field: 'type', sortable: true, filter: true, resizable: true  },
     { field: 'dealer', sortable: true, filter: true, resizable: true  },
     { field: 'discount', sortable: true, filter: true, resizable: true  },
-    { field: 'delivery date', sortable: true, filter: true, resizable: true  },
+    { field: 'deliveryDate', sortable: true, filter: true, resizable: true  },
 ];
 
 rowData = [
-    { make: 'Toyota', model: 'Celica', price: 35000 },
-    { make: 'Ford', model: 'Mondeo', price: 32000 },
-    { make: 'Porsche', model: 'Boxter', price: 72000 }
+    { make: 'Toyota', model: 'Celica', price: 35000, year: 2022, origin: 'U.S', type: 'Sedan', dealer: 'Huntington', discount: 'None', deliveryDate: '2022-March' },
+    { make: 'Ford', model: 'Mondeo', price: 32000, year: 2022, origin: 'U.S', type: 'Sedan', dealer: 'Huntington', discount: 'None', deliveryDate: '2022-March' },
+    { make: 'Porsche', model: 'Boxter', price: 72000, year: 2022, origin: 'Germany', type: 'Coupe', dealer: 'Jericho', discount: '+ 10%', deliveryDate: '2022-March' },
+    { make: 'Toyota', model: 'Camry', price: 35000, year: 2022, origin: 'U.S', type: 'Sedan', dealer: 'Huntington', discount: 'None', deliveryDate: '2022-March' },
+    { make: 'Ford', model: 'Bronco', price: 52000, year: 2022, origin: 'U.S', type: 'Sedan', dealer: 'Huntington', discount: 'None', deliveryDate: '2022-March' },
+    { make: 'Porsche', model: 'Cayenne', price: 102000, year: 2022, origin: 'Germany', type: 'Coupe', dealer: 'Jericho', discount: '+ 10%', deliveryDate: '2022-March' }
 ];
 }
