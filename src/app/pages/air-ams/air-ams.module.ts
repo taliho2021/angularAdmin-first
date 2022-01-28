@@ -1,4 +1,6 @@
+import { AgGridModule } from 'ag-grid-angular';
 import { AirAmsComponent } from './air-ams.component';
+import { AirAmsGridComponent } from './air-ams-grid/air-ams-grid.component';
 import { AirAmsRoutingModule } from './air-ams-routing.module';
 import { AirAmsSummaryComponent } from './air-ams-summary/air-ams-summary.component';
 import { AmsDetailComponent } from './ams-detail/ams-detail.component';
@@ -22,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AirAmsComponent,
     AmsDetailComponent,
-    AirAmsSummaryComponent
+    AirAmsSummaryComponent,
+    AirAmsGridComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     MatPaginatorModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    AgGridModule
 
   ]
 })

@@ -17,6 +17,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { NgModule } from '@angular/core';
 import { PagesModule } from '../pages/pages.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { WidgetsModule } from '../widgets/widgets.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatButtonModule,
     AuthModule,
     PagesModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    WidgetsModule
   ]
 })
 export class HomeModule { }

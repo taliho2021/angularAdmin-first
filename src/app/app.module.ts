@@ -1,6 +1,7 @@
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { RouterModule, Routes } from '@angular/router';
 
+import { AgGridModule } from 'ag-grid-angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthInterceptor } from './helpers/auth.interceptor';
@@ -49,6 +50,7 @@ import { WidgetsModule } from './widgets/widgets.module';
     PagesModule,
     HomeModule,
     WidgetsModule,
+    AgGridModule,
     TranslateModule.forRoot()
   ],
 

@@ -1,5 +1,3 @@
-<h1>ANA Link, Ltd</h1>
-
 <mat-toolbar color="primary">
   <button
     mat-icon-button
@@ -9,10 +7,10 @@
     <!-- *ngIf="isHandset$ | async"> -->
     <mat-icon>menu</mat-icon>
   </button>
-  <span>ANA Link, Ltd</span>
+  <span class="name1">ANA Link, Ltd</span>
 
   <span class="toolbar-filler"></span>
-  <a routerLink="/"><button id="button-logout" md-button>Log Out</button> </a>
+  <a routerLink="/"><button id="button-logout" type="button" class="btn btn-warning" >Log Out</button> </a>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
@@ -34,7 +32,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <app-dashboard *ngIf ="showDefaultMessage"></app-dashboard>
-  
+
 
     <router-outlet (activate) ="toggleDefaultMessage(false)" (deactivate)="toggleDefaultMessage(true)"></router-outlet>
   </mat-sidenav-content>

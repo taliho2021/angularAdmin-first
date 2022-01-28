@@ -5,6 +5,7 @@ import { CustomsBrokerageComponent } from './customs-brokerage.component';
 import { CustomsBrokerageRoutingModule } from './customs-brokerage-routing.module';
 import { EntriesSummaryComponent } from './entries-summary/entries-summary.component';
 import { EntryDetailComponent } from './entry-detail/entry-detail.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -27,6 +28,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     MatIconModule,
     MatTabsModule,
     MatCardModule,
+    FlexLayoutModule,
     WidgetsModule
   ]
 })
