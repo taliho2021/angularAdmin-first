@@ -34,10 +34,9 @@ import { WidgetsModule } from './widgets/widgets.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    LayoutModule,
     HttpClientModule,
+    AgGridModule,
     FlexLayoutModule,
-    ExtrapagesModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -46,11 +45,12 @@ import { WidgetsModule } from './widgets/widgets.module';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    PagesModule,
-    HomeModule,
-    WidgetsModule,
-    AgGridModule,
     AppRoutingModule,
+    PagesModule,
+    ExtrapagesModule,
+    HomeModule,
+    LayoutModule,
+    WidgetsModule,
     TranslateModule.forRoot()
   ],
 
