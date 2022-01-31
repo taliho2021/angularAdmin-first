@@ -10,6 +10,14 @@ interface ShipType {
 interface Action {
   value: string;
 }
+
+interface isfType {
+  value: string;
+}
+
+interface mot {
+  value: string;
+}
 @Component({
   selector: 'app-shipment',
   templateUrl: './shipment.component.html',
@@ -19,6 +27,8 @@ export class ShipmentComponent implements OnInit {
 
   selectedValue!: string;
   selectedValue1!: string;
+  selectedValue2!: string;
+  selectedValue3!: string;
 
   isfShipment = this.fb.group({
     ISFNo:[''],
@@ -56,6 +66,18 @@ export class ShipmentComponent implements OnInit {
     { value: 'FR=Flexible Range' },
     { value: 'FT=Flexible Timing' }
   ];
+
+  isfTypes: isfType[] = [
+    {value: 'ISF-10'},
+    {value: 'ISF-5'},
+    {value: 'ISF-5 to ISF-10'},
+    {value: 'ISF-10 to ISF-5'}
+  ]
+
+  mots: mot[] = [
+    {value: '11-Containerized'},
+    {value: '10-Breakbulk'}
+  ]
 
 
   constructor(private fb: FormBuilder) { }

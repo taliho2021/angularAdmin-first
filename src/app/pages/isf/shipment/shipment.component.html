@@ -3,271 +3,106 @@
 
   <table class="container-fluid example-full-width" fxLayout="column" fxFlex="30" fxLayoutAlign="space-between start">
     <tr>
+      <td>
+        <mat-form-field  appearance="fill">
+          <mat-label>ISF No.</mat-label>
+          <input matInput id="ISFNo" type="text" >
+        </mat-form-field>
+      </td>
+
+
+    <td>
       <mat-form-field  appearance="fill">
-        <mat-label>ISF No.</mat-label>
-        <input matInput id="ISFNo" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-
-      <mat-label>ISF Type</mat-label>
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">ISF-10</mat-radio-button>
-        <mat-radio-button value="2">ISF-5</mat-radio-button>
-        <mat-radio-button value="3">ISF-5 to ISF-10</mat-radio-button>
-        <mat-radio-button value="4">ISF-10 to ISF-5</mat-radio-button>
-      </mat-radio-group>
-
-    </tr>
-
-    <tr>
-        <mat-label>MOT</mat-label>
-        <mat-radio-group aria-label="Select an option">
-          <mat-radio-button value="1">11 - Containerized</mat-radio-button>
-          <mat-radio-button value="2">10 - Breakbulk</mat-radio-button>
-        </mat-radio-group>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Shpt Type.</mat-label>
-        <mat-select [(ngModel)]="selectedValue" name="shipment">
-          <mat-option *ngFor =" let shipment of shipTypes" [value]="shipment.value">
-            {{ shipment.value}}
+        <mat-label>ISF</mat-label>
+        <mat-select [(ngModel)]="selectedValue2" name="isf">
+          <mat-option *ngFor =" let isf of isfTypes" [value]="isf.value">
+            {{ isf.value}}
           </mat-option>
         </mat-select>
       </mat-form-field>
-    </tr>
 
-    <tr>
+    </td>
+
+    <td>
       <mat-form-field  appearance="fill">
-        <mat-label>Action</mat-label>
-        <mat-select [(ngModel)]="selectedValue1" name="action">
-          <mat-option *ngFor =" let action of actions" [value]="action.value">
-            {{ action.value}}
+        <mat-label>MOT</mat-label>
+        <mat-select [(ngModel)]="selectedValue3" name="mot">
+          <mat-option *ngFor =" let mot of mots" [value]="mot.value">
+            {{ mot.value}}
           </mat-option>
         </mat-select>
       </mat-form-field>
-    </tr>
+    </td>
 
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>AMS B/L</mat-label>
-        <input matInput id="AmsBL" type="text" >
-      </mat-form-field>
-    </tr>
+    <td>
+        <mat-form-field  appearance="fill">
+          <mat-label>Shpt Type.</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="shipment">
+            <mat-option *ngFor =" let shipment of shipTypes" [value]="shipment.value">
+              {{ shipment.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
 
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Add'l AMS B/L #1</mat-label>
-        <input matInput id="Add1AmsBL" type="text" >
-      </mat-form-field>
-    </tr>
+      <td>
+          <mat-form-field  appearance="fill">
+            <mat-label>Action</mat-label>
+            <mat-select [(ngModel)]="selectedValue1" name="action">
+              <mat-option *ngFor =" let action of actions" [value]="action.value">
+                {{ action.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      </td>
 
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Master B/L #</mat-label>
-        <input matInput id="MasterBL" type="text" >
-      </mat-form-field>
-    </tr>
+   <tr>
+      <td>
+        <mat-form-field  appearance="fill">
+          <mat-label>AMS B/L</mat-label>
+          <input matInput id="AmsBL" type="text" >
+        </mat-form-field>
+      </td>
 
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>File No</mat-label>
-        <input matInput id="FileNo" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Customer Ref #</mat-label>
-        <input matInput id="CustRefNo" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Importer ID #</mat-label>
-        <input matInput id="ImporterID" type="text" >
-      </mat-form-field>
-    </tr>
-
-  </table>
-
-
-  <table class="container-fluid example-full-width" fxLayout="column" fxFlex="30">
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>ISF No.</mat-label>
-        <input matInput id="ISFNo" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-
-      <mat-label>ISF Type</mat-label>
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">ISF-10</mat-radio-button>
-        <mat-radio-button value="2">ISF-5</mat-radio-button>
-        <mat-radio-button value="3">ISF-5 to ISF-10</mat-radio-button>
-        <mat-radio-button value="4">ISF-10 to ISF-5</mat-radio-button>
-      </mat-radio-group>
-
-    </tr>
-
-    <tr>
-        <mat-label>MOT</mat-label>
-        <mat-radio-group aria-label="Select an option">
-          <mat-radio-button value="1">11 - Containerized</mat-radio-button>
-          <mat-radio-button value="2">10 - Breakbulk</mat-radio-button>
-        </mat-radio-group>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Shpt Type.</mat-label>
-        <input matInput id="ShptTyp" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Action</mat-label>
-        <input matInput id="Action" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>AMS B/L</mat-label>
-        <input matInput id="AmsBL" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
+    <td>
       <mat-form-field  appearance="fill">
         <mat-label>Add'l AMS B/L #1</mat-label>
         <input matInput id="Add1AmsBL" type="text" >
       </mat-form-field>
-    </tr>
+    </td>
 
-
-    <tr>
+    <td>
       <mat-form-field  appearance="fill">
         <mat-label>Master B/L #</mat-label>
         <input matInput id="MasterBL" type="text" >
       </mat-form-field>
-    </tr>
+    </td>
 
-    <tr>
+    <td>
       <mat-form-field  appearance="fill">
         <mat-label>File No</mat-label>
         <input matInput id="FileNo" type="text" >
       </mat-form-field>
-    </tr>
+    </td>
 
-    <tr>
+    <td>
       <mat-form-field  appearance="fill">
         <mat-label>Customer Ref #</mat-label>
         <input matInput id="CustRefNo" type="text" >
       </mat-form-field>
-    </tr>
+    </td>
+  </tr>
 
-    <tr>
+  <tr>
+    <td>
       <mat-form-field  appearance="fill">
         <mat-label>Importer ID #</mat-label>
         <input matInput id="ImporterID" type="text" >
       </mat-form-field>
-    </tr>
+    </td>
+
+  </tr>
 
   </table>
 
-
-  <table class="container-fluid example-full-width" fxLayout="column" fxFlex="30">
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>ISF No.</mat-label>
-        <input matInput id="ISFNo" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-
-      <mat-label>ISF Type</mat-label>
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">ISF-10</mat-radio-button>
-        <mat-radio-button value="2">ISF-5</mat-radio-button>
-        <mat-radio-button value="3">ISF-5 to ISF-10</mat-radio-button>
-        <mat-radio-button value="4">ISF-10 to ISF-5</mat-radio-button>
-      </mat-radio-group>
-
-    </tr>
-
-    <tr>
-        <mat-label>MOT</mat-label>
-        <mat-radio-group aria-label="Select an option">
-          <mat-radio-button value="1">11 - Containerized</mat-radio-button>
-          <mat-radio-button value="2">10 - Breakbulk</mat-radio-button>
-        </mat-radio-group>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Shpt Type.</mat-label>
-        <input matInput id="ShptTyp" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Action</mat-label>
-        <input matInput id="Action" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>AMS B/L</mat-label>
-        <input matInput id="AmsBL" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Add'l AMS B/L #1</mat-label>
-        <input matInput id="Add1AmsBL" type="text" >
-      </mat-form-field>
-    </tr>
-
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Master B/L #</mat-label>
-        <input matInput id="MasterBL" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>File No</mat-label>
-        <input matInput id="FileNo" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Customer Ref #</mat-label>
-        <input matInput id="CustRefNo" type="text" >
-      </mat-form-field>
-    </tr>
-
-    <tr>
-      <mat-form-field  appearance="fill">
-        <mat-label>Importer ID #</mat-label>
-        <input matInput id="ImporterID" type="text" >
-      </mat-form-field>
-    </tr>
-
-  </table>
 </div>

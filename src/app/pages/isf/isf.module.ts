@@ -20,6 +20,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { PartiesComponent } from './parties/parties.component';
 import { ShipmentComponent } from './shipment/shipment.component';
+import { IsfDetailComponent } from './isf-detail/isf-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ShipmentComponent } from './shipment/shipment.component';
     HtsComponent,
     DomesticComponent,
     ForeignComponent,
-    IsfGridComponent
+    IsfGridComponent,
+    IsfDetailComponent
   ],
   imports: [
     CommonModule,

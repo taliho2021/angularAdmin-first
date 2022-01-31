@@ -33,7 +33,6 @@ import { WidgetsModule } from './widgets/widgets.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
     HttpClientModule,
@@ -51,6 +50,7 @@ import { WidgetsModule } from './widgets/widgets.module';
     HomeModule,
     WidgetsModule,
     AgGridModule,
+    AppRoutingModule,
     TranslateModule.forRoot()
   ],
 

@@ -9,9 +9,9 @@ import { ColDef } from 'ag-grid-community';
 })
 export class IsfGridComponent  {
 
-  columnDefs: ColDef[] = [
+columnDefs: ColDef[] = [
     { field: 'id', sortable: true, filter: true, resizable: true  },
-    { field: 'isfNo', sortable: true, filter: true, resizable: true },
+    { field: 'isfNo', sortable: true, filter: true, resizable: true, checkboxSelection: true },
     { field: 's', sortable: true, filter: true, resizable: true },
     { field: 'd', sortable: true, filter: true, resizable: true  },
     { field: 'type', sortable: true, filter: true, resizable: true  },
@@ -39,7 +39,7 @@ rowData = [
     { id: '129229', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270628', custRefNo: 'LN-146817', importer:'Pocas Intl Corp' },
     { id: '129228', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270627', custRefNo: 'LN-146817', importer:'Pocas Intl Corp' },
     { id: '129227', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270626', custRefNo: 'LN-146817', importer:'Pocas Intl Corp' },
-    { id: '129226', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270625', custRefNo: 'LN-146817', importer:'Pocas Intl Corp' }, 
+    { id: '129226', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270625', custRefNo: 'LN-146817', importer:'Pocas Intl Corp' },
     { id: '129225', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270624', custRefNo: 'LN-146817', importer:'Pocas Intl Corp' },
     { id: '129224', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270622', custRefNo: 'LN-146817', importer:'Fancy Trading Inc' },
     { id: '129223', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270621', custRefNo: 'LN-146817', importer:'Fancy Trading Inc' },
@@ -57,7 +57,7 @@ rowData = [
     { id: '129211', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270654', custRefNo: 'LN-146817', importer:'Continental Materials Inc' },
     { id: '129210', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270654', custRefNo: 'LN-146817', importer:'Continental Materials Inc' },
     { id: '129211', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270654', custRefNo: 'LN-146817', importer:'Continental Materials Inc' },
-    { id: '129210', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270654', custRefNo: 'LN-146817', importer:'Continental Materials Inc' }, 
+    { id: '129210', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270654', custRefNo: 'LN-146817', importer:'Continental Materials Inc' },
     { id: '129209', isfNo: 'EH3-239215131425', s: '02', d: 'S1', type: '01', act: 'CT', hbl: 'EGLV503190020233', fileNo: '2270654', custRefNo: 'LN-146817', importer:'Continental Materials Inc' },
 ];
 }

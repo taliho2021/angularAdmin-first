@@ -1,7 +1,12 @@
 <h1 style="max-width: 100%; max-height: 100%">Customs Brokerage Works</h1>
 
 <mat-tab-group mat-align-tabs="start">
-  <mat-tab label="First">
+
+  <mat-tab label="Entry Grid">
+    <app-entry-grid></app-entry-grid>
+  </mat-tab>
+
+  <mat-tab label="Dashboard">
     <div fxLayout="row" fxLayoutAlign="space-around center">
 
       <mat-card fxFlex="30"class='example-card'>
@@ -68,4 +73,4 @@
 </mat-tab-group>
 
 
-<button type="button" class="btn btn-link" routerLink="/nav/">Back to Mainpage</button>
+<button type="button" class="btn btn-link" routerLink="/home/nav/">Back to Mainpage</button>

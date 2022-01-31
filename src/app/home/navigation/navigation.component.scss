@@ -1,17 +1,18 @@
 .sidenav-container {
-  position: absolute;
-  top: 70px;
-  bottom: 60px;
+  position: fixed;
+  top: 60px;
+  bottom: auto;
   left: 0;
   right: 0;
 }
 
 .sidenav {
   width: 200px;
-  margin-top: 70px;
-  background-color: lightskyblue;
+  margin-top: 60px;
+  background-color: rgb(8, 241, 86);
   a:hover {
-    color:lime
+    color:lime;
+    cursor: pointer;
   }
 
   a:visited {
@@ -75,7 +76,7 @@ h1 {
   margin: 0 8px;
 }
 
-mat-sidenav-content, router-outlet, app-dashboard  {
+mat-sidenav-content {
   height: 900px;
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(gray, rgb(255, 255, 255));

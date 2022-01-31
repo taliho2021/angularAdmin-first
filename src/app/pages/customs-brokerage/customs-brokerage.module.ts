@@ -1,10 +1,12 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { AgGridModule } from 'ag-grid-angular';
 import { CommonModule } from '@angular/common';
 import { CustomsBrokerageComponent } from './customs-brokerage.component';
 import { CustomsBrokerageRoutingModule } from './customs-brokerage-routing.module';
 import { EntriesSummaryComponent } from './entries-summary/entries-summary.component';
 import { EntryDetailComponent } from './entry-detail/entry-detail.component';
+import { EntryGridComponent } from './entry-grid/entry-grid.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,7 +19,8 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
   declarations: [
     CustomsBrokerageComponent,
     EntriesSummaryComponent,
-    EntryDetailComponent
+    EntryDetailComponent,
+    EntryGridComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +32,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     MatTabsModule,
     MatCardModule,
     FlexLayoutModule,
+    AgGridModule,
     WidgetsModule
   ]
 })

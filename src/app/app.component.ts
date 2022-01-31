@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { slideInAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angularAdmin-first';
+  title = 'ANA Link';
 }
