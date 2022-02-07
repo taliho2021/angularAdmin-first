@@ -27,12 +27,12 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    CustomsBrokerageRoutingModule,
     MatIconModule,
     MatTabsModule,
     MatCardModule,
     FlexLayoutModule,
     AgGridModule,
+    CustomsBrokerageRoutingModule,
     WidgetsModule
   ]
 })

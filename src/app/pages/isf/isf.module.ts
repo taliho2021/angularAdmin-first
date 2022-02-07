@@ -35,7 +35,6 @@ import { IsfDetailComponent } from './isf-detail/isf-detail.component';
   ],
   imports: [
     CommonModule,
-    IsfRoutingModule,
     MatTabsModule,
     MatInputModule,
     MatFormFieldModule,
@@ -47,7 +46,8 @@ import { IsfDetailComponent } from './isf-detail/isf-detail.component';
     FlexLayoutModule,
     MatButtonModule,
     MatSelectModule,
-    AgGridModule
+    AgGridModule,
+    IsfRoutingModule,
   ]
 })
 export class IsfModule { }
