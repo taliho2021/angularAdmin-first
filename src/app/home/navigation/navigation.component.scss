@@ -4,12 +4,14 @@
   bottom: auto;
   left: 0;
   right: 0;
+  background-color:beige;
+  border-radius: 5px;
 }
 
 .sidenav {
   width: 200px;
   margin-top: 60px;
-  background-color: rgb(8, 241, 86);
+  background-color: beige;
   a:hover {
     color:lime;
     cursor: pointer;
@@ -55,12 +57,14 @@
   }
 }
 
-.mat-menu-item {
+mat-menu-item {
   padding: 8px 0;
   display: flex;
   width: auto;
+  border: 5px solid mintcream;
 
-  .routeIcon {
+
+.routeIcon {
     margin-right: 40px;
   }
 }

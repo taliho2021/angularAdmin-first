@@ -21,7 +21,7 @@
       [opened]="(isHandset$ | async) === false">
 
 
-    <mat-menu-item *ngFor = 'let menu of menuItem' [ngStyle]="{'padding-left': '10px'}" >
+    <mat-menu-item *ngFor = 'let menu of menuItem' [ngStyle]="{'padding-left': '20px'}" >
       <a mat-list-item routerLink="{{menu.route}}" >
         <mat-icon>{{menu.iconName}}</mat-icon>
         {{menu.label}}</a>
