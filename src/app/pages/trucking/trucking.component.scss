@@ -5,3 +5,11 @@ nav a {
 a {
   font-size: large;
 }
+
+mat-card {
+  max-width: auto;
+}
+
+mat-card-content {
+  max-width: 800px;
+}

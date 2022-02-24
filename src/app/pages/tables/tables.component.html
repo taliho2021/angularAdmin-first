@@ -1,47 +1,24 @@
 <h1 style="font-weight: bolder; background-color: yellow; text-align: center;">Tables</h1>
 <nav>
-  <a routerLink="carriers" routerLinkActive="active">Carriers</a>
-  <a routerLink="ports" routerLinkActive="active">Ports</a>
-  <a routerLink="foreignPorts" routerLinkActive="active">Foreign Ports</a>
-  <a routerLink="country" routerLinkActive="active">Coutries</a>
-  <a routerLink="states" routerLinkActive="active">U.S. States</a>
-  <a routerLink="firms" routerLinkActive="active">FIRMS Codes</a>
-  <a routerLink="hts" routerLinkActive="active">U.S. Harmonized Tariffs Code</a>
-  <a routerLink="add-cvd" routerLinkActive="active">ADD CVD Cases</a>
-  <a routerLink="fdaProduct" routerLinkActive="active">FDA Product Codes</a>
-  <a routerLink="currency" routerLinkActive="active">Foreign Currency Tables</a>
-  <a routerLink="vessel" routerLinkActive="active">Vessel Codes</a>
-  <a routerLink="products" routerLinkActive="active">Product Codes</a>
+  <div>
+    <button type="button" class="btn btn-primary"> <a routerLink="carriers" routerLinkActive="active">Carriers</a></button>
+    <button type="button" class="btn btn-secondary"> <a routerLink="ports" routerLinkActive="active">Ports</a></button>
+    <button type="button" class="btn btn-success"> <a routerLink="foreignPorts" routerLinkActive="active">Foreign Ports</a></button>
+    <button type="button" class="btn btn-danger"> <a routerLink="country" routerLinkActive="active">Countries</a></button>
+    <button type="button" class="btn btn-warning"> <a routerLink="states" routerLinkActive="active">U.S. States</a></button>
+    <button type="button" class="btn btn-info"> <a routerLink="firms" routerLinkActive="active">FIRMS Codes</a></button>
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary"> <a routerLink="hts" routerLinkActive="active">U.S. Harmonized Tariffs Code</a></button>
+    <button type="button" class="btn btn-secondary"> <a routerLink="add-cvd" routerLinkActive="active">ADD CVD Cases</a></button>
+    <button type="button" class="btn btn-success"> <a routerLink="fdaProduct" routerLinkActive="active">FDA Product Codes</a></button>
+    <button type="button" class="btn btn-danger"> <a routerLink="currency" routerLinkActive="active">Foreign Currency Tables</a></button>
+    <button type="button" class="btn btn-warning"> <a routerLink="vessel" routerLinkActive="active">Vessel Codes</a></button>
+    <button type="button" class="btn btn-info"> <a routerLink="products" routerLinkActive="active">Products Table</a></button>
+  </div>
+
+
 </nav>
 
-<mat-card>
-  <mat-card-header>
-    List of Entries
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Entries Under Exam
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Entries with PGA Hold
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Entries Past Arrival Dates
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Duty Payments Due
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Liquidated Entries
-  </mat-card-header>
-</mat-card>  
+
 <router-outlet></router-outlet>
