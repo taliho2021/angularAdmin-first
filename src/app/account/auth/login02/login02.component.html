@@ -40,27 +40,178 @@
   </mat-card>
 
   <div fxLayout="row" fxLayoutAlign="space-around center">
-      <mat-card fxFlex="33" class='example-card'>
+      <mat-card fxFlex="23" class='example-card'>
         <mat-card-header>
-          Card 1
+          <mat-card-title>
+            Manufacturers / Shippers
+          </mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://cdn.pixabay.com/photo/2022/01/16/13/25/cityscape-6942013__340.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2022/01/16/13/25/cityscape-6942013__340.jpg') ">
+          <ul style="font-weight: bolder; color:blanchedalmond ">Manufactuers / Shippers can
+            <li>Apply for Customs' assigned number</li>
+            <li>Obtain a continuous/annual bond</li>
+            <li>Clear U.S. Customs</li>
+            <li>Pay the duty online</li>
+            <li>Proof of Delivery</li>
+          </ul>
+          <mat-card-actions>
+            <button mat-button class="btn btn-primary" style="margin-left:120px"> Log In or Sign Up </button>
+          </mat-card-actions>
+        </mat-card-content >
+       
       </mat-card>
-      <mat-card  fxFlex="33"class='example-card'>
+
+      <mat-card  fxFlex="23"class='example-card'>
         <mat-card-header>
-          Card 2
+          <mat-card-title>
+            Importers / Exporters
+          </mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590__340.jpg" alt="Photo of a Shiba Inu">
-    </mat-card>
-    <mat-card fxFlex="33"class='example-card'>
+        <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590__340.jpg') ">
+          <ul style="font-weight: bolder; color:chartreuse">Importers or Exporters can
+            <li>Check duty payments</li>
+            <li>Detailed entry report</li>
+            <li>Liquidaiton report</li>
+            <li>Entry & PGA status</li>
+            <li>Delivery Status</li>
+          </ul>
+          <mat-card-actions>
+            <button mat-button class="btn btn-secondary" style="margin-left:120px"> Log In or Sign Up </button>
+          </mat-card-actions>
+        </mat-card-content >
+        
+      </mat-card>
+
+    <mat-card fxFlex="23"class='example-card' >
       <mat-card-header>
-        Card 3
+        <mat-card-title>
+            Freight Forwarders
+        </mat-card-title>
       </mat-card-header>
-      <img mat-card-image src="https://cdn.pixabay.com/photo/2021/12/16/15/26/forest-6874717__340.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg') ">
+            <ul style="font-weight: bolder; color:darkkhaki">Forwarders can
+              <li>Check the entry status for clients</li>
+              <li>Upload documents for Customs' clearance</li>
+              <li>Duty reports for each client</li>
+              <li>Delivery status</li>
+              <li>Print entry documents</li>
+            </ul>
+            <mat-card-actions>
+              <button mat-button class="btn btn-warning" style="margin-left:120px"> Log In or Sign Up </button>
+            </mat-card-actions>
+      </mat-card-content >
     </mat-card>
+
+    <mat-card fxFlex="23" class='example-card'>
+      <mat-card-header>
+        <mat-card-title>
+          Truckers
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2018/05/11/23/45/highway-3392100_960_720.jpg')">
+        <ul style="font-weight: bolder; color:rgb(238, 222, 5)">Truckers  can
+          <li>Receive the delivery order</li>
+          <li>Generate the invoice</li>
+          <li>Get paid</li>
+          <li>Upload documents</li>
+          <li>Contact the issuer</li>
+        </ul>
+        <mat-card-actions>
+          <button mat-button class="btn btn-info" style="margin-left:120px"> Log In or Sign Up </button>
+        </mat-card-actions>
+      </mat-card-content >
+    </mat-card>
+
   </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+   
+
+    <mat-card  fxFlex="23"class='example-card'>
+      <mat-card-header>
+        <mat-card-title>
+          CFS / Terminal Operators
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2018/01/14/15/53/hamburg-3082070_960_720.jpg') ">
+        <ul style="font-weight: bolder; color:aliceblue">CFS or Terminal Operators can
+          <li>Download Manifest</li>
+          <li>Receive payments</li>
+          <li>Shipment tracking</li>
+          <li>Arrange Trucking</li>
+          <li>Generate invoices</li>
+        </ul>
+        <mat-card-actions>
+          <button mat-button class="btn btn-success" style="margin-left:120px"> Log In or Sign Up </button>
+        </mat-card-actions>
+      </mat-card-content >
+    </mat-card>
+
+  <mat-card fxFlex="23"class='example-card' >
+    <mat-card-header>
+      <mat-card-title>
+          Air Carriers
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2015/07/30/11/35/boeing-747-867517_960_720.jpg') ">
+          <ul style="font-weight: bolder; color:greenyellow">Air Carriers can
+            <li>File AMS</li>
+            <li>Cargo Manifest Status Query</li>
+            <li>Receive payments</li>
+            <li>Customs' status</li>
+            <li>Shipment tracking</li>
+          </ul>
+          <mat-card-actions>
+            <button mat-button class="btn btn-danger" style="margin-left:120px"> Log In or Sign Up </button>
+          </mat-card-actions>
+    </mat-card-content >
+  </mat-card>
+
+  
+  <mat-card  fxFlex="23"class='example-card'>
+    <mat-card-header>
+      <mat-card-title>
+        Sea Carriers
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2018/01/14/15/53/hamburg-3082070_960_720.jpg') ">
+      <ul style="font-weight: bolder; color:magenta">Sea Carriers can
+        <li>File AMS</li>
+        <li>Shipment Status</li>
+        <li>Route delivery</li>
+        <li>Customs' Status</li>
+        <li>Receive payments</li>
+      </ul>
+      <mat-card-actions>
+        <button mat-button class="btn btn-warning" style="margin-left:120px"> Log In or Sign Up </button>
+      </mat-card-actions>
+    </mat-card-content >
+  </mat-card>
+
+<mat-card fxFlex="23"class='example-card' >
+  <mat-card-header>
+    <mat-card-title>
+        Other Service Providers
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2015/07/30/11/35/boeing-747-867517_960_720.jpg') ">
+        <ul style="font-weight: bolder; color:darkkhaki">Other Service Providers can
+          <li>Upload documents</li>
+          <li>Download documents</li>
+          <li>Generate invoices</li>
+          <li>Get paid</li>
+          <li>Reports</li>
+        </ul>
+        <mat-card-actions>
+          <button mat-button class="btn btn-info" style="margin-left:120px"> Log In or Sign Up </button>
+        </mat-card-actions>
+  </mat-card-content >
+  
+</mat-card>
+
+</div>
 
   <div class="alert alert-success" *ngIf="isLoggedIn">
     Logged in!!
   </div>
-  <footer>Copyrighted by ANA Link</footer>
+  <footer>&copy; Coprighted by ANA Link - 2022</footer>
