@@ -8,34 +8,65 @@
   <a routerLink="pnlbyCustomer" routerLinkActive="active">Profit and Loss by Customer</a>
 </nav>
 
-<mat-card>
-  <mat-card-header>
-    List of Entries
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Entries Under Exam
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Entries with PGA Hold
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Entries Past Arrival Dates
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Duty Payments Due
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    Liquidated Entries
-  </mat-card-header>
-</mat-card>  
+<!-- Example single danger button -->
+
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" id="entryMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+      Customs Entries
+    </button>
+      <ul class="dropdown-menu" aria-labelledby="entryMenuLink">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+  </div>
+
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    AMS
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+
+  <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    ISF
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+
+  <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Accounting
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+
+  <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Compliance
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+
+
+
 <router-outlet></router-outlet>

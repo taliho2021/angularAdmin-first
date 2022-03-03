@@ -1,7 +1,12 @@
 <ag-grid-angular
-    style="width: auto; height: 500px;"
+    style="width: auto; height: 700px;"
     class="ag-theme-alpine"
     [rowData]="rowData"
     [columnDefs]="columnDefs"
+    [pagination]=true
+    [paginationPageSize]=10
+    [animateRows]=true
+    [sideBar]="true"
+
 >
 </ag-grid-angular>
