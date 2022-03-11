@@ -40,6 +40,7 @@ export class ClientsComponent implements OnInit {
   });
 
   hasUnitNumber = false;
+  importers: Importer[] =[];
   
   constructor(private fb: FormBuilder, private importerService : ImportersService) { }
 
@@ -111,7 +112,10 @@ export class ClientsComponent implements OnInit {
   ];
 
   onSubmit(): void {
-    this.importerService.getAll;
+    this.importerService.getAll()
+       .subscribe(data => (this.importers =data));
+    console.log(this.importers);
+    
     alert('Thanks!');
   }
 

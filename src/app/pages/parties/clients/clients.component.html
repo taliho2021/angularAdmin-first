@@ -108,52 +108,55 @@
 
       </mat-card-content>
     </mat-card>
-
+    
+    
     <mat-card class="shipping-card">
       <mat-card-header>
         <mat-card-title>Tax & Bond Information</mat-card-title>
       </mat-card-header>
 
       <mat-card-content>
-        <div class="row">
-            <mat-form-field class="full-width" appearance='fill'>
-              <mat-label>Effective Date</mat-label>
-              <input matInput placeholder="Effective Date" formControlName="effectiveDate">
-            </mat-form-field>
-        </div>
+        <div formGroupName='bond'>
+          <div class="row">
+              <mat-form-field class="full-width" appearance='fill'>
+                <mat-label>Effective Date</mat-label>
+                <input matInput placeholder="Effective Date" formControlName="effectiveDate">
+              </mat-form-field>
+          </div>
 
-        <div class="row">
-            <mat-form-field class="full-width" appearance='fill'>
-              <mat-label>Bond No.</mat-label>
-              <input matInput placeholder="Bond Number" formControlName="bondNo">
-            </mat-form-field>
-        </div>
+          <div class="row">
+              <mat-form-field class="full-width" appearance='fill'>
+                <mat-label>Bond No.</mat-label>
+                <input matInput placeholder="Bond Number" formControlName="bondNo">
+              </mat-form-field>
+          </div>
 
-        <div class="row">
-            <mat-form-field class="full-width" appearance='fill'>
-              <mat-label>Amount of bond</mat-label>
-              <input matInput placeholder="Bond Amount" formControlName="amount">
-            </mat-form-field>
-        </div>
+          <div class="row">
+              <mat-form-field class="full-width" appearance='fill'>
+                <mat-label>Amount of bond</mat-label>
+                <input matInput placeholder="Bond Amount" formControlName="amount">
+              </mat-form-field>
+          </div>
 
-        <div class="row" >
-            <mat-form-field class="full-width" appearance='fill'>
-              <mat-label>Surety Code</mat-label>
-              <input matInput placeholder="Surety Code" formControlName="suretyCode">
-            </mat-form-field>
-        </div>
+          <div class="row" >
+              <mat-form-field class="full-width" appearance='fill'>
+                <mat-label>Surety Code</mat-label>
+                <input matInput placeholder="Surety Code" formControlName="suretyCode">
+              </mat-form-field>
+          </div>
 
-        <div class="row">
-            <mat-form-field class="full-width" appearance='fill'>
-              <mat-label>Port Filed</mat-label>
-              <input matInput placeholder="Port Filed" formControlName="portFiled">
-            </mat-form-field>
+          <div class="row">
+              <mat-form-field class="full-width" appearance='fill'>
+                <mat-label>Port Filed</mat-label>
+                <input matInput placeholder="Port Filed" formControlName="portFiled">
+              </mat-form-field>
 
-            <mat-form-field class="full-width" appearance='fill'>
-              <mat-label>Bond Holder Name</mat-label>
-              <input matInput placeholder="Bond Holder Name" formControlName="holderName">
-            </mat-form-field>
-        </div>
+              <mat-form-field class="full-width" appearance='fill'>
+                <mat-label>Bond Holder Name</mat-label>
+                <input matInput placeholder="Bond Holder Name" formControlName="holderName">
+              </mat-form-field>
+          </div>
+      </div>  
       </mat-card-content>
     </mat-card>
 
