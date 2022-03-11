@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 import { ImportersService } from 'src/app/services/importers.service';
+import { Importer } from 'src/app/models/importer';
 
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.scss']
 })
+
 export class ClientsComponent implements OnInit {
   importerForm = this.fb.group({
     clientId: null,
@@ -22,15 +24,29 @@ export class ClientsComponent implements OnInit {
     country: [null, Validators.required],
     phone1:  [null, Validators.required],
     email:  [null, Validators.required],
-    website: [null, Validators.required]
+    website: [null, Validators.required],
+
+    bond: this.fb.group({
+      effectiveDate: [''],
+      bondNo: [''],
+      amount: [''],
+      suretyCode: [''],
+      portFiled: [''],
+      holderName: ['']
+    }),
+
+    
+
   });
 
   hasUnitNumber = false;
-
+  
   constructor(private fb: FormBuilder, private importerService : ImportersService) { }
 
   ngOnInit(): void {
+
   }
+
 
   states = [
     {name: 'Alabama', abbreviation: 'AL'},
