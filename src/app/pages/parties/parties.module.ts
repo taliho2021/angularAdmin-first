@@ -1,6 +1,7 @@
 import { CarriersComponent } from './carriers/carriers.component';
 import { ClientsComponent } from './clients/clients.component';
 import { CommonModule } from '@angular/common';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
@@ -29,6 +30,7 @@ import { VendorsComponent } from './vendors/vendors.component';
     MatRadioModule,
     MatCardModule,
     MatTabsModule,
+    FlexLayoutModule,
     ReactiveFormsModule
   ]
 })

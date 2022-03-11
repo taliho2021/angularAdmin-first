@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { Country, CountryDataSource } from './country-datasource';
+
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { CountryDataSource, CountryItem } from './country-datasource';
 
 @Component({
   selector: 'app-country',
@@ -12,11 +13,11 @@ import { CountryDataSource, CountryItem } from './country-datasource';
 export class CountryComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatTable) table!: MatTable<CountryItem>;
+  @ViewChild(MatTable) table!: MatTable<Country>;
   dataSource: CountryDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'name', 'flag', 'area', 'population'];
 
   constructor() {
     this.dataSource = new CountryDataSource();

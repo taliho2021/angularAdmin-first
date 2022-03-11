@@ -1,8 +1,12 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomsBrokerageComponent } from './customs-brokerage.component';
 
-const routes: Routes = [{ path: '', component: CustomsBrokerageComponent }];
+import { CustomsBrokerageComponent } from './customs-brokerage.component';
+import { EntryDetailComponent } from './entry-detail/entry-detail.component';
+import { NgModule } from '@angular/core';
+
+const routes: Routes = [
+  { path: '', component: CustomsBrokerageComponent },
+  { path: 'detail/:id', component: EntryDetailComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

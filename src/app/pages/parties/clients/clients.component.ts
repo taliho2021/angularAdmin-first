@@ -1,27 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+
+import { ImportersService } from 'src/app/services/importers.service';
 
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
   styleUrls: ['./clients.component.scss']
 })
-export class ClientsComponent {
-  addressForm = this.fb.group({
-    company: null,
-    firstName: [null, Validators.required],
-    lastName: [null, Validators.required],
-    address: [null, Validators.required],
-    address2: null,
+export class ClientsComponent implements OnInit {
+  importerForm = this.fb.group({
+    clientId: null,
+    name:  [null, Validators.required],
+    address1: [null, Validators.required],
+    address2: [null, Validators.required],
     city: [null, Validators.required],
     state: [null, Validators.required],
     postalCode: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(5)])
     ],
-    shipping: ['free', Validators.required]
+    country: [null, Validators.required],
+    phone1:  [null, Validators.required],
+    email:  [null, Validators.required],
+    website: [null, Validators.required]
   });
 
   hasUnitNumber = false;
+
+  constructor(private fb: FormBuilder, private importerService : ImportersService) { }
+
+  ngOnInit(): void {
+  }
 
   states = [
     {name: 'Alabama', abbreviation: 'AL'},
@@ -85,9 +94,9 @@ export class ClientsComponent {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-  constructor(private fb: FormBuilder) {}
-
   onSubmit(): void {
+    this.importerService.getAll;
     alert('Thanks!');
   }
+
 }
