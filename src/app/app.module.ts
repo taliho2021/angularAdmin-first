@@ -21,6 +21,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
 import { PagesModule } from './pages/pages.module';
 import { TranslateModule } from '@ngx-translate/core';
@@ -51,6 +52,7 @@ import { WidgetsModule } from './widgets/widgets.module';
     HomeModule,
     LayoutModule,
     WidgetsModule,
+    NgChartsModule,
     TranslateModule.forRoot()
   ],
 

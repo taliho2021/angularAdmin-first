@@ -1,6 +1,7 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AeFormComponent } from './ae-form/ae-form.component';
+import { Chart01Component } from './chart01/chart01.component';
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
 import { CommonModule } from '@angular/common';
 import { ExtrapagesComponent } from './extrapages.component';
@@ -11,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
 import { Page404Component } from './page404/page404.component';
 
@@ -20,7 +22,8 @@ import { Page404Component } from './page404/page404.component';
     Page404Component,
     ComingsoonComponent,
     IsfFormComponent,
-    AeFormComponent
+    AeFormComponent,
+    Chart01Component
   ],
   imports: [
     CommonModule,
@@ -31,7 +34,9 @@ import { Page404Component } from './page404/page404.component';
     MatIconModule,
     MatInputModule,
     MatCardModule,
-    ExtrapagesRoutingModule
+    NgChartsModule,
+    ExtrapagesRoutingModule,
+
   ]
 })
 export class ExtrapagesModule { }
