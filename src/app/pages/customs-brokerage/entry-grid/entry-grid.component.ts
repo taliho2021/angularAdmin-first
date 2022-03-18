@@ -167,7 +167,6 @@ export class EntryGridComponent  {
       {refNo: 2275012, entryNo: 'EH2-22705128', entryType:'01' , importer:'ADMCRA' , mot:'11' , custRefNo:'NB1175150B' , entryDate:'01/28/2022' , rlseDate:'01/28/2022' , stmtDate: '02/10/2022' ,
          entryPort: '3501' , description: 'Commercial Freezer', vessel: 'Zim Rotterdam' ,  user:'plim' , arAmt:'55' , apAmt:'0' },
 
-
   ]
 
 }
