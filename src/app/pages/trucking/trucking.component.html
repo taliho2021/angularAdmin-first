@@ -1,8 +1,16 @@
-<h1 style="font-weight: bolder; background-color: yellow; text-align: center;">Trucking Dashboard</h1><nav>
+<h1 style="font-weight: bolder; background-color: yellow; text-align: center;">Trucking Dashboard</h1>
+<nav>
   <a routerLink="air" routerLinkActive="active">Air Delivery</a>
   <a routerLink="lcl" routerLinkActive="active">LCL Delivery</a>
   <a routerLink="fcl" routerLinkActive="active">FCL Delivery</a>
 </nav>
+
+<button mat-fab color="primary">Today</button>
+<button mat-fab color="accent">Weekly</button>
+<button mat-fab color="warn"> This Month</button>
+<button mat-fab color="primary">Last Year Same Month</button>
+<button mat-fab color="accent">Last Year</button>
+<button mat-fab color="warn">This Year</button>
 
 <router-outlet></router-outlet>
 
