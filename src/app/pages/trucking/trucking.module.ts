@@ -1,3 +1,5 @@
+import { MatGridAvatarCssMatStyler, MatGridListModule } from '@angular/material/grid-list';
+
 import { AirComponent } from './air/air.component';
 import { CommonModule } from '@angular/common';
 import { FclComponent } from './fcl/fcl.component';
@@ -17,6 +19,7 @@ import { TruckingRoutingModule } from './trucking-routing.module';
   imports: [
     CommonModule,
     MatCardModule,
+    MatGridListModule,
     TruckingRoutingModule
   ]
 })
