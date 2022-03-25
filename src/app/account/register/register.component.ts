@@ -18,6 +18,8 @@ export class RegisterComponent implements OnInit {
   isSignUpFailed = false;
   errorMessage = '';
 
+  Roles: any = ['Admmin', 'Manager', 'User', 'Trucker', 'Customer', 'Terminal Operators', 'Carriers']
+
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
