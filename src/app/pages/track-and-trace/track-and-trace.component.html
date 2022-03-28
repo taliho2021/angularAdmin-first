@@ -8,20 +8,20 @@
     </mat-chip-avatar>
     Air Import
   </mat-chip>
-  <mat-chip color="primary">
+  <mat-chip color="primary" [routerLink]="['airExport']" routerLinkActive="router-link-active" >
     <mat-chip-avatar>
         <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
     </mat-chip-avatar>
     Air Export
   </mat-chip>
-  <mat-chip color="accent">
+  <mat-chip color="accent" [routerLink]="['oceanImport']" routerLinkActive="router-link-active" >
     <mat-chip-avatar>
         <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
     </mat-chip-avatar>
     Ocean Import
   </mat-chip>
 
-  <mat-chip>
+  <mat-chip [routerLink]="['oceanExport']" routerLinkActive="router-link-active" >
     <mat-chip-avatar>
         <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
     </mat-chip-avatar>
@@ -33,7 +33,7 @@
     </mat-chip-avatar>
     Deliveries
   </mat-chip>
-  <mat-chip color="accent">
+  <mat-chip color="accent" [routerLink]="['entries']" routerLinkActive="router-link-active" >
     <mat-chip-avatar>
         <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo of a Shiba Inu"/>
     </mat-chip-avatar>

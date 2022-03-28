@@ -109,6 +109,7 @@ body {
 
 .example-card {
   max-width: 400px;
+  margin-top: 20px;
 }
 
 .wrapper {
@@ -120,6 +121,11 @@ background-image {
 }
 
 li {
-  margin: 15px
+  border: 20px
+}
+
+ul {
+  padding: 20px;
+  font-size: larger;
 }
 
