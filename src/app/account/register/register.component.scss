@@ -1,23 +1,69 @@
-html,
-body {
+html {
   height: 100%;
-}
-body {
-  margin: 20px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  min-height: 100vh;
-  background: #86cc8f;
-}
-.app-header {
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+  width: 100%;
 }
 
-.example-card {
-  max-width: 400px;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #E4F0FF;
+
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 12px;
+  grid-template-areas:
+  "header header header"
+  "content content side"
+  "footer footer footer";
+  height: 90vh;
+  width: 100vw;
+  background-image: url('https://cdn.pixabay.com/photo/2022/01/16/13/25/cityscape-6942013__340.jpg');
+
+}
+header {
+  color: white;
+  font-size: 14px;
+  grid-area: header;
+  text-align: center;
+  background-color: #FA7D44;
+}
+
+nav {
+  grid-area: nav;
+  margin-left: 0.6rem;
+  background-color: #2A92BF;
+}
+
+app-privacy-policy,
+main {
+  grid-area: content;
+  background-color: #F4CE46;
+  padding: 25px;
+}
+
+aside {
+  grid-area: side;
+  margin-right: 0.6rem;
+  background-color: #2A92BF;
+}
+
+footer {
+  grid-area: footer;
+  background-color:#2BB961;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+}
+ul li {
+  color: white;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
 }
