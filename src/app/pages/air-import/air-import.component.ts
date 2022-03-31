@@ -40,12 +40,6 @@ export class AirImportComponent {
     { field: 'Zip_Code', sortable: true, filter: true }
 ];
 
-// rowData = [
-//     { make: 'Toyota', model: 'Celica', price: 35000 },
-//     { make: 'Ford', model: 'Mondeo', price: 32000 },
-//     { make: 'Porsche', model: 'Boxter', price: 72000 }
-// ];
-
   rowData : PORT[] = Ports ;
 
   constructor(private http: HttpClient) {
