@@ -37,16 +37,25 @@ interface ISF {
 export class IsfGridComponent  {
 
 columnDefs: ColDef[] = [
-    { field: 'id', sortable: true, filter: true, resizable: true  },
-    { field: 'isfNo', sortable: true, filter: true, resizable: true, checkboxSelection: true },
-    { field: 's', sortable: true, filter: true, resizable: true },
-    { field: 'd', sortable: true, filter: true, resizable: true  },
+    { field: 'seqNo', sortable: true, filter: true, resizable: true  },
+    { field: 'refNo', sortable: true, filter: true, resizable: true, checkboxSelection: true },
+    { field: 'fileNo', sortable: true, filter: true, resizable: true },
+    { field: 'branch', sortable: true, filter: true, resizable: true  },
+    { field: 'status', sortable: true, filter: true, resizable: true  },
+    { field: 'disposition', sortable: true, filter: true, resizable: true  },
     { field: 'type', sortable: true, filter: true, resizable: true  },
-    { field: 'act', sortable: true, filter: true, resizable: true  },
-    { field: 'h.b/l', sortable: true, filter: true, resizable: true  },
-    { field: 'fileNo', sortable: true, filter: true, resizable: true  },
-    { field: 'custRefNo', sortable: true, filter: true, resizable: true  },
-    { field: 'importer', sortable: true, filter: true, resizable: true  },
+    { field: 'shipmentType', sortable: true, filter: true, resizable: true  },
+    { field: 'actReason', sortable: true, filter: true, resizable: true  },
+    { field: 'importerCode', sortable: true, filter: true, resizable: true  },
+    { field: 'importerName', sortable: true, filter: true, resizable: true  },
+    { field: 'bondType', sortable: true, filter: true, resizable: true},
+    { field: 'houseBL', sortable: true, filter: true, resizable: true },
+    { field: 'regularBL', sortable: true, filter: true, resizable: true  },
+    { field: 'masterBL', sortable: true, filter: true, resizable: true  },
+    { field: 'oiRefNo', sortable: true, filter: true, resizable: true  },
+    { field: 'updatedDate', sortable: true, filter: true, resizable: true  },
+    { field: 'user', sortable: true, filter: true, resizable: true  }
+
 ];
 
 rowData : ISF[] = Isf;
