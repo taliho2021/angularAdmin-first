@@ -1,4 +1,4 @@
-<a routerLink="detail/{{rowData[1].refNo}}">
+
 <ag-grid-angular
     style="width: auto; height: 700px;"
     class="ag-theme-alpine"
@@ -8,9 +8,10 @@
     [paginationPageSize]=10
     [animateRows]=true
     [sideBar]="true"
+    [colWidth]="120"
+    [rowSelection]="rowSelection"
+    (rowClicked)="onGridReady($event)"
 
 >
 </ag-grid-angular>
 
-</a>
-<p>{{rowData[1].refNo}}</p>

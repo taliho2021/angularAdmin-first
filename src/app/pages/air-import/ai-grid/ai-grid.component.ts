@@ -29,6 +29,8 @@ interface ENTRY  {
 
 export class AiGridComponent {
 
+  rowSelection ='single'
+
   columnDefs: ColDef[] = [
     { field: 'refNo', sortable: true, filter: true, resizable: true, checkboxSelection: true  },
     { field: 'entryNo', sortable: true, filter: true, resizable: true },

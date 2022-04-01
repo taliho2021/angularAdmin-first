@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   { path: '', component: CustomsBrokerageComponent },
-  { path: 'detail/:id', component: EntryDetailComponent}];
+  { path: ':id', component: EntryDetailComponent}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

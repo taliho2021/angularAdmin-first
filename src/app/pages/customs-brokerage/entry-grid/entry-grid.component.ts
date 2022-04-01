@@ -1,6 +1,6 @@
+import { ActivatedRoute, Router } from '@angular/router';
+import { ColDef, GridApi, GridReadyEvent } from 'ag-grid-community';
 import { Component, OnInit } from '@angular/core';
-
-import { ColDef } from 'ag-grid-community';
 
 export interface RowData{
    refNo: number;
@@ -25,6 +25,12 @@ export interface RowData{
   styleUrls: ['./entry-grid.component.scss']
 })
 export class EntryGridComponent  {
+
+rowSelection = 'single'
+private gridApi!: GridApi
+
+constructor(private route: ActivatedRoute, private router: Router ) {}
+
 
   columnDefs: ColDef[] = [
     { field: 'refNo', sortable: true, filter: true, resizable: true, checkboxSelection: true  },
@@ -168,5 +174,10 @@ export class EntryGridComponent  {
          entryPort: '3501' , description: 'Commercial Freezer', vessel: 'Zim Rotterdam' ,  user:'plim' , arAmt:'55' , apAmt:'0' },
 
   ]
+
+  onGridReady(params: GridReadyEvent){
+    this.gridApi= params.api
+    this.router.navigate([this.rowData[1].refNo], {relativeTo: this.route})
+    }
 
 }

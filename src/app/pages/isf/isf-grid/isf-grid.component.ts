@@ -1,6 +1,7 @@
+import { ActivatedRoute, Router } from '@angular/router';
+import { ColDef, GridApi, GridReadyEvent } from 'ag-grid-community';
 import { Component, OnInit } from '@angular/core';
 
-import { ColDef } from 'ag-grid-community';
 import Isf from '../../../../assets/data/isf.json';
 
 interface ISF {
@@ -36,6 +37,11 @@ interface ISF {
 })
 export class IsfGridComponent  {
 
+rowSelection = 'single'
+private gridApi!: GridApi
+
+constructor(private route: ActivatedRoute, private router: Router ) {}
+
 columnDefs: ColDef[] = [
     { field: 'seqNo', sortable: true, filter: true, resizable: true  },
     { field: 'refNo', sortable: true, filter: true, resizable: true, checkboxSelection: true },
@@ -59,4 +65,9 @@ columnDefs: ColDef[] = [
 ];
 
 rowData : ISF[] = Isf;
+
+onGridReady(params: GridReadyEvent){
+  this.gridApi= params.api
+  this.router.navigate([this.rowData[1].refNo], {relativeTo: this.route})
+  }
 }
