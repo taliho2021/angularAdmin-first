@@ -1,34 +1,9 @@
 import { ActivatedRoute, Router } from '@angular/router';
-import { ColDef, GridApi, GridReadyEvent } from 'ag-grid-community';
+import { ColDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community';
 import { Component, OnInit } from '@angular/core';
 
+import { ISF } from '../../interfaces/isf'
 import Isf from '../../../../assets/data/isf.json';
-
-interface ISF {
-    seqNo : Number,
-    refNo: Number,
-    fileNo: String,
-    branch : String,
-    isfNo : String,
-    status : String,
-    disposition: String,
-    type: any,
-    shipmentType: String,
-    actReason : String,
-    importerCode : String,
-    ImpIdtype : String,
-    importerName : String,
-    bondHolderId : String,
-    bondActCode: String,
-    bondtype: String,
-    houseBL : String,
-    regularBL: Number,
-    masterBL: String,
-    oiRefNo : String,
-    updatedDate: String,
-    user: String,
-    invDate: String,
-}
 
 @Component({
   selector: 'app-isf-grid',
@@ -67,7 +42,7 @@ columnDefs: ColDef[] = [
 rowData : ISF[] = Isf;
 
 onGridReady(params: GridReadyEvent){
-  this.gridApi= params.api
-  this.router.navigate([this.rowData[1].refNo], {relativeTo: this.route})
+  const refNo = Number(this.route.snapshot.paramMap.get('refNo'));
+  this.router.navigate([this.rowData[refNo], {relativeTo: this.route}]);
   }
 }
