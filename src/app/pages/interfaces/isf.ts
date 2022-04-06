@@ -1,6 +1,6 @@
 export interface ISF {
     seqNo : Number,
-    refNo: Number,
+    refNo: number,
     fileNo: String,
     branch : String,
     isfNo : String,

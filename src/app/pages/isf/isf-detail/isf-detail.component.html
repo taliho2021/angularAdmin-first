@@ -1,13 +1,84 @@
 <h1 style="font-weight: bolder; background-color: rgb(255, 0, 170); text-align: center;">Importer Security Detail</h1>
 
 
-<div *ngIf = "isfDetail">
-  <h2>{{isfDetail.refNo}} Details</h2>
-  <app-shipment></app-shipment>
+<div *ngIf = "isf">
+  <h2> Ref #: {{isf.refNo }} Details   <span><button type="button" class="btn btn-link" (click)="goBack()">Back to ISFMainpage</button>
+  </span>
+</h2>
+
+  <form class="row g-3">
+    <div class="col-md-3">
+      <label for="inputEmail4" class="form-label">File No</label>
+      <input type="email" class="form-control" placeholder={{isf.fileNo}}>
+    </div>
+    <div class="col-md-3">
+      <label for="inputPassword4" class="form-label">Branch</label>
+      <input type="password" class="form-control" placeholder={{isf.branch}}>
+    </div>
+    <div class="col-md-6">
+      <label for="inputAddress" class="form-label">ISF No</label>
+      <input type="text" class="form-control"  placeholder={{isf.isfNo}}>
+    </div>
+
+    <div class="col-md-3">
+      <label for="inputAddress2" class="form-label">ISF Status</label>
+      <input type="text" class="form-control"  placeholder={{isf.status}}>
+    </div>
+    <div class="col-md-3">
+      <label for="inputCity" class="form-label">Disposition</label>
+      <input type="text" class="form-control" placeholder={{isf.disposition}}>
+    </div>
+    <div class="col-md-3">
+      <label for="inputState" class="form-label">Shipment Type</label>
+      <input id="inputState" class="form-select" placeholder={{isf.type}}>
+    </div>
+    <div class="col-md-3">
+      <label for="inputZip" class="form-label">Action Reason</label>
+      <input type="text" class="form-control" placeholder={{isf.actReason}}>
+    </div>
+
+    <div class="col-md-3">
+        <label class="form-label" for="gridCheck"> Importer Code </label>
+        <input class="form-control"  placeholder={{isf.importerCode}}>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="gridCheck"> Importer Name </label>
+      <input class="form-control"  placeholder={{isf.importerName}}>
+    </div>
+
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Bond Holder Id</label>
+      <input type="text" class="form-control" placeholder={{isf.bondHolderId}}>
+    </div>
+    <div class="col-md-5">
+        <label class="form-label" for="gridCheck"> House Bill of Lading </label>
+        <input class="form-control"  placeholder={{isf.houseBL}}>
+    </div>
+    <div class="col-md-5">
+      <label class="form-label" for="gridCheck"> Master Bill of Lading </label>
+      <input class="form-control"  placeholder={{isf.masterBL}}>
+    </div>
+
+
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Ocean Import Ref #</label>
+      <input type="text" class="form-control" placeholder={{isf.oiRefNo}}>
+    </div>
+    <div class="col-md-3">
+        <label class="form-label" for="gridCheck"> ISF Filed By </label>
+        <input class="form-control"  placeholder={{isf.user}}>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label" for="gridCheck"> Last Updated On </label>
+      <input class="form-control"  placeholder={{isf.updatedDate}}>
+  </div>
+
+  </form>
+
+</div>
+<mat-divider></mat-divider>
+<div>
   <app-parties></app-parties>
 </div>
 
-<h2>{{ refNo }} </h2>
-<h1> ISF For Ref #: {{ refNo }} </h1>
 
-<button type="button" class="btn btn-link" (click)="goBack()">Back to ISFMainpage</button>

@@ -14,10 +14,11 @@ import { findIndex } from 'rxjs';
   templateUrl: './isf-detail.component.html',
   styleUrls: ['./isf-detail.component.scss']
 })
+
 export class IsfDetailComponent implements OnInit {
 
-  public refNo!: number
   public isf!: ISF
+  public id!: number
   public isfDetail : any
   constructor(
     private route: ActivatedRoute,
@@ -27,10 +28,14 @@ export class IsfDetailComponent implements OnInit {
   ) { }
 
 
-  ngOnInit() {
-    const refNo =  this.route.snapshot.paramMap.get('id')
-    window.alert(refNo)
-    this.isfService.getIsf(refNo).subscribe(isf => this.isf)
+  ngOnInit(): void {
+
+    const refNo =  Number(this.route.snapshot.paramMap.get('id'))
+    // window.alert(refNo)
+    this.isfService.getIsf(refNo).subscribe(isf => this.isf = isf)
+    // window.alert(this.isf)
+
+
     // this.route.params.forEach((params: Params) => {
     //   window.alert(params)
     //   this.refNo = params['refNo']                // this.refNo undefined

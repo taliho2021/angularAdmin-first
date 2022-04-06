@@ -42,9 +42,9 @@ columnDefs: ColDef[] = [
 rowData : ISF[] = Isf;
 
 onRowClicked(params: RowClickedEvent){
-  console.log(params);
   let refNo = params.node.data.refNo
-  this.router.navigate([(refNo)], {relativeTo: this.route});
+  // window.alert(refNo)     // Picks up correct ref #
+  this.router.navigate([(refNo)], {relativeTo: this.route});  //Navigate to corret Url
   // window.alert(refNo)   // refNo is correct here
   // const isf = Isf.find(i => i.reffNo === refNo)
   // console.log(isf);
