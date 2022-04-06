@@ -1,9 +1,13 @@
 <h1 style="font-weight: bolder; background-color: rgb(255, 0, 170); text-align: center;">Importer Security Detail</h1>
 
 
-<div>
+<div *ngIf = "isfDetail">
+  <h2>{{isfDetail.refNo}} Details</h2>
   <app-shipment></app-shipment>
   <app-parties></app-parties>
 </div>
 
-<button type="button" class="btn btn-link" routerLink="/nav/">Back to Mainpage</button>
+<h2>{{ refNo }} </h2>
+<h1> ISF For Ref #: {{ refNo }} </h1>
+
+<button type="button" class="btn btn-link" (click)="goBack()">Back to ISFMainpage</button>

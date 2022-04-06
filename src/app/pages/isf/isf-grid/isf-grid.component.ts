@@ -1,5 +1,5 @@
 import { ActivatedRoute, Router } from '@angular/router';
-import { ColDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community';
+import { ColDef, GridApi, GridOptions, GridReadyEvent, RowClickedEvent } from 'ag-grid-community';
 import { Component, OnInit } from '@angular/core';
 
 import { ISF } from '../../interfaces/isf'
@@ -41,8 +41,13 @@ columnDefs: ColDef[] = [
 
 rowData : ISF[] = Isf;
 
-onGridReady(params: GridReadyEvent){
-  const refNo = Number(this.route.snapshot.paramMap.get('refNo'));
-  this.router.navigate([this.rowData[refNo], {relativeTo: this.route}]);
+onRowClicked(params: RowClickedEvent){
+  console.log(params);
+  let refNo = params.node.data.refNo
+  this.router.navigate([(refNo)], {relativeTo: this.route});
+  // window.alert(refNo)   // refNo is correct here
+  // const isf = Isf.find(i => i.reffNo === refNo)
+  // console.log(isf);
+
   }
 }
