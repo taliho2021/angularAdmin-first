@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormBuilder, FormControl } from '@angular/forms';
 
 import { FlexibleConnectedPositionStrategy } from '@angular/cdk/overlay';
-import { FormBuilder } from '@angular/forms';
 
 interface ShipType {
   value: string;
@@ -37,10 +37,9 @@ export class ShipmentComponent implements OnInit {
     ShptType:[''],
     Action: [''],
     AmsBL:[''],
-    Add1AmsBL:[''],
-    Add2AmsBL:[''],
-    Add3AmsBL:[''],
-    Add4AmsBL:[''],
+    AddlAmsBL:this.fb.array([
+      this.fb.control('')
+    ]),
     MasterBL:[''],
     FileNo:[''],
     CustRefNo: [''],
@@ -85,4 +84,11 @@ export class ShipmentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get AddlAmsBl(): FormArray {
+    return this.isfShipment.get('AddlAmsBL') as FormArray
+  }
+
+  addBill() {
+    this.AddlAmsBl.push(this.fb.control(''))
+  }
 }
