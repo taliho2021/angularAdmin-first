@@ -11,7 +11,13 @@ import  States from '../../../../assets/data/states.json'
   styleUrls: ['./clients.component.scss']
 })
 
+
 export class ClientsComponent implements OnInit {
+  cust: string = 'Pointe International'
+  openAmt:number = 20000
+  overDue:number = 1000
+  crLimit: number = 50000
+
   importerForm = this.fb.group({
     clientId: null,
     name:  [null, Validators.required],

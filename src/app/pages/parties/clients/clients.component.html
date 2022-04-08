@@ -1,8 +1,18 @@
 <h1>Importer's Screen</h1>
-
+<mat-card fxLayout='row' fxLayoutAlign = 'space-around center' style="background-color:lightblue">
+  <mat-card-header>
+    <mat-card-title> {{cust}} </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Open Amt: {{openAmt | currency}}</p>
+    <p>Overdue Amt: {{overDue | currency}}</p>
+    <p>Credit Limit: {{crLimit | currency }}</p>
+  </mat-card-content>
+</mat-card>
+<br>
 <form [formGroup]="importerForm" novalidate (ngSubmit)="onSubmit()" >
-  <div fxLayout = 'row' fxLayoutAlign = 'space-around center'>
-  <mat-card class="shipping-card">
+  <div fxLayout = 'row' fxLayoutAlign = 'space-around start'>
+  <mat-card fxFlex="30">
       <mat-card-header>
         <mat-card-title>Address Information</mat-card-title>
       </mat-card-header>
@@ -108,9 +118,9 @@
 
       </mat-card-content>
     </mat-card>
-    
-    
-    <mat-card class="shipping-card">
+
+
+    <mat-card fxFlex="30">
       <mat-card-header>
         <mat-card-title>Tax & Bond Information</mat-card-title>
       </mat-card-header>
@@ -156,11 +166,11 @@
                 <input matInput placeholder="Bond Holder Name" formControlName="holderName">
               </mat-form-field>
           </div>
-      </div>  
+      </div>
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="shipping-card">
+    <mat-card fxFlex="30">
       <mat-card-header>
         <mat-card-title>Other Information</mat-card-title>
       </mat-card-header>
