@@ -17,6 +17,19 @@ export class AmsDetailComponent implements OnInit {
       mib: ['']
     }),
 
+<<<<<<< HEAD
+=======
+  amsForm = this.fb.group({
+    bl: this.fb.group({
+      issuer: [''],
+      blType: [''],
+      bookingNo: [''],
+      carrierMasterBl:[''],
+      hBl: [''],
+      mib: ['']
+    }),
+
+>>>>>>> 525b09ad8aa8bdb721b359b4a182ab3791c60172
     vessel: this.fb.group({
       vType: [''],
       carrierCode: [''],
