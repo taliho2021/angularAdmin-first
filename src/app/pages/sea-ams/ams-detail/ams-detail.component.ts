@@ -93,9 +93,14 @@ export class AmsDetailComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+
   }
 
   onSubmit() {
     window.alert('Thank you for submitting Sea AMS data')
+  }
+
+  get container() : FormArray {
+    return this.amsForm.get("container") as FormArray
   }
 }

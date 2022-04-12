@@ -1,7 +1,6 @@
-<h1>Sea AMS</h1>
 <mat-card fxLayout='row' fxLayoutAlign = 'space-around center' style="background-color:lightblue">
   <mat-card-header>
-    <mat-card-title>AMS Transaction No: </mat-card-title>
+    <mat-card-title>Truck AMS Transaction No: </mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <p>filed on:</p>
@@ -147,7 +146,7 @@
 
   </fieldset>
 
-  <!-- <fieldset formArrayName="container" >
+  <!-- <fieldset formArrayName="container"  style="color:red">
     <legend>Containers</legend>
     <div class="row">
       <mat-form-field class="col-md-2" appearance='fill'>
@@ -173,79 +172,107 @@
         <mat-label>Service</mat-label>
         <input matInput placeholder="Service" formControlName="service">
       </mat-form-field>
-
     </div>
 
   </fieldset> -->
 
-  <!-- <fieldset >
+  <fieldset formGroupName="relatedParties" style="color:red" >
     <legend>Related Parties</legend>
-    <div class="row">
-      <mat-form-field class="col-md-2" appearance='fill'>
-        <mat-label>B/L Issuer</mat-label>
-        <input matInput placeholder="B/L Issuer" formControlName="issuer">
+    <div fxLayout="row" fxLayoutAlign="space-around start">
+    <div class="card" fxFlex="24" formGroupName="shipper">
+      <mat-form-field  appearance='fill'>
+        <mat-label>Shipper Code</mat-label>
+        <input matInput placeholder="Shipper Code" formControlName="shipperCode">
       </mat-form-field>
-      <mat-form-field class="col-md-4" appearance='fill'>
-        <mat-label>B/L Type</mat-label>
-        <input matInput placeholder="B/L Type" formControlName="blType">
+      <mat-form-field  appearance='fill'>
+        <mat-label>Shipper Name</mat-label>
+        <input matInput placeholder="Shipper Name" formControlName="name">
       </mat-form-field>
-      <mat-form-field class="col-md-6" appearance='fill'>
-        <mat-label>Booking No</mat-label>
-        <input matInput placeholder="Booking No" formControlName="bookingNo">
+      <mat-form-field appearance='fill'>
+        <mat-label>Shipper Address</mat-label>
+        <input matInput placeholder="Shipper Address" formControlName="address">
+      </mat-form-field>
+      <mat-form-field appearance='fill'>
+        <mat-label>Shipper Tel No</mat-label>
+        <input matInput placeholder="Shipper Tel No" formControlName="telNo">
       </mat-form-field>
     </div>
 
-    <div class="row">
-      <mat-form-field class="col-md-3" appearance='fill'>
-        <mat-label>Carrier Master B/L</mat-label>
-        <input matInput placeholder="Carrier Master B/L" formControlName="carrierMasterBl">
+       <div class="card" fxFlex="24" formGroupName="consignee">
+      <mat-form-field  appearance='fill'>
+        <mat-label>Consignee Code</mat-label>
+        <input matInput placeholder="Consignee Code" formControlName="consigneeCode">
       </mat-form-field>
-      <mat-form-field class="col-md-7" appearance='fill'>
-        <mat-label>House B/L</mat-label>
-        <input matInput placeholder="House B/L" formControlName="hbl">
+      <mat-form-field  appearance='fill'>
+        <mat-label>Consignee Name</mat-label>
+        <input matInput placeholder="Consignee Name" formControlName="name">
       </mat-form-field>
-      <mat-form-field class="col-md-2" appearance='fill'>
-        <mat-label>Master In Bond</mat-label>
-        <input matInput placeholder="Master In Bond" formControlName="mib">
+      <mat-form-field appearance='fill'>
+        <mat-label>Consignee Address</mat-label>
+        <input matInput placeholder="Consignee Address" formControlName="address">
+      </mat-form-field>
+      <mat-form-field appearance='fill'>
+        <mat-label>Consignee Tel No</mat-label>
+        <input matInput placeholder="Consignee Tel No" formControlName="telNo">
       </mat-form-field>
     </div>
+
+    <div class="card" fxFlex="24" formGroupName="notify">
+      <mat-form-field  appearance='fill'>
+        <mat-label>Notify Code</mat-label>
+        <input matInput placeholder="Notify Code" formControlName="notifyCode">
+      </mat-form-field>
+      <mat-form-field  appearance='fill'>
+        <mat-label>Notify Name</mat-label>
+        <input matInput placeholder="Notify Name" formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance='fill'>
+        <mat-label>Notify Address</mat-label>
+        <input matInput placeholder="Notify Address" formControlName="address">
+      </mat-form-field>
+      <mat-form-field appearance='fill'>
+        <mat-label>Notify Tel No</mat-label>
+        <input matInput placeholder="Notify Tel No" formControlName="telNo">
+      </mat-form-field>
+    </div>
+
+    <div class="card" fxFlex="24" formGroupName="secondNotify">
+      <mat-form-field  appearance='fill'>
+        <mat-label>Second Notify Code</mat-label>
+        <input matInput placeholder="Second Notify Code" formControlName="secondNotifyCode">
+      </mat-form-field>
+      <mat-form-field  appearance='fill'>
+        <mat-label>Second Notify Name</mat-label>
+        <input matInput placeholder="Second Notify Name" formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance='fill'>
+        <mat-label>Second Notify Address</mat-label>
+        <input matInput placeholder="Second Notify Address" formControlName="address">
+      </mat-form-field>
+      <mat-form-field appearance='fill'>
+        <mat-label>Second Notify Tel No</mat-label>
+        <input matInput placeholder="Second Notify Tel No" formControlName="telNo">
+      </mat-form-field>
+    </div>
+   </div>
 
   </fieldset>
 
-  <fieldset >
+  <fieldset formGroupName = "amend" style="color:red">
     <legend>Amend Flag</legend>
     <div class="row">
-      <mat-form-field class="col-md-2" appearance='fill'>
-        <mat-label>B/L Issuer</mat-label>
-        <input matInput placeholder="B/L Issuer" formControlName="issuer">
-      </mat-form-field>
       <mat-form-field class="col-md-4" appearance='fill'>
-        <mat-label>B/L Type</mat-label>
-        <input matInput placeholder="B/L Type" formControlName="blType">
+        <mat-label>Amend Flag</mat-label>
+        <input matInput placeholder="Amend Flag" formControlName="amendFlag">
       </mat-form-field>
-      <mat-form-field class="col-md-6" appearance='fill'>
-        <mat-label>Booking No</mat-label>
-        <input matInput placeholder="Booking No" formControlName="bookingNo">
+      <mat-form-field class="col-md-8" appearance='fill'>
+        <mat-label>Amend Reason</mat-label>
+        <input matInput placeholder="Amend Reason" formControlName="reason">
       </mat-form-field>
+
     </div>
 
-    <div class="row">
-      <mat-form-field class="col-md-3" appearance='fill'>
-        <mat-label>Carrier Master B/L</mat-label>
-        <input matInput placeholder="Carrier Master B/L" formControlName="carrierMasterBl">
-      </mat-form-field>
-      <mat-form-field class="col-md-7" appearance='fill'>
-        <mat-label>House B/L</mat-label>
-        <input matInput placeholder="House B/L" formControlName="hbl">
-      </mat-form-field>
-      <mat-form-field class="col-md-2" appearance='fill'>
-        <mat-label>Master In Bond</mat-label>
-        <input matInput placeholder="Master In Bond" formControlName="mib">
-      </mat-form-field>
-    </div> -->
-
-
-  <!-- </fieldset> -->
+  </fieldset>
 
 
   </form>
