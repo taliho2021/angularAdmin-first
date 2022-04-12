@@ -18,7 +18,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     AirAmsRoutingModule,
     MatTabsModule,
     FlexLayoutModule,
@@ -43,6 +45,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatCardModule,
     MatButtonModule,
+    MatRadioModule,
     AgGridModule
 
   ]

@@ -89,6 +89,9 @@ export class AmsDetailComponent implements OnInit {
     })
 
   })
+
+  amendReason!: string
+  amends: string[] = ['New entry', 'Add a bill of lading', 'Delte a bill of lading', 'Replace manifest quantiy']
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
