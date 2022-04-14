@@ -15,6 +15,7 @@
         <mat-label>B/L Issuer</mat-label>
         <input matInput placeholder="B/L Issuer" formControlName="issuer">
       </mat-form-field>
+
       <mat-form-field class="col-md-4" appearance='fill'>
         <mat-label>B/L Type</mat-label>
         <select matNativeControl required placeholder="B/L Type" formControlName="blType">
@@ -31,6 +32,7 @@
           <option value="">T - In-bond Type 62/53 with Importer Security Filing </option>
         </select>
       </mat-form-field>
+
       <mat-form-field class="col-md-6" appearance='fill'>
         <mat-label>Booking No</mat-label>
         <input matInput placeholder="Booking No" formControlName="bookingNo">
@@ -280,15 +282,19 @@
 
       <mat-radio-group
         aria-labelledby="example-radio-group-label"
-        class="example-radio-group"
-        [(ngModel)]="amendReason">
+        class="example-radio-group">
        <mat-radio-button class="example-radio-button" *ngFor="let amend of amends" [value]="amend">
              {{amend}}
         </mat-radio-button>
       </mat-radio-group>
+
       <mat-form-field class="col-md-8" appearance='fill'>
         <mat-label>Amend Reason</mat-label>
-        <input matInput placeholder="Amend Reason" formControlName="reason">
+        <select matNativeControl required placeholder="Amend Reason" formControlName="reason">
+          <mat-option *ngFor="let reason of reasons" [value]="reason">
+              {{ reason }}
+          </mat-option>
+        </select>
       </mat-form-field>
 
     </div>

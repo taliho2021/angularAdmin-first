@@ -31,10 +31,10 @@ export class Login02Component implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+
   }
 
-  
+
   onSubmit() {
     this.submitted = true;
 
@@ -42,8 +42,7 @@ export class Login02Component implements OnInit {
         if (this.loginForm.invalid) {
             return;
         } else {
-          this.authService.login(this.loginForm.value, this.loginForm.value);
-
+          this.authService.login(this.loginForm.value.username, this.loginForm.value.password);
         }
       }
     }

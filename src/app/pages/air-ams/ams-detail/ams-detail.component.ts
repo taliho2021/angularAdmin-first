@@ -92,6 +92,13 @@ export class AmsDetailComponent implements OnInit {
 
   amendReason!: string
   amends: string[] = ['New entry', 'Add a bill of lading', 'Delte a bill of lading', 'Replace manifest quantiy']
+
+  reasons: string[] = [
+'01 - Not laden aboard per evidence from foreign shipper, or amnended bill of lading',
+'02 - Error in manifesting, not laden on this carrier; laden on subsequent carrier for transportation to United States, per evidence in files',
+'03 - Clerical error in manifesting per bill of lading in files',
+'04 - Pilfered or prematurely landed prior to arrival in United States per signed statement of master or his agent or vessel log extract in our file'
+  ]
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {

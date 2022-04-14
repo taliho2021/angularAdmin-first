@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
 import { Page404Component } from './page404/page404.component';
+import { WidgetsModule } from '../widgets/widgets.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { Page404Component } from './page404/page404.component';
     MatInputModule,
     MatCardModule,
     NgChartsModule,
+    WidgetsModule,
     ExtrapagesRoutingModule,
 
   ]
