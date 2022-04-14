@@ -28,6 +28,7 @@ const routes: Routes = []
     NgChartsModule,
     ReactiveFormsModule
   ],
+
   exports: [
     TodoComponent,
     TodoListComponent,
@@ -36,5 +37,6 @@ const routes: Routes = []
     BubbleChartComponent,
     RadarChartComponent
   ],
+
 })
 export class WidgetsModule { }
