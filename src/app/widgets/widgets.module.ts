@@ -11,6 +11,7 @@ import { DonutMonochromeComponent } from './donut-monochrome/donut-monochrome.co
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
+import { PolarChartComponent } from './polar-chart/polar-chart.component';
 import { RadarChartComponent } from './radar-chart/radar-chart.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TodoComponent } from './todo-list/todo/todo.component';
@@ -30,7 +31,8 @@ const routes: Routes = []
     ApexChartComponent,
     BrushChartComponent,
     DonutChartComponent,
-    DonutMonochromeComponent
+    DonutMonochromeComponent,
+    PolarChartComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +51,8 @@ const routes: Routes = []
     BrushChartComponent,
     DonutChartComponent,
     DonutMonochromeComponent,
-    ApexChartComponent
+    ApexChartComponent,
+    PolarChartComponent
   ],
 
 })
