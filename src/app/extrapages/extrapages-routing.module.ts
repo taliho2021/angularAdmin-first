@@ -1,10 +1,14 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { AeFormComponent } from './ae-form/ae-form.component';
+import { ApexChartComponent } from '../widgets/apex-chart/apex-chart.component';
 import { BarChartComponent } from '../widgets/bar-chart/bar-chart.component';
+import { BrushChartComponent } from '../widgets/brush-chart/brush-chart.component';
 import { BubbleChartComponent } from '../widgets/bubble-chart/bubble-chart.component';
 import { Chart01Component } from './chart01/chart01.component';
 import { ComingsoonComponent } from './comingsoon/comingsoon.component';
+import { DonutChartComponent } from '../widgets/donut-chart/donut-chart.component';
+import { DonutMonochromeComponent } from '../widgets/donut-monochrome/donut-monochrome.component';
 import { ExtrapagesComponent } from './extrapages.component';
 import { IsfFormComponent } from './isf-form/isf-form.component';
 import { NgModule } from '@angular/core';
@@ -20,7 +24,11 @@ const routes: Routes = [
   { path: 'chart01', component: Chart01Component},
   { path: 'bar', component: BarChartComponent},
   { path: 'bubble', component: BubbleChartComponent},
-  { path: 'radar', component: RadarChartComponent}
+  { path: 'radar', component: RadarChartComponent},
+  { path: 'apex', component: ApexChartComponent},
+  { path: 'brush', component: BrushChartComponent},
+  { path: 'donut', component: DonutChartComponent},
+  { path: 'donut-mono', component: DonutMonochromeComponent}
 ]
 
 @NgModule({
