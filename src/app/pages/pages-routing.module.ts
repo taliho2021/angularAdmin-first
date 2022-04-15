@@ -1,10 +1,11 @@
 import { RouterModule, Routes } from '@angular/router';
 
+import { Chart01Component } from '../extrapages/chart01/chart01.component';
 import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 
 const routes: Routes = [{ path: '', component: PagesComponent},
-            
+
                               { path: 'isf', loadChildren: () => import('./isf/isf.module').then(m => m.IsfModule) },
                               { path: 'airAms', loadChildren: () => import('./air-ams/air-ams.module').then(m => m.AirAmsModule) },
                               { path: 'seaAms', loadChildren: () => import('./sea-ams/sea-ams.module').then(m => m.SeaAmsModule) },
@@ -19,8 +20,9 @@ const routes: Routes = [{ path: '', component: PagesComponent},
                               { path: 'trackAndTrace', loadChildren: () => import('./track-and-trace/track-and-trace.module').then(m => m.TrackAndTraceModule) },
                               { path: 'parties', loadChildren: () => import('./parties/parties.module').then(m => m.PartiesModule) },
                               { path: 'tables', loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule) },
-                              { path: 'reports', loadChildren: () => import('./reports/reports.module').then(m => m.ReportsModule) }
-                      
+                              { path: 'reports', loadChildren: () => import('./reports/reports.module').then(m => m.ReportsModule) },
+                              { path: 'sample', component: Chart01Component}
+
                     ]
 
 @NgModule({

@@ -11,7 +11,7 @@
 .sidenav {
   width: 200px;
   margin-top: 60px;
-  background-color: beige;
+  background-color: rgb(156, 156, 144);
   a:hover {
     color:lime;
     cursor: pointer;
@@ -23,10 +23,10 @@
 
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
+// .sidenav .mat-toolbar {
+//   background: inherit;
 
-}
+// }
 
 .mat-toolbar.mat-primary {
   position: sticky;
@@ -58,10 +58,10 @@
 }
 
 mat-menu-item {
+  font-size:medium;
   padding: 8px 0;
   display: flex;
   width: auto;
-  border: 5px solid mintcream;
 
 
 .routeIcon {

@@ -8,6 +8,7 @@ import { ChartsComponent } from './charts/charts.component';
 import { CommonModule } from '@angular/common';
 import { DonutChartComponent } from './donut-chart/donut-chart.component';
 import { DonutMonochromeComponent } from './donut-monochrome/donut-monochrome.component';
+import { MonthlySummaryComponent } from './monthly-summary/monthly-summary.component';
 import { MultiYComponent } from './multi-y/multi-y.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgChartsModule } from 'ng2-charts';
@@ -36,7 +37,8 @@ const routes: Routes = []
     DonutMonochromeComponent,
     PolarChartComponent,
     MultiYComponent,
-    Todo02Component
+    Todo02Component,
+    MonthlySummaryComponent
   ],
   imports: [
     CommonModule,
@@ -58,7 +60,8 @@ const routes: Routes = []
     ApexChartComponent,
     PolarChartComponent,
     MultiYComponent,
-    Todo02Component
+    Todo02Component,
+    MonthlySummaryComponent
   ],
 
 })

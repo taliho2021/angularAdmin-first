@@ -103,6 +103,14 @@
         "iconName": "local_shipping",
         "route": "pages/trucking",
         "isTitle" : "true"
+      },
+
+      {
+        "id": "16",
+        "label": "Dashboard-Sample",
+        "iconName": "dashboard",
+        "route": "pages/sample",
+        "isTitle" : "true"
       }
   ]
 
