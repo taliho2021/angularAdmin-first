@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './chart01.component.html',
   styleUrls: ['./chart01.component.scss']
 })
+
 export class Chart01Component implements OnInit {
+  date1 = new Date()
 
   constructor() { }
 

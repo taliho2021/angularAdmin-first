@@ -17,6 +17,8 @@ export class TodoComponent implements OnInit {
     { task : 'Level up for Antony' , completed : false }
   ];
 
+  date1 = new Date()
+
   constructor(fb: FormBuilder) {
 
     this.form = fb.group({
@@ -39,11 +41,11 @@ export class TodoComponent implements OnInit {
      if(item === this.todoArray[i]) {
        this.todoArray.splice(i, 1);
      }
-   } 
+   }
   }
   changeTodoStatus(event:any ,index:any) {
     if(event.target.checked) {
-    this.todoArray[index]['completed'] = true; 
+    this.todoArray[index]['completed'] = true;
     } else {
       this.todoArray[index]['completed'] = false;
     }
