@@ -290,10 +290,11 @@
 
       <mat-form-field class="col-md-8" appearance='fill'>
         <mat-label>Amend Reason</mat-label>
-        <select matNativeControl required placeholder="Amend Reason" formControlName="reason">
-          <mat-option *ngFor="let reason of reasons" [value]="reason">
-              {{ reason }}
-          </mat-option>
+        <select matNativeControl
+            required placeholder="Amend Reason" formControlName="reason">
+          <option *ngFor="let reas of reasons" [value]="reas">
+              {{ reas }}
+          </option>
         </select>
       </mat-form-field>
 

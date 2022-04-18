@@ -2,12 +2,12 @@
 
 <mat-tab-group mat-align-tabs="start" style="color:pink;">
 
-  <mat-tab label="Air AMS Grid" >
-    <app-air-ams-grid></app-air-ams-grid>
+  <mat-tab label="Air AMS Dashboard" >
+    <app-air-ams-dashboard></app-air-ams-dashboard>
   </mat-tab>
 
-  <mat-tab label="Air AMS Summary" >
-    <app-air-ams-summary></app-air-ams-summary>
+  <mat-tab label="Air AMS Grid" >
+    <app-air-ams-grid></app-air-ams-grid>
   </mat-tab>
 
 
@@ -15,105 +15,6 @@
       <app-ams-detail></app-ams-detail>
   </mat-tab>
 
-  <mat-tab label="Third" >
-    <form class="example-form">
-
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Number</mat-label>
-        <input type="text"
-               placeholder="Pick one"
-               aria-label="Number"
-               matInput
-               [formControl]="myControl"
-               [matAutocomplete]="auto">
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of options" [value]="option">
-            {{option}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
-
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label>Number</mat-label>
-          <input type="text"
-                 placeholder="Pick one"
-                 aria-label="Number"
-                 matInput
-                 [formControl]="myControl"
-                 [matAutocomplete]="auto">
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let option of options" [value]="option">
-              {{option}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Number</mat-label>
-            <input type="text"
-                   placeholder="Pick one"
-                   aria-label="Number"
-                   matInput
-                   [formControl]="myControl"
-                   [matAutocomplete]="auto">
-            <mat-autocomplete #auto="matAutocomplete">
-              <mat-option *ngFor="let option of options" [value]="option">
-                {{option}}
-              </mat-option>
-            </mat-autocomplete>
-          </mat-form-field>
-
-          <form class="example-form">
-
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label>Number</mat-label>
-              <input type="text"
-                     placeholder="Pick one"
-                     aria-label="Number"
-                     matInput
-                     [formControl]="myControl"
-                     [matAutocomplete]="auto">
-              <mat-autocomplete #auto="matAutocomplete">
-                <mat-option *ngFor="let option of options" [value]="option">
-                  {{option}}
-                </mat-option>
-              </mat-autocomplete>
-            </mat-form-field>
-
-              <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Number</mat-label>
-                <input type="text"
-                       placeholder="Pick one"
-                       aria-label="Number"
-                       matInput
-                       [formControl]="myControl"
-                       [matAutocomplete]="auto">
-                <mat-autocomplete #auto="matAutocomplete">
-                  <mat-option *ngFor="let option of options" [value]="option">
-                    {{option}}
-                  </mat-option>
-                </mat-autocomplete>
-              </mat-form-field>
-
-                <mat-form-field class="example-full-width" appearance="fill">
-                  <mat-label>Number</mat-label>
-                  <input type="text"
-                         placeholder="Pick one"
-                         aria-label="Number"
-                         matInput
-                         [formControl]="myControl"
-                         [matAutocomplete]="auto">
-                  <mat-autocomplete #auto="matAutocomplete">
-                    <mat-option *ngFor="let option of options" [value]="option">
-                      {{option}}
-                    </mat-option>
-                  </mat-autocomplete>
-                </mat-form-field>
-
-          </form>
-
-    </form>
-    </mat-tab>
 
 </mat-tab-group>
 

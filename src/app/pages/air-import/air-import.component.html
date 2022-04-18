@@ -2,27 +2,18 @@
 
 <mat-tab-group mat-align-tabs="start">
 
+<mat-tab style="background-color:green" label="Air Import Dashboard">
+  <app-air-import-dashboard></app-air-import-dashboard>
+</mat-tab>
+
 <mat-tab style="background-color:green" label="Air Import Grid">
   <app-ai-grid></app-ai-grid>
 </mat-tab>
 
-<mat-tab>
-    <ng-template mat-tab-label>
-      <span class="my-tab-class">Ports</span>
-    </ng-template>
-    <ag-grid-angular
-      style="width: auto; height: 500px;"
-      class="ag-theme-alpine-dark"
-      [rowData]="rowData"
-      [columnDefs]="columnDefs"
-      rowSelection="multiple"    >
-    </ag-grid-angular>
-  </mat-tab>
-
-  <mat-tab style="background-color: blue; padding:1em" label="New Air Import">
+<mat-tab style="background-color: blue; padding:1em" label="New Air Import">
     <app-air-import-detail></app-air-import-detail>
   </mat-tab>
-  <mat-tab style="background-color:green" label="Third">Content 3</mat-tab>
+
 </mat-tab-group>
 
 

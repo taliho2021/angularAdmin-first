@@ -1,4 +1,6 @@
 import { AirExportComponent } from './air-export.component';
+import { AirExportDashboardComponent } from './air-export-dashboard/air-export-dashboard.component';
+import { AirExportDetailComponent } from './air-export-detail/air-export-detail.component';
 import { AirExportRoutingModule } from './air-export-routing.module';
 import { CommonModule } from '@angular/common';
 import { ExportSummaryComponent } from './export-summary/export-summary.component';
@@ -14,13 +16,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AirExportDetailComponent } from './air-export-detail/air-export-detail.component';
+import { WidgetsModule } from 'src/app/widgets/widgets.module';
 
 @NgModule({
   declarations: [
     AirExportComponent,
     ExportSummaryComponent,
-    AirExportDetailComponent
+    AirExportDetailComponent,
+    AirExportDashboardComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +38,8 @@ import { AirExportDetailComponent } from './air-export-detail/air-export-detail.
     MatPaginatorModule,
     MatTableModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    WidgetsModule
   ]
 })
 export class AirExportModule { }
