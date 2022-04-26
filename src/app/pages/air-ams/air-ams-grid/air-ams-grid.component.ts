@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ColDef } from 'ag-grid-community';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-air-ams-grid',
@@ -23,8 +24,8 @@ export class AirAmsGridComponent  {
     { field: 'description', sortable: true, filter: true, resizable: true  },
     { field: 'vessel', sortable: true, filter: true, resizable: true  },
     { field: 'user', sortable: true, filter: true, resizable: true  },
-    { field: 'arAmt', sortable: true, filter: true, resizable: true},
-    { field: 'apAmt', sortable: true, filter: true, resizable: true},
+    { field: 'arAmt', sortable: true, filter: true, resizable: true },
+    { field: 'apAmt', sortable: true, filter: true, resizable: true },
   ];
 
   rowData = [

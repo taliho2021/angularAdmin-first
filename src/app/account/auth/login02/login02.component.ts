@@ -19,7 +19,7 @@ export class Login02Component implements OnInit {
 
   loginForm = this.fb.group  ({
     username: ['', Validators.required],
-    password: ['', Validators.required]
+    password: ['', [Validators.required, Validators.minLength(7)]]
   });
 
   constructor(
@@ -42,7 +42,10 @@ export class Login02Component implements OnInit {
         if (this.loginForm.invalid) {
             return;
         } else {
-          this.authService.login(this.loginForm.value.username, this.loginForm.value.password);
+          // this.authService.login(this.loginForm.value.username, this.loginForm.value.password)
+          this.router.navigate(['/home/nav'])
+          this.isLoggedIn = true
+
         }
       }
     }

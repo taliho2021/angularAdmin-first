@@ -1,3 +1,5 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AmsDetailComponent } from './ams-detail/ams-detail.component';
 import { AmsSummaryComponent } from './ams-summary/ams-summary.component';
 import { CommonModule } from '@angular/common';
@@ -15,7 +17,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { TruckAmsComponent } from './truck-ams.component';
 import { TruckAmsDashboardComponent } from './truck-ams-dashboard/truck-ams-dashboard.component';
 import { TruckAmsRoutingModule } from './truck-ams-routing.module';
@@ -33,6 +34,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     ReactiveFormsModule,
     MatTabsModule,
     FlexLayoutModule,
+    FormsModule,
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,

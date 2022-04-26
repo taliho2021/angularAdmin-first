@@ -263,16 +263,13 @@
     <div class="row">
       <mat-form-field class="col-md-4" appearance='fill'>
         <mat-label>Amend Flag</mat-label>
-        <input matInput placeholder="Amend Flag" formControlName="amendFlag">
+        <select matNativeControl
+            required placeholder="Amend Flag" formControlName="amendFlag">
+          <option *ngFor="let amend of amends" [value]="amend">
+              {{ amend }}
+          </option>
+        </select>
       </mat-form-field>
-
-      <mat-radio-group
-        aria-labelledby="example-radio-group-label"
-        class="example-radio-group">
-       <mat-radio-button class="example-radio-button" *ngFor="let amend of amends" [value]="amend">
-             {{amend}}
-        </mat-radio-button>
-      </mat-radio-group>
 
       <mat-form-field class="col-md-8" appearance='fill'>
         <mat-label>Amend Reason</mat-label>
