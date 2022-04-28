@@ -1,29 +1,25 @@
-import { HTTP_INTERCEPTORS, HttpEvent } from '@angular/common/http';
-import { HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TokenStorageService } from '../services/token-storage.service';
-
-// const TOKEN_HEADER_KEY = 'Authorization';       // for Spring Boot back-end
-
-const TOKEN_HEADER_KEY = 'x-access-token';  // for Node.js + MongoDb JWT
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  constructor(private token: TokenStorageService) { }
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    let authReq = req;
-    const token = this.token.getToken();
+    intercept(req: HttpRequest<any>,
+              next: HttpHandler): Observable<HttpEvent<any>> {
 
-    if (token != null) {
-      authReq = req.clone({ headers: req.headers.set(TOKEN_HEADER_KEY, token) });
+        const idToken = sessionStorage.getItem("id_token");
+
+        if (idToken) {
+            const cloned = req.clone({
+                headers: req.headers.set("Authorization", idToken)
+            });
+
+            return next.handle(cloned);
+        }
+        else {
+            return next.handle(req);
+        }
     }
-    return next.handle(authReq);
-  }
 }
-
-export const authInterceptorProviders = [
-  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
-];

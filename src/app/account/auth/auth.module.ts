@@ -4,7 +4,6 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Login02Component } from './login02/login02.component';
-import { LoginComponent } from './login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -15,7 +14,6 @@ import { RecoverpwdComponent } from './recoverpwd/recoverpwd.component';
 
 @NgModule({
   declarations: [
-    LoginComponent,
     RecoverpwdComponent,
     ProfileComponent,
     Login02Component
@@ -32,7 +30,6 @@ import { RecoverpwdComponent } from './recoverpwd/recoverpwd.component';
     AuthRoutingModule
   ],
   exports: [
-    LoginComponent,
     RecoverpwdComponent,
     ProfileComponent,
     Login02Component

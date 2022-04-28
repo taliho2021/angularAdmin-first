@@ -8,7 +8,6 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ErrorInterceptor } from './helpers/error.interceptor';
 import { ExtrapagesModule } from './extrapages/extrapages.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeModule } from './home/home.module';
@@ -64,7 +63,6 @@ import { WidgetsModule } from './widgets/widgets.module';
 
 
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

@@ -1,35 +1,43 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import moment from 'moment';
 
 // Assign the server auth API to AUT_API
-const USER_API = 'http:localhost:8080/users';
-
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type' : 'application/json'})
-}
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor( private http: HttpClient) { }
+  constructor() {}
 
-  login (username: string, password: string) : Observable<any> {
-    return this.http.post(USER_API + 'login', {
-      username,
-      password
-    }, httpOptions)
+  setSessionStorage(responseObj: any) {
+
+      // Adds the expiration time defined on the JWT to the current moment
+      const expiresAt = moment().add(Number.parseInt(responseObj.expiresIn), 'days');
+
+      sessionStorage.setItem('id_token', responseObj.token);
+      sessionStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
   }
 
-  register(username: string, emai:string, password: string): Observable<any> {
-    return this.http.post(USER_API + 'signup', {
-      username,
-      password
-    }, httpOptions)
+  logout() {
+      sessionStorage.removeItem("id_token");
+      sessionStorage.removeItem("expires_at");
   }
 
+  public isLoggedIn() {
+      return moment().isBefore(this.getExpiration(), "second");
+  }
+
+  isLoggedOut() {
+      return !this.isLoggedIn();
+  }
+
+  getExpiration() {
+      const expiration = sessionStorage.getItem("expires_at");
+      if (expiration) {
+          const expiresAt = JSON.parse(expiration);
+          return moment(expiresAt);
+      } else {
+          return moment();
+      }
+  }
 }

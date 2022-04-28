@@ -20,7 +20,7 @@
 
   <span class="toolbar-filler"></span>
   <input type="search" value="search">
-  <a routerLink="/"><button id="button-logout" type="button" class="btn btn-warning" >Log Out</button> </a>
+  <button id="button-logout" type="button" class="btn btn-warning"  (click)="logout()">Log Out</button>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
@@ -34,7 +34,7 @@
       <a mat-list-item routerLink="{{menu.route}}" >
         <mat-icon>{{menu.iconName}}</mat-icon>
         {{menu.label}}</a>
-  
+
     </mat-menu-item>
 
 

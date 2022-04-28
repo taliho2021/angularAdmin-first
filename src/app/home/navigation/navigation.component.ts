@@ -2,6 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { map, shareReplay } from 'rxjs/operators';
 
+import {AuthService} from '../../services/auth.service'
 import { MenuService } from '../../services/menu.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -16,7 +17,6 @@ import { SideBarMenuItem } from '../../layouts/sidebar/sidebar.menu.model';
 
 export class NavigationComponent implements OnInit  {
 
-  isLoggedIn=true;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -27,6 +27,7 @@ export class NavigationComponent implements OnInit  {
   menuItem! : SideBarMenuItem[]
   constructor(private breakpointObserver: BreakpointObserver,
               private menuService: MenuService,
+              private authService: AuthService,
               private route: Router) {}
 
   hasChild = (_: number, node: SideBarMenuItem) => !!node.children && node.children.length >0;
@@ -38,7 +39,7 @@ export class NavigationComponent implements OnInit  {
     {
       this.menuItem = data;
     })
-    
+
     // this.route.navigate(['/dashboard'])
 
   }
@@ -46,4 +47,11 @@ export class NavigationComponent implements OnInit  {
   toggleDefaultMessage(state: boolean){
     this.showDefaultMessage = state;
   }
+
+  logout(): void {
+    this.authService.logout();
+    this.route.navigate(['/'])
+  }
+
+  isLoggedIn = this.authService.isLoggedIn()
 }

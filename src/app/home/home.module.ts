@@ -1,4 +1,3 @@
-import { AuthModule } from '../account/auth/auth.module';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -38,7 +37,6 @@ import { WidgetsModule } from '../widgets/widgets.module';
     MatCardModule,
     MatDividerModule,
     MatButtonModule,
-    AuthModule,
     PagesModule,
     FlexLayoutModule,
     WidgetsModule

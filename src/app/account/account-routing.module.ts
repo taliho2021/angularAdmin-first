@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'register'},
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: 'register', component: RegisterComponent}
 ];

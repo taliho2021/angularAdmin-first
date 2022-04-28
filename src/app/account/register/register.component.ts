@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { AuthService } from '../../services/auth.service'
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,38 +11,44 @@ import { AuthService } from '../../services/auth.service'
 })
 export class RegisterComponent implements OnInit {
 
-  form: any ={
-    username: null,
-    email: null,
-    password: null
-  };
-  isSuccessful = false;
-  isSignUpFailed = false;
-  errorMessage = '';
+  @ViewChild('registerform', { static: false }) registerForm!: NgForm;
 
-  Roles: any = ['Admmin', 'Manager', 'User', 'Trucker', 'Customer', 'Terminal Operators', 'Carriers']
+  constructor(private http: HttpClient, private router: Router) { }
 
-  constructor(private authService: AuthService) { }
-
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
-  onSubmit(): void {
-    const {username, email, password } = this.form;
+  // Submits a post request to the /users/register route of our Express app
+  onRegisterSubmit() {
+    const username = this.registerForm.value.username;
+    const password = this.registerForm.value.password;
 
-    this.authService.register(username, email, password).subscribe({
-      next: data => {
-        console.log(data);
-        this.isSuccessful = true;
-        this.isSignUpFailed = false;
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+
+    const reqObject = {
+      username: username,
+      password: password
+    };
+
+    this.http.post('http://localhost:3000/users/register', reqObject, { headers: headers }).subscribe(
+
+      // The response data
+      (response) => {
+        console.log(response);
       },
 
-      error: err =>{
-        this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;
-      }
-    })
+      // If there is an error
+      (error) => {
+        console.log(error);
+      },
 
+      // When observable completes
+      () => {
+        console.log('done!');
+        this.router.navigate(['login']);
+      }
+
+    );
   }
 
 }
