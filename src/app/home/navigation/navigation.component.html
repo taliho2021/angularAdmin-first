@@ -1,50 +1,76 @@
 <mat-toolbar color="primary">
-  <span>  <img src="../../../assets/images/logo.jpg" alt="ANA Link. Ltd" width="90" height="50"> </span>
+  <span>
+    <img
+      src="../../../assets/images/logo.jpg"
+      alt="ANA Link. Ltd"
+      width="70"
+      height="40"
+    />
+  </span>
   <button
     mat-icon-button
     aria-label="Toggle sidenav"
     mat-icon-button
-    (click)="drawer.toggle()">
+    (click)="drawer.toggle()"
+  >
     <!-- *ngIf="isHandset$ | async"> -->
     <mat-icon>menu</mat-icon>
   </button>
   <span class="name1">ANA Link</span>
 
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
     <mat-icon>favorite</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-   <mat-icon>share</mat-icon>
- </button>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>share</mat-icon>
+  </button>
 
   <span class="toolbar-filler"></span>
-  <input type="search" value="search">
-  <button id="button-logout" type="button" class="btn btn-warning"  (click)="logout()">Log Out</button>
+  <input type="search" value="search" />
+  <button
+    id="button-logout"
+    type="button"
+    class="btn btn-warning"
+    (click)="logout()"
+  >
+    Log Out
+  </button>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-
-
-    <mat-menu-item *ngFor = 'let menu of menuItem' [ngStyle]="{'padding-left': '20px'}" >
-      <a mat-list-item routerLink="{{menu.route}}" >
-        <mat-icon>{{menu.iconName}}</mat-icon>
-        {{menu.label}}</a>
-
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-menu-item
+      *ngFor="let menu of menuItem"
+      [ngStyle]="{ 'padding-left': '20px' }"
+    >
+      <a mat-list-item routerLink="{{ menu.route }}">
+        <mat-icon>{{ menu.iconName }}</mat-icon>
+        {{ menu.label }}</a
+      >
     </mat-menu-item>
-
-
-
   </mat-sidenav>
   <mat-sidenav-content>
-    <app-dashboard *ngIf ="showDefaultMessage"></app-dashboard>
+    <app-dashboard *ngIf="showDefaultMessage"></app-dashboard>
 
-
-    <router-outlet (activate) ="toggleDefaultMessage(false)" (deactivate)="toggleDefaultMessage(true)"></router-outlet>
+    <router-outlet
+      (activate)="toggleDefaultMessage(false)"
+      (deactivate)="toggleDefaultMessage(true)"
+    ></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-

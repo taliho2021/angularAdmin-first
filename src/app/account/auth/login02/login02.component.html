@@ -3,8 +3,7 @@
   <h1>ANA Link, Ltd</h1>
 </mat-toolbar>
 
-<mat-card class='wrapper'>
-
+<mat-card class="wrapper">
   <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
     <form
       name="form"
@@ -17,165 +16,248 @@
           <mat-card-title>Log in ANA Link</mat-card-title>
         </mat-card-header>
 
-        <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+        <form
+          class="example-form"
+          [formGroup]="loginForm"
+          (ngSubmit)="onLoginSubmit()"
+        >
           <mat-card-content>
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Username</mat-label>
-              <input matInput id="username" type="text" formControlName="username" placeholder="Username">
+              <input
+                matInput
+                id="username"
+                type="text"
+                formControlName="username"
+                placeholder="Username"
+              />
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Password</mat-label>
-              <input matInput id="password" type="password" formControlName="password"  placeholder="Password">
+              <input
+                matInput
+                id="password"
+                type="password"
+                formControlName="password"
+                placeholder="Password"
+              />
             </mat-form-field>
           </mat-card-content>
           <!-- <a routerLink="/home/nav"><button mat-stroked-button color="accent" class="btn-block" >Log in</button> </a> -->
-          <button mat-stroked-button color="accent" class="btn-block" onclick="onLoginSubmit()">Log in</button>
+          <button
+            mat-stroked-button
+            color="accent"
+            class="btn-block"
+            (click)="onLoginSubmit()"
+          >
+            Log in
+          </button>
         </form>
       </mat-card>
-
     </form>
   </div>
+</mat-card>
 
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <mat-card fxFlex="23" class="example-card">
+    <mat-card-header>
+      <mat-card-title> Manufacturers / Shippers </mat-card-title>
+    </mat-card-header>
+    <mat-card-content
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2022/01/16/13/25/cityscape-6942013__340.jpg');
+        background-size: contain;
+      "
+    >
+      <ul style="font-weight: bolder; color: blanchedalmond">
+        Manufactuers / Shippers can
+        <li>Apply for Customs' assigned number</li>
+        <li>Obtain a continuous/annual bond</li>
+        <li>Clear U.S. Customs</li>
+        <li>Pay the duty online</li>
+        <li>Proof of Delivery</li>
+      </ul>
+      <mat-card-actions>
+        <a routerLink="/account/register"
+          ><button
+            mat-button
+            class="btn btn-primary"
+            style="margin-left: 120px"
+          >
+            Log In or Sign Up
+          </button>
+        </a>
+      </mat-card-actions>
+    </mat-card-content>
   </mat-card>
 
-  <div fxLayout="row" fxLayoutAlign="space-around center">
-      <mat-card fxFlex="23" class='example-card'>
-        <mat-card-header>
-          <mat-card-title>
-            Manufacturers / Shippers
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2022/01/16/13/25/cityscape-6942013__340.jpg'); background-size: contain; ">
-          <ul style="font-weight: bolder; color:blanchedalmond ">Manufactuers / Shippers can
-            <li>Apply for Customs' assigned number</li>
-            <li>Obtain a continuous/annual bond</li>
-            <li>Clear U.S. Customs</li>
-            <li>Pay the duty online</li>
-            <li>Proof of Delivery</li>
-          </ul>
-        <mat-card-actions>
-            <a routerLink='/account/register'><button mat-button class="btn btn-primary" style="margin-left:120px"> Log In or Sign Up </button> </a>
-          </mat-card-actions>
-        </mat-card-content >
-
-      </mat-card>
-
-      <mat-card  fxFlex="23"class='example-card'>
-        <mat-card-header>
-          <mat-card-title>
-            Importers / Exporters
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590__340.jpg'); background-size: contain; ">
-          <ul style="font-weight: bolder; color:chartreuse">Importers or Exporters can
-            <li>Check duty payments</li>
-            <li>Detailed entry report</li>
-            <li>Liquidaiton report</li>
-            <li>Entry & PGA status</li>
-            <li>Delivery Status</li>
-          </ul>
-          <mat-card-actions>
-            <a routerLink='/account/register'><button mat-button class="btn btn-secondary" style="margin-left:120px"> Log In or Sign Up </button> </a>
-             </mat-card-actions>
-        </mat-card-content >
-
-      </mat-card>
-
-    <mat-card fxFlex="23"class='example-card' >
-      <mat-card-header>
-        <mat-card-title>
-            Freight Forwarders
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg'); background-size: contain; ">
-            <ul style="font-weight: bolder; color:darkkhaki">Forwarders can
-              <li>Check the entry status for clients</li>
-              <li>Upload documents for Customs' clearance</li>
-              <li>Duty reports for each client</li>
-              <li>Delivery status</li>
-              <li>Print entry documents</li>
-            </ul>
-            <mat-card-actions>
-              <a routerLink='/account/register'><button mat-button class="btn btn-warning" style="margin-left:120px"> Log In or Sign Up </button> </a>
-            </mat-card-actions>
-      </mat-card-content >
-    </mat-card>
-
-    <mat-card fxFlex="23" class='example-card'>
-      <mat-card-header>
-        <mat-card-title>
-          Truckers
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2018/05/11/23/45/highway-3392100_960_720.jpg'); background-size: contain;">
-        <ul style="font-weight: bolder; color:rgb(238, 222, 5)">Truckers  can
-          <li>Receive the delivery order</li>
-          <li>Generate the invoice</li>
-          <li>Get paid</li>
-          <li>Upload documents</li>
-          <li>Contact the issuer</li>
-        </ul>
-        <mat-card-actions>
-          <a routerLink='/account/register'><button mat-button class="btn btn-info" style="margin-left:120px"> Log In or Sign Up </button> </a>
-        </mat-card-actions>
-      </mat-card-content >
-    </mat-card>
-
-  </div>
-
-  <div fxLayout="row" fxLayoutAlign="space-around center">
-
-
-    <mat-card  fxFlex="23"class='example-card'>
-      <mat-card-header>
-        <mat-card-title>
-          CFS / Terminal Operators
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2018/01/14/15/53/hamburg-3082070_960_720.jpg'); background-size: contain; ">
-        <ul style="font-weight: bolder; color:aliceblue">CFS or Terminal Operators can
-          <li>Download Manifest</li>
-          <li>Receive payments</li>
-          <li>Shipment tracking</li>
-          <li>Arrange Trucking</li>
-          <li>Generate invoices</li>
-        </ul>
-        <mat-card-actions>
-          <a routerLink='/account/register'><button mat-button class="btn btn-primary" style="margin-left:120px"> Log In or Sign Up </button> </a>
-        </mat-card-actions>
-      </mat-card-content >
-    </mat-card>
-
-  <mat-card fxFlex="23"class='example-card' >
+  <mat-card fxFlex="23" class="example-card">
     <mat-card-header>
-      <mat-card-title>
-          Air Carriers
-      </mat-card-title>
+      <mat-card-title> Importers / Exporters </mat-card-title>
     </mat-card-header>
-    <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2015/03/24/09/02/airport-687256_960_720.jpg'); background-size: contain; ">
-          <ul style="font-weight: bolder; color:greenyellow">Air Carriers can
-            <li>File AMS</li>
-            <li>Cargo Manifest Status Query</li>
-            <li>Receive payments</li>
-            <li>Customs' status</li>
-            <li>Shipment tracking</li>
-          </ul>
-          <mat-card-actions>
-            <a routerLink='/account/register'><button mat-button class="btn btn-danger" style="margin-left:120px"> Log In or Sign Up </button> </a>
-          </mat-card-actions>
-    </mat-card-content >
+    <mat-card-content
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2022/01/10/15/29/wind-mills-6928590__340.jpg');
+        background-size: contain;
+      "
+    >
+      <ul style="font-weight: bolder; color: chartreuse">
+        Importers or Exporters can
+        <li>Check duty payments</li>
+        <li>Detailed entry report</li>
+        <li>Liquidaiton report</li>
+        <li>Entry & PGA status</li>
+        <li>Delivery Status</li>
+      </ul>
+      <mat-card-actions>
+        <a routerLink="/account/register"
+          ><button
+            mat-button
+            class="btn btn-secondary"
+            style="margin-left: 120px"
+          >
+            Log In or Sign Up
+          </button>
+        </a>
+      </mat-card-actions>
+    </mat-card-content>
   </mat-card>
 
-
-  <mat-card  fxFlex="23"class='example-card'>
+  <mat-card fxFlex="23" class="example-card">
     <mat-card-header>
-      <mat-card-title>
-        Sea Carriers
-      </mat-card-title>
+      <mat-card-title> Freight Forwarders </mat-card-title>
     </mat-card-header>
-    <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2018/01/14/15/53/hamburg-3082070_960_720.jpg'); background-size: contain; ">
-      <ul style="font-weight: bolder; color:magenta">Sea Carriers can
+    <mat-card-content
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg');
+        background-size: contain;
+      "
+    >
+      <ul style="font-weight: bolder; color: darkkhaki">
+        Forwarders can
+        <li>Check the entry status for clients</li>
+        <li>Upload documents for Customs' clearance</li>
+        <li>Duty reports for each client</li>
+        <li>Delivery status</li>
+        <li>Print entry documents</li>
+      </ul>
+      <mat-card-actions>
+        <a routerLink="/account/register"
+          ><button
+            mat-button
+            class="btn btn-warning"
+            style="margin-left: 120px"
+          >
+            Log In or Sign Up
+          </button>
+        </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card fxFlex="23" class="example-card">
+    <mat-card-header>
+      <mat-card-title> Truckers </mat-card-title>
+    </mat-card-header>
+    <mat-card-content
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2018/05/11/23/45/highway-3392100_960_720.jpg');
+        background-size: contain;
+      "
+    >
+      <ul style="font-weight: bolder; color: rgb(238, 222, 5)">
+        Truckers can
+        <li>Receive the delivery order</li>
+        <li>Generate the invoice</li>
+        <li>Get paid</li>
+        <li>Upload documents</li>
+        <li>Contact the issuer</li>
+      </ul>
+      <mat-card-actions>
+        <a routerLink="/account/register"
+          ><button mat-button class="btn btn-info" style="margin-left: 120px">
+            Log In or Sign Up
+          </button>
+        </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div fxLayout="row" fxLayoutAlign="space-around center">
+  <mat-card fxFlex="23" class="example-card">
+    <mat-card-header>
+      <mat-card-title> CFS / Terminal Operators </mat-card-title>
+    </mat-card-header>
+    <mat-card-content
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2018/01/14/15/53/hamburg-3082070_960_720.jpg');
+        background-size: contain;
+      "
+    >
+      <ul style="font-weight: bolder; color: aliceblue">
+        CFS or Terminal Operators can
+        <li>Download Manifest</li>
+        <li>Receive payments</li>
+        <li>Shipment tracking</li>
+        <li>Arrange Trucking</li>
+        <li>Generate invoices</li>
+      </ul>
+      <mat-card-actions>
+        <a routerLink="/account/register"
+          ><button
+            mat-button
+            class="btn btn-primary"
+            style="margin-left: 120px"
+          >
+            Log In or Sign Up
+          </button>
+        </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card fxFlex="23" class="example-card">
+    <mat-card-header>
+      <mat-card-title> Air Carriers </mat-card-title>
+    </mat-card-header>
+    <mat-card-content
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2015/03/24/09/02/airport-687256_960_720.jpg');
+        background-size: contain;
+      "
+    >
+      <ul style="font-weight: bolder; color: greenyellow">
+        Air Carriers can
+        <li>File AMS</li>
+        <li>Cargo Manifest Status Query</li>
+        <li>Receive payments</li>
+        <li>Customs' status</li>
+        <li>Shipment tracking</li>
+      </ul>
+      <mat-card-actions>
+        <a routerLink="/account/register"
+          ><button mat-button class="btn btn-danger" style="margin-left: 120px">
+            Log In or Sign Up
+          </button>
+        </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card fxFlex="23" class="example-card">
+    <mat-card-header>
+      <mat-card-title> Sea Carriers </mat-card-title>
+    </mat-card-header>
+    <mat-card-content
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2018/01/14/15/53/hamburg-3082070_960_720.jpg');
+        background-size: contain;
+      "
+    >
+      <ul style="font-weight: bolder; color: magenta">
+        Sea Carriers can
         <li>File AMS</li>
         <li>Shipment Status</li>
         <li>Route delivery</li>
@@ -183,32 +265,46 @@
         <li>Receive payments</li>
       </ul>
       <mat-card-actions>
-        <a routerLink='/account/register'><button mat-button class="btn btn-warning" style="margin-left:120px"> Log In or Sign Up </button> </a>
+        <a routerLink="/account/register"
+          ><button
+            mat-button
+            class="btn btn-warning"
+            style="margin-left: 120px"
+          >
+            Log In or Sign Up
+          </button>
+        </a>
       </mat-card-actions>
-    </mat-card-content >
+    </mat-card-content>
   </mat-card>
 
-<mat-card fxFlex="23"class='example-card' >
-  <mat-card-header>
-    <mat-card-title>
-        Other Service Providers
-    </mat-card-title>
-  </mat-card-header>
-  <mat-card-content style="background-image: url('https://cdn.pixabay.com/photo/2022/01/15/02/07/windows-6938478_960_720.jpg'); background-size: contain; ">
-        <ul style="font-weight: bolder; color:darkkhaki">Other Service Providers can
-          <li>Upload documents</li>
-          <li>Download documents</li>
-          <li>Generate invoices</li>
-          <li>Get paid</li>
-          <li>Reports</li>
-        </ul>
-        <mat-card-actions>
-          <a routerLink='/account/register'><button mat-button class="btn btn-info" style="margin-left:120px"> Log In or Sign Up </button> </a>
-        </mat-card-actions>
-  </mat-card-content >
-
-</mat-card>
-
+  <mat-card fxFlex="23" class="example-card">
+    <mat-card-header>
+      <mat-card-title> Other Service Providers </mat-card-title>
+    </mat-card-header>
+    <mat-card-content
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2022/01/15/02/07/windows-6938478_960_720.jpg');
+        background-size: contain;
+      "
+    >
+      <ul style="font-weight: bolder; color: darkkhaki">
+        Other Service Providers can
+        <li>Upload documents</li>
+        <li>Download documents</li>
+        <li>Generate invoices</li>
+        <li>Get paid</li>
+        <li>Reports</li>
+      </ul>
+      <mat-card-actions>
+        <a routerLink="/account/register"
+          ><button mat-button class="btn btn-info" style="margin-left: 120px">
+            Log In or Sign Up
+          </button>
+        </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>
 </div>
 
-  <footer>&copy; Coprighted by ANA Link - 2022</footer>
+<footer>&copy; Coprighted by ANA Link - 2022</footer>

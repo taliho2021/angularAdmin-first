@@ -1,10 +1,15 @@
 mat-card {
-    max-width: 600px;
-    max-height: auto;
-    margin: 10px 10px 10px 10px;
+  max-width: 600px;
+  max-height: auto;
+  margin: 10px 10px 10px 10px;
 }
 
 mat-card-header {
-    font-size: 20px;
-    font-family: "Times New Roman", serif ;
+  font-size: 20px;
+  font-family: "Times New Roman", serif;
+}
+
+mat-tab {
+  font-size: 20px;
+  color: plum;
 }
