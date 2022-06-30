@@ -109,4 +109,8 @@ export class AmsDetailComponent implements OnInit {
   onSubmit() {
     window.alert('Thank you for submitting Sea AMS data')
   }
+
+  clearForm(): void {
+    this.amsForm.reset()
+  }
 }
