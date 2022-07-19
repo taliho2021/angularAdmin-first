@@ -31,14 +31,19 @@ export class Login02Component implements OnInit {
     const username = this.loginForm.value.username;
     const password = this.loginForm.value.password;
 
-    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    const headers = new HttpHeaders({
+      'Content-type': 'application/json', 
+      'Access-Control-Allow-Origin': '*'
+      });
 
     const reqObject = {
       username: username,
       password: password
     };
 
-    this.http.post('http://localhost:8080/auth/signin', reqObject, { headers: headers }).subscribe(
+    // this.http.post('http://localhost:8080/auth/signin', reqObject, { headers: headers }).subscribe(
+
+    this.http.post('https://git.heroku.com/nodejs01-app.git/auth/signin', reqObject, { headers: headers }).subscribe(
 
       // The response data
       (response) => {

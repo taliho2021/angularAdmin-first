@@ -113,4 +113,5 @@ export class AmsDetailComponent implements OnInit {
   clearForm(): void {
     this.amsForm.reset()
   }
+
 }

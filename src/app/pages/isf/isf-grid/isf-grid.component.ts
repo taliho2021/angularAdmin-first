@@ -12,7 +12,7 @@ import Isf from '../../../../assets/data/isf.json';
 })
 export class IsfGridComponent  {
 
-rowSelection = 'single'
+rowSelection : 'single' | 'multiple' = 'single'
 private gridApi!: GridApi
 
 constructor(private route: ActivatedRoute, private router: Router ) {}

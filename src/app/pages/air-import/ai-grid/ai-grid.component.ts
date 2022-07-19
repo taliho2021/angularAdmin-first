@@ -29,7 +29,7 @@ interface ENTRY  {
 
 export class AiGridComponent {
 
-  rowSelection ='single'
+  rowSelection: 'single' | 'multiple' ='single'
 
   columnDefs: ColDef[] = [
     { field: 'refNo', sortable: true, filter: true, resizable: true, checkboxSelection: true  },

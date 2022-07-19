@@ -26,7 +26,7 @@ export interface RowData{
 })
 export class EntryGridComponent  {
 
-rowSelection = 'single'
+rowSelection: 'single' | 'multiple' = 'single'
 private gridApi!: GridApi
 
 constructor(private route: ActivatedRoute, private router: Router ) {}

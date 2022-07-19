@@ -32,7 +32,7 @@ export class TodoComponent implements OnInit {
 
   addTodo() {
     let newTodoList = { task: '' , completed: false };
-    newTodoList.task= this.form.value.todoitem;
+    newTodoList.task!= this.form.value.todoitem;
     this.todoArray.push(newTodoList);
     this.form.reset();
   }
