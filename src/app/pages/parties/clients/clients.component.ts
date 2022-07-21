@@ -73,10 +73,10 @@ export class ClientsComponent implements OnInit {
 
   onSubmit(): void {
     this.importerService.getAll()
-       .subscribe(data => (this.importers =data));
+       .subscribe(data => (this.importers= data));
     console.log(this.importers);
 
-    alert('Thanks!');
+    alert(this.importers[5].clientId);
   }
 
 }

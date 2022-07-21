@@ -1,5 +1,5 @@
 import { ActivatedRoute, Router } from '@angular/router';
-import { ColDef, GridApi, GridOptions, GridReadyEvent, RowClickedEvent } from 'ag-grid-community';
+import { ColDef, GridApi,  RowClickedEvent } from 'ag-grid-community';
 import { Component, OnInit } from '@angular/core';
 
 import { ISF } from '../../interfaces/isf'
@@ -39,12 +39,14 @@ columnDefs: ColDef[] = [
 
 ];
 
+
+
 rowData : ISF[] = Isf;
 
 onRowClicked(params: RowClickedEvent){
   let refNo = params.node.data.refNo
   // window.alert(refNo)     // Picks up correct ref #
-  this.router.navigate([(refNo)], {relativeTo: this.route});  //Navigate to corret Url
+  this.router.navigate([(refNo)], {relativeTo: this.route});  //Navigate to correct Url with selected Ref#
   // window.alert(refNo)   // refNo is correct here
   // const isf = Isf.find(i => i.reffNo === refNo)
   // console.log(isf);

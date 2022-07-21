@@ -6,7 +6,7 @@ import { Importer } from '../models/importer';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
-const API_URL = "https://test-node-006.uc.r.appspot.com/"
+const API_URL = "https://nodejs01-app.herokuapp.com/importers"
 
 @Injectable({
   providedIn: 'root'
