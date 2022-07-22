@@ -1,6 +1,6 @@
 import { ActivatedRoute, Router } from '@angular/router';
-import { ColDef, GridApi,  RowClickedEvent } from 'ag-grid-community';
-import { Component, OnInit } from '@angular/core';
+import { ColDef, RowClickedEvent } from 'ag-grid-community';
+import { Component } from '@angular/core';
 
 import { ISF } from '../../interfaces/isf'
 import Isf from '../../../../assets/data/isf.json';
@@ -13,7 +13,6 @@ import Isf from '../../../../assets/data/isf.json';
 export class IsfGridComponent  {
 
 rowSelection : 'single' | 'multiple' = 'single'
-private gridApi!: GridApi
 
 constructor(private route: ActivatedRoute, private router: Router ) {}
 
