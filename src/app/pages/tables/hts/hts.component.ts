@@ -5,17 +5,19 @@ import { MatTable } from '@angular/material/table';
 import { HTSDataSource, HTSItem } from './hts-datasource';
 import { ColDef, GridApi,  RowClickedEvent } from 'ag-grid-community';
 
+interface HTS  {
+  seqNo : Number,
+  refNo: number,
+
+}
+
 @Component({
   selector: 'app-hts',
   templateUrl: './hts.component.html',
   styleUrls: ['./hts.component.scss']
 })
 
-interface HTS  {
-  seqNo : Number,
-  refNo: number,
 
-}
 export class HTSComponent  {
  
  rowData: HTS[] = [];

@@ -1,6 +1,6 @@
 export interface SideBarMenuItem {
     id?: number;
-    label?: string;
+    displayName?: string;
     iconName?: string;
     route?: string;
     subItems?: any;
