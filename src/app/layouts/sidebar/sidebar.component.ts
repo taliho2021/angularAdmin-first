@@ -1,8 +1,6 @@
 import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
-import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs/internal/Observable';
 import {Router} from '@angular/router';
 import { SideBarMenuItem } from '../../layouts/sidebar/sidebar.menu.model'
 import { SidebarNavService } from './sidebar-nav.service';
