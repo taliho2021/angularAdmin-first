@@ -4,6 +4,7 @@ interface HTS {
   seqNo: Number;
   refNo: number;
 }
+
 @Component({
   selector: 'app-hts',
   templateUrl: './hts.component.html',
