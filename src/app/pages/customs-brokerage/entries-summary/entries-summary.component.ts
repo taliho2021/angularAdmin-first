@@ -2,7 +2,7 @@ import { Component, PipeTransform } from '@angular/core';
 import { map, startWith } from 'rxjs/operators';
 
 import { DecimalPipe } from '@angular/common';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 interface Country {
@@ -56,7 +56,7 @@ function search(text: string, pipe: PipeTransform): Country[] {
 export class EntriesSummaryComponent {
   
   countries$: Observable<Country[]>;
-  filter = new FormControl('');
+  filter = new UntypedFormControl('');
 
   constructor(pipe: DecimalPipe) {
     this.countries$ = this.filter.valueChanges.pipe(

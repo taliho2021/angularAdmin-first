@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, Validators } from '@angular/forms';
+import { FormArray, UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-ams-detail',
@@ -101,7 +101,7 @@ export class AmsDetailComponent implements OnInit {
 '04 - Clerical error in manifesting per bill of lading in files',
 '05 - Pilfered or prematurely landed prior to arrival in United States per signed statement of master or his agent or vessel log extract in our file'
   ]
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
   }

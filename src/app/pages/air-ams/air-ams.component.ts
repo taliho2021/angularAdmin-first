@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-air-ams',
@@ -8,9 +8,9 @@ import { FormControl } from '@angular/forms';
 })
 export class AirAmsComponent {
 
-  myControl = new FormControl();
+  myControl = new UntypedFormControl();
   options: string[] = ['One', 'Two', 'Three'];
 
-  date = new FormControl(new Date());
-  serializedDate = new FormControl(new Date().toISOString());
+  date = new UntypedFormControl(new Date());
+  serializedDate = new UntypedFormControl(new Date().toISOString());
 }

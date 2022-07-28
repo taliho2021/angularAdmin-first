@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
 
 import { Importer } from 'src/app/models/importer';
 import { ImportersService } from 'src/app/services/importers.service';
@@ -49,14 +49,14 @@ export class ClientsComponent implements OnInit {
   hasUnitNumber = false;
   importers: Importer[] =[];
 
-  constructor(private fb: FormBuilder, private importerService : ImportersService) { }
+  constructor(private fb: UntypedFormBuilder, private importerService : ImportersService) { }
 
   ngOnInit(): void {
 
   }
 
   get additional() {
-    return this.importerForm.controls["addInfo"] as FormArray
+    return this.importerForm.controls["addInfo"] as UntypedFormArray
   }
 
   addaddInfo() {

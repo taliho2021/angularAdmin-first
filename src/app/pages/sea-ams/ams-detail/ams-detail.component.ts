@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-ams-detail',
@@ -101,7 +101,7 @@ export class AmsDetailComponent implements OnInit {
     '05 - Pilfered or prematurely landed prior to arrival in United States per signed statement of master or his agent or vessel log extract in our file'
       ]
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: UntypedFormBuilder) { }
 
 
   ngOnInit(): void {
@@ -112,7 +112,7 @@ export class AmsDetailComponent implements OnInit {
     window.alert('Thank you for submitting Sea AMS data')
   }
 
-  get container() : FormArray {
-    return this.amsForm.get("container") as FormArray
+  get container() : UntypedFormArray {
+    return this.amsForm.get("container") as UntypedFormArray
   }
 }

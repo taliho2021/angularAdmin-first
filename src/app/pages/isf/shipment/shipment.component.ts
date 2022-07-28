@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, FormControl } from '@angular/forms';
 
 import { FlexibleConnectedPositionStrategy } from '@angular/cdk/overlay';
 
@@ -79,13 +79,13 @@ export class ShipmentComponent implements OnInit {
   ]
 
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: UntypedFormBuilder) { }
 
   ngOnInit(): void {
   }
 
-  get AddlAmsBl(): FormArray {
-    return this.isfShipment.get('AddlAmsBL') as FormArray
+  get AddlAmsBl(): UntypedFormArray {
+    return this.isfShipment.get('AddlAmsBL') as UntypedFormArray
   }
 
   addBill() {
