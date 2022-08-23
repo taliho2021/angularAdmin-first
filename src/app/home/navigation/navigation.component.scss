@@ -1,5 +1,5 @@
 .sidenav-container {
-  position: fixed;
+  position: flex;
   top: 60px;
   bottom: auto;
   left: 0;
@@ -15,6 +15,7 @@
   a:hover {
     color:lime;
     cursor: pointer;
+    font-size: medium;
   }
 
   a:visited {

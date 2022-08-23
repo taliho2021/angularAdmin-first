@@ -43,58 +43,60 @@ export class Login02Component implements OnInit {
       password: password,
     };
 
-    const myObserver = {
-      // The response data
-      next: (response: any) => {
-        // If the user authenticates successfully, we need to store the JWT returned in localStorage
-        this.authService.setSessionStorage(response);
-      },
-
-      // If there is an error
-      error: (err: Error) => {
-        console.log(err);
-      },
-
-      // When observable completes
-      complete: () => {
-        console.log('done!');
-        this.router.navigate(['/home/nav']);
-      },
-    };
-
-    this.http
-      .post('http://localhost:8080/auth/signin', reqObject, httpOptions)
-      .subscribe(myObserver);
-
-    // this.http
-    //   .post(
-    //     'https://git.heroku.com/nodejs01-app.git/auth/signin',
-    //     reqObject,
-    //     httpOptions
-    //   )
-    //   .subscribe(myObserver);
-
-    //   // The response data
-    //   response => {
-
-    //     // If the user authenticates successfully, we need to store the JWT returned in localStorage
-    //     this.authService.setSessionStorage(response);
-
-    //   },
-
-    //   // If there is an error
-    //   error => {
-    //     console.log(error);
-    //   },
-
-    //   // When observable completes
-    //   () => {
-    //     console.log('done!');
-    //     this.router.navigate(['/home/nav']);
-    //   }
-
-    // );
+    this.router.navigate(['/home/nav']);
   }
+  //   const myObserver = {
+  //     // The response data
+  //     next: (response: any) => {
+  //       // If the user authenticates successfully, we need to store the JWT returned in localStorage
+  //       this.authService.setSessionStorage(response);
+  //     },
+
+  //     // If there is an error
+  //     error: (err: Error) => {
+  //       console.log(err);
+  //     },
+
+  //     // When observable completes
+  //     complete: () => {
+  //       console.log('done!');
+  //       this.router.navigate(['/home/nav']);
+  //     },
+  //   };
+
+  //   this.http
+  //     .post('http://localhost:8080/auth/signin', reqObject, httpOptions)
+  //     .subscribe(myObserver);
+
+  //   // this.http
+  //   //   .post(
+  //   //     'https://git.heroku.com/nodejs01-app.git/auth/signin',
+  //   //     reqObject,
+  //   //     httpOptions
+  //   //   )
+  //   //   .subscribe(myObserver);
+
+  //   //   // The response data
+  //   //   response => {
+
+  //   //     // If the user authenticates successfully, we need to store the JWT returned in localStorage
+  //   //     this.authService.setSessionStorage(response);
+
+  //   //   },
+
+  //   //   // If there is an error
+  //   //   error => {
+  //   //     console.log(error);
+  //   //   },
+
+  //   //   // When observable completes
+  //   //   () => {
+  //   //     console.log('done!');
+  //   //     this.router.navigate(['/home/nav']);
+  //   //   }
+
+  //   // );
+  // }
 
   onLogout() {
     this.authService.logout();
