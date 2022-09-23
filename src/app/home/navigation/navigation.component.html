@@ -51,8 +51,6 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
     #drawer
-    class="sidenav"
-    fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
@@ -77,3 +75,4 @@
     ></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<h1>Footer here?</h1>
