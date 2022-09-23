@@ -1,59 +1,74 @@
-<div fxLayout="row" fxLayoutAlign = "space-aroundstart" fxLayoutGap="20px">
-  <mat-card class="example-card" fxFlex="30" >
+<div fxLayout="row" fxLayoutAlign="space-aroundstart" fxLayoutGap="40px">
+  <mat-card class="example-card g-5" fxFlex="30">
     <mat-card-title-group>
-      <mat-card-title>Tasks for {{ date1 | date:'mediumDate'}}</mat-card-title>
+      <mat-card-title
+        >Tasks for {{ date1 | date: "mediumDate" }}</mat-card-title
+      >
     </mat-card-title-group>
     <mat-card-content>
       <app-todo-list></app-todo-list>
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="example-card" fxFlex="30" >
+  <mat-card class="example-card g-5" fxFlex="30">
     <mat-card-title-group>
-      <mat-card-title>To Do List for {{ date1 | date:'mediumDate'}}</mat-card-title>
+      <mat-card-title
+        >To Do List for {{ date1 | date: "mediumDate" }}</mat-card-title
+      >
     </mat-card-title-group>
     <mat-card-content>
       <app-todo02></app-todo02>
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="example-card" fxFlex="30" >
+  <mat-card class="example-card g-5" fxFlex="30">
     <mat-card-title-group>
-      <mat-card-title>Current Mo. Summary As Of {{ date1 | date:'shortDate'}}</mat-card-title>
+      <mat-card-title
+        >Current Mo. Summary As Of
+        {{ date1 | date: "shortDate" }}</mat-card-title
+      >
     </mat-card-title-group>
     <mat-card-content>
       <app-monthly-summary></app-monthly-summary>
     </mat-card-content>
   </mat-card>
-
 </div>
-
-<div fxLayout="row" fxLayoutAlign = "space-aroundstart" fxLayoutGap="20px">
-  <mat-card class="example-card" fxFlex="30" >
+<mat-divider></mat-divider>
+<br />
+<br />
+<div fxLayout="row" fxLayoutAlign="space-aroundstart" fxLayoutGap="40px">
+  <mat-card class="example-card" fxFlex="30">
     <mat-card-title-group>
-      <mat-card-title>Tasks for {{ date1 | date:'mediumDate'}}</mat-card-title>
+      <mat-card-title
+        >Tasks for {{ date1 | date: "mediumDate" }}</mat-card-title
+      >
     </mat-card-title-group>
     <mat-card-content>
       <app-bar-chart></app-bar-chart>
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="example-card" fxFlex="30" >
+  <mat-card class="example-card" fxFlex="30">
     <mat-card-title-group>
-      <mat-card-title>To Do List for {{ date1 | date:'mediumDate'}}</mat-card-title>
+      <mat-card-title
+        >To Do List for {{ date1 | date: "mediumDate" }}</mat-card-title
+      >
     </mat-card-title-group>
     <mat-card-content>
       <app-brush-chart></app-brush-chart>
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="example-card" fxFlex="30" >
+  <mat-card class="example-card" fxFlex="30">
     <mat-card-title-group>
-      <mat-card-title>Current Mo. Summary As Of {{ date1 | date:'shortDate'}}</mat-card-title>
+      <mat-card-title
+        >Current Mo. Summary As Of
+        {{ date1 | date: "shortDate" }}</mat-card-title
+      >
     </mat-card-title-group>
     <mat-card-content>
       <app-polar-chart></app-polar-chart>
     </mat-card-content>
   </mat-card>
-
 </div>
+<br /><br />

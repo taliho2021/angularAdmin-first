@@ -25,11 +25,13 @@ import { NgModule } from '@angular/core';
 import { PagesModule } from './pages/pages.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { WidgetsModule } from './widgets/widgets.module';
+import { Dashboard02Component } from './dashboard02/dashboard02.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    Dashboard02Component
   ],
   imports: [
     BrowserModule,

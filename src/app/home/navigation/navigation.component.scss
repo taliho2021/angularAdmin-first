@@ -1,27 +1,27 @@
 .sidenav-container {
   position: flex;
-  top: 60px;
+  height: auto;
   bottom: auto;
   left: 0;
   right: 0;
-  background-color:beige;
+  background-color: beige;
   border-radius: 5px;
 }
 
 .sidenav {
   width: 200px;
-  margin-top: 60px;
-  background-color: rgb(156, 156, 144);
+  height: auto;
+  margin: auto;
+  background-color: rgb(94, 94, 63);
   a:hover {
-    color:lime;
+    color: lime;
     cursor: pointer;
     font-size: medium;
   }
 
-  a:visited {
-    color: rgba(34, 56, 4, 0.863)
-  }
-
+  // a:visited {
+  //   color: rgba(34, 56, 4, 0.863)
+  // }
 }
 
 // .sidenav .mat-toolbar {
@@ -36,36 +36,34 @@
 }
 
 .toolbar-filler {
-  flex: 1 1 auto
+  flex: 1 1 auto;
 }
 
+// :host {
+//   display: flex;
+//   flex-direction: column;
+//   outline: none;
+//   width: 100%;
+//   background-color: rgb(151, 178, 32);
 
-:host {
-  display: flex;
-  flex-direction: column;
-  outline: none;
-  width: 100%;
-  background-color: rgb(151, 178, 32);
-
-  .mat-list-item.active {
-    background-color: yellowgreen;
-  }
-  &:hover,
-  &:focus {
-    >.mat-list-item:not(.expanded) {
-      background-color: ivory;
-    }
-  }
-}
+//   .mat-list-item.active {
+//     background-color: yellowgreen;
+//   }
+//   &:hover,
+//   &:focus {
+//     > .mat-list-item:not(.expanded) {
+//       background-color: ivory;
+//     }
+//   }
+// }
 
 mat-menu-item {
-  font-size:medium;
+  font-size: medium;
   padding: 8px 0;
   display: flex;
   width: auto;
 
-
-.routeIcon {
+  .routeIcon {
     margin-right: 40px;
   }
 }
@@ -73,7 +71,7 @@ mat-menu-item {
 h1 {
   margin: auto;
   font-weight: bolder;
-  text-shadow: 0 0 3px #FF0000;
+  text-shadow: 0 0 3px #ff0000;
 }
 
 .a {
@@ -82,13 +80,14 @@ h1 {
 }
 
 mat-sidenav-content {
-  height: 900px;
+  height: auto;
   background-color: red; /* For browsers that do not support gradients */
   background-image: linear-gradient(beige, rgb(255, 255, 255));
   margin: auto;
 }
 
-h3, mat-icon {
+h3,
+mat-icon {
   margin: auto;
 }
 
@@ -99,7 +98,7 @@ h3, mat-icon {
 }
 
 img {
-  background-color: rgb(20, 72, 216) ;
+  background-color: rgb(20, 72, 216);
   border-radius: 50%;
 }
 
