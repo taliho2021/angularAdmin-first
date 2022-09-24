@@ -1,4 +1,4 @@
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { RouterModule, Routes } from '@angular/router';
 
 import { AgGridModule } from 'ag-grid-angular';
@@ -25,9 +25,14 @@ import { NgModule } from '@angular/core';
 import { PagesModule } from './pages/pages.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { WidgetsModule } from './widgets/widgets.module';
+import { Dashboard02Component } from './dashboard02/dashboard02.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    Dashboard02Component
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -49,14 +54,19 @@ import { WidgetsModule } from './widgets/widgets.module';
     LayoutModule,
     WidgetsModule,
     NgChartsModule,
-    TranslateModule.forRoot(),
+    TranslateModule.forRoot()
   ],
 
-  exports: [MatIconModule, MatSidenavModule, MatToolbarModule],
+  exports: [
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule
+  ],
+
 
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

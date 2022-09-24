@@ -1,29 +1,31 @@
-<h1
-  style="
-    font-weight: bolder;
-    background-color: rgb(0, 183, 255);
-    text-align: center;
-  "
->
-  Air AMS
-</h1>
+<div class="outerContainer">
+  <h1
+    style="
+      font-weight: bolder;
+      background-color: rgb(0, 183, 255);
+      text-align: center;
+    "
+  >
+    Air AMS
+  </h1>
 
-<mat-tab-group mat-align-tabs="start" style="color: pink">
-  <mat-tab label="Air AMS Dashboard">
-    <app-air-ams-dashboard></app-air-ams-dashboard>
-  </mat-tab>
+  <mat-tab-group mat-align-tabs="start" style="color: pink">
+    <mat-tab label="Air AMS Dashboard">
+      <app-air-ams-dashboard></app-air-ams-dashboard>
+    </mat-tab>
 
-  <mat-tab label="Air AMS Grid">
-    <app-air-ams-grid></app-air-ams-grid>
-  </mat-tab>
+    <mat-tab label="Air AMS Grid">
+      <app-air-ams-grid></app-air-ams-grid>
+    </mat-tab>
 
-  <mat-tab label="New Air AMS">
-    <div class="container">
-      <app-ams-detail></app-ams-detail>
-    </div>
-  </mat-tab>
-</mat-tab-group>
+    <mat-tab label="New Air AMS">
+      <div class="container">
+        <app-ams-detail></app-ams-detail>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
 
-<button type="button" class="btn btn-link" routerLink="/home/nav/">
-  Back to Mainpage
-</button>
+  <button type="button" class="btn btn-link" routerLink="/home/nav/">
+    Back to Mainpage
+  </button>
+</div>

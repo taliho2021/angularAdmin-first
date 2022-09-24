@@ -1,12 +1,4 @@
 <mat-toolbar color="primary">
-  <span>
-    <img
-      src="../../../assets/images/logo.jpg"
-      alt="ANA Link. Ltd"
-      width="70"
-      height="40"
-    />
-  </span>
   <button
     mat-icon-button
     aria-label="Toggle sidenav"
@@ -16,6 +8,16 @@
     <!-- *ngIf="isHandset$ | async"> -->
     <mat-icon>menu</mat-icon>
   </button>
+
+  <span>
+    <img
+      src="../../../assets/images/logo.jpg"
+      alt="ANA Link. Ltd"
+      width="70"
+      height="40"
+    />
+  </span>
+
   <span class="name1">ANA Link</span>
 
   <span class="example-spacer"></span>
@@ -49,8 +51,6 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
     #drawer
-    class="sidenav"
-    fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
@@ -65,6 +65,7 @@
       >
     </mat-menu-item>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <app-dashboard *ngIf="showDefaultMessage"></app-dashboard>
 
@@ -74,3 +75,4 @@
     ></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<h1>Footer here?</h1>

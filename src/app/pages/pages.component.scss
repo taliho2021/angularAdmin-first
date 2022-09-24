@@ -1,92 +1,97 @@
-.container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap:10px;
-  background-color: #2196F3;
-  padding: 10px;
+:host {
+  max-width: 60%;
+  margin: auto;
 }
 
-.example-card {
-    max-width: 300px;
-    border: 10px;
-  }
+// .container {
+//   display: grid;
+//   grid-template-columns: auto auto auto auto;
+//   grid-gap:10px;
+//   background-color: #2196F3;
+//   padding: 10px;
+// }
 
-  .sidenav-container {
-    position: absolute;
-    top: 100px;
-    bottom: 60px;
-    left: 0;
-    right: 0;
-  }
+// .example-card {
+//     max-width: 300px;
+//     border: 10px;
+//   }
 
-  .sidenav {
-    width: 200px;
-    margin-top: 100px;
-    background-color: lightskyblue;
-    a:hover {
-      color:lime
-    }
+//   .sidenav-container {
+//     position: absolute;
+//     top: 100px;
+//     bottom: 60px;
+//     left: 0;
+//     right: 0;
+//   }
 
-    a:visited {
-      color: green
-    }
+//   .sidenav {
+//     width: 200px;
+//     margin-top: 100px;
+//     background-color: lightskyblue;
+//     a:hover {
+//       color:lime;
+//       font-size: 20px;
+//     }
 
-  }
+//     a:visited {
+//       color: green
+//     }
 
-  .sidenav .mat-toolbar {
-    background: inherit;
+//   }
 
-  }
+//   .sidenav .mat-toolbar {
+//     background: inherit;
 
-  .mat-toolbar.mat-primary {
-    position: sticky;
-    top: 0;
-    z-index: 0;
-  }
+//   }
 
-  .toolbar-filler {
-    flex: 1 1 auto
-  }
+//   .mat-toolbar.mat-primary {
+//     position: sticky;
+//     top: 0;
+//     z-index: 0;
+//   }
 
+//   .toolbar-filler {
+//     flex: 1 1 auto
+//   }
 
-  :host {
-    display: flex;
-    flex-direction: column;
-    outline: none;
-    width: 100%;
-    background-color: lightseagreen;
+//   :host {
+//     display: flex;
+//     flex-direction: column;
+//     outline: none;
+//     width: 100%;
+//     background-color: lightseagreen;
 
-    .mat-list-item.active {
-      background-color: yellowgreen;
-    }
-    &:hover,
-    &:focus {
-      >.mat-list-item:not(.expanded) {
-        background-color: ivory;
-      }
-    }
-  }
+//     .mat-list-item.active {
+//       background-color: yellowgreen;
+//     }
+//     &:hover,
+//     &:focus {
+//       >.mat-list-item:not(.expanded) {
+//         background-color: ivory;
+//       }
+//     }
+//   }
 
-  .mat-list-item {
-    padding: 8px 0;
-    display: flex;
-    width: auto;
+//   .mat-list-item {
+//     padding: 8px 0;
+//     display: flex;
+//     width: auto;
 
-    .routeIcon {
-      margin-right: 40px;
-    }
-  }
+//     .routeIcon {
+//       margin-right: 40px;
+//     }
+//   }
 
-  h1 {
-    margin: auto;
-    font-weight: bolder;
-  }
+//   h1 {
+//     margin: auto;
+//     font-weight: bolder;
+//   }
 
-  .a {
-    border-radius: 5px;
-    margin: 0 8px;
-  }
+//   .a {
+//     border-radius: 5px;
+//     margin: 0 8px;
+//   }
 
-  .example-spacer {
-    flex: 1 1 auto;
-  }
+//   .example-spacer {
+//     flex: 1 1 auto;
+//   }

@@ -11,16 +11,12 @@ import { NgModule } from '@angular/core';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './profile/profile.component';
 import { RecoverpwdComponent } from './recoverpwd/recoverpwd.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     RecoverpwdComponent,
     ProfileComponent,
-    Login02Component,
-    HeaderComponent,
-    FooterComponent
+    Login02Component
   ],
   imports: [
     CommonModule,
