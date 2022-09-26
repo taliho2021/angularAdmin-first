@@ -11,12 +11,16 @@ import { NgModule } from '@angular/core';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from './profile/profile.component';
 import { RecoverpwdComponent } from './recoverpwd/recoverpwd.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     RecoverpwdComponent,
     ProfileComponent,
-    Login02Component
+    Login02Component,
+    FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -27,12 +31,8 @@ import { RecoverpwdComponent } from './recoverpwd/recoverpwd.component';
     MatInputModule,
     FlexLayoutModule,
     MatToolbarModule,
-    AuthRoutingModule
+    AuthRoutingModule,
   ],
-  exports: [
-    RecoverpwdComponent,
-    ProfileComponent,
-    Login02Component
-  ]
+  exports: [RecoverpwdComponent, ProfileComponent, Login02Component],
 })
-export class AuthModule { }
+export class AuthModule {}

@@ -2,13 +2,13 @@
   height: auto;
   bottom: auto;
   margin: auto;
-  background-color: beige;
+  background-color: #d4daf7;
   border-radius: 5px;
 }
 
 mat-sidenav-content {
   height: auto;
-  background-color: red; /* For browsers that do not support gradients */
+  background-color: #fba90a; /* For browsers that do not support gradients */
   background-image: linear-gradient(beige, rgb(255, 255, 255));
   margin: auto;
 }
@@ -18,9 +18,9 @@ mat-sidenav {
   padding: 20px;
   background-color: rgb(94, 94, 63);
   a:hover {
-    color: lime;
+    color: #b88114;
     cursor: pointer;
-    font-size: medium;
+    font-size: 20px;
   }
 }
 
@@ -74,4 +74,13 @@ img {
 
 example-spacer {
   flex: 1 1 auto;
+}
+
+a {
+  color: #263409;
+}
+
+button {
+  width: 150px;
+  border-radius: 10%;
 }

@@ -1,17 +1,26 @@
-<h1 style="font-weight: bolder; background-color: rgb(43, 255, 0); text-align: center;">Air Export</h1>
-<mat-tab-group mat-align-tabs="start">
-  <mat-tab label="Air Export Dashboard">
-    <app-air-export-dashboard></app-air-export-dashboard>
-  </mat-tab>
+<h1
+  style="
+    font-weight: bolder;
+    background-color: rgb(43, 255, 0);
+    text-align: center;
+  "
+>
+  Air Export
+</h1>
+<div class="container">
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Air Export Dashboard">
+      <app-air-export-dashboard></app-air-export-dashboard>
+    </mat-tab>
 
-  <mat-tab label="Air Export Summary">
-    <app-export-summary></app-export-summary>
-  </mat-tab>
-  <mat-tab label="New Air Export">
-    <app-air-export-detail></app-air-export-detail>
-  </mat-tab>
-
-</mat-tab-group>
-
-
-<button type="button" class="btn btn-link" routerLink="/home/nav/">Back to Mainpage</button>
+    <mat-tab label="Air Export Summary">
+      <app-export-summary></app-export-summary>
+    </mat-tab>
+    <mat-tab label="New Air Export">
+      <app-air-export-detail></app-air-export-detail>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<button type="button" class="btn btn-link" routerLink="/home/nav/">
+  Back to Mainpage
+</button>

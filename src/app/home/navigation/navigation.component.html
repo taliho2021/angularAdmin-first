@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="color: #d4daf7">
   <button
     mat-icon-button
     aria-label="Toggle sidenav"
@@ -6,7 +6,7 @@
     (click)="drawer.toggle()"
   >
     <!-- *ngIf="isHandset$ | async"> -->
-    <mat-icon>menu</mat-icon>
+    <mat-icon style="color: #183bf0">menu</mat-icon>
   </button>
 
   <span>
@@ -26,14 +26,14 @@
     class="example-icon favorite-icon"
     aria-label="Example icon-button with heart icon"
   >
-    <mat-icon>favorite</mat-icon>
+    <mat-icon style="color: #2d14b8">favorite</mat-icon>
   </button>
   <button
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with share icon"
   >
-    <mat-icon>share</mat-icon>
+    <mat-icon style="color: #b88114">share</mat-icon>
   </button>
 
   <span class="toolbar-filler"></span>
@@ -55,13 +55,14 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
+    <button type="button" class="btn btn-primary btn-lg">New</button>
     <mat-menu-item
       *ngFor="let menu of menuItem"
       [ngStyle]="{ 'padding-left': '20px' }"
     >
       <a mat-list-item routerLink="{{ menu.route }}">
         <mat-icon>{{ menu.iconName }}</mat-icon>
-        {{ menu.displayName }}</a
+        {{ menu.label }}</a
       >
     </mat-menu-item>
   </mat-sidenav>
