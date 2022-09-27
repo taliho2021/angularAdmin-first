@@ -7,3 +7,12 @@ mat-card {
 table {
   width: 100%;
 }
+
+.outerContainer {
+  padding: 5px;
+  border: 1px solid #b6b6b6;
+  box-sizing: content-box;
+  max-width: 90%;
+  margin: auto;
+  min-height: 900px;
+}

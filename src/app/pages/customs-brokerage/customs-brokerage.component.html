@@ -1,75 +1,71 @@
-<h1 style="font-weight: bolder; background-color: rgb(225, 227, 235); text-align: center;">Customs Brokerage</h1>
-<mat-tab-group mat-align-tabs="start">
+<div class="outerContainer">
+  <h1
+    style="
+      font-weight: bolder;
+      background-color: rgb(225, 227, 235);
+      text-align: center;
+    "
+  >
+    Customs Brokerage
+  </h1>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Entry Grid">
+      <app-entry-grid></app-entry-grid>
+    </mat-tab>
 
-  <mat-tab label="Entry Grid">
-    <app-entry-grid></app-entry-grid>
-  </mat-tab>
+    <mat-tab label="Dashboard">
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        <mat-card fxFlex="30" class="example-card">
+          <mat-card-header> List of Entries </mat-card-header>
+          <mat-card-content>
+            <app-entries-summary></app-entries-summary>
+          </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex="30" class="example-card">
+          <mat-card-header> Entries Under Exam </mat-card-header>
+          <mat-card-content>
+            <app-entries-summary></app-entries-summary>
+          </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex="30" class="example-card">
+          <mat-card-header> Entries with PGA Hold </mat-card-header>
+          <mat-card-content>
+            <app-entries-summary></app-entries-summary>
+          </mat-card-content>
+        </mat-card>
+      </div>
 
-  <mat-tab label="Dashboard">
-    <div fxLayout="row" fxLayoutAlign="space-around center">
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        <mat-card fxFlex="30" class="example-card">
+          <mat-card-header> Entries Past Arrival Dates </mat-card-header>
+          <mat-card-content>
+            <app-entries-summary></app-entries-summary>
+          </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex="30" class="example-card">
+          <mat-card-header> Duty Payments Due </mat-card-header>
+          <mat-card-content>
+            <app-entries-summary></app-entries-summary>
+          </mat-card-content>
+        </mat-card>
+        <mat-card fxFlex="30" class="example-card">
+          <mat-card-header> Liquidated Entries </mat-card-header>
+          <mat-card-content>
+            <app-entries-summary></app-entries-summary>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
 
-      <mat-card fxFlex="30"class='example-card'>
-        <mat-card-header>
-          List of Entries
-        </mat-card-header>
-        <mat-card-content>
-          <app-entries-summary></app-entries-summary>
-        </mat-card-content>
-      </mat-card>
-      <mat-card fxFlex="30"class='example-card'>
-        <mat-card-header>
-          Entries Under Exam
-        </mat-card-header>
-        <mat-card-content>
-          <app-entries-summary></app-entries-summary>
-        </mat-card-content>
-      </mat-card>
-      <mat-card fxFlex="30"class='example-card'>
-        <mat-card-header>
-          Entries with PGA Hold
-        </mat-card-header>
-        <mat-card-content>
-          <app-entries-summary></app-entries-summary>
-        </mat-card-content>
-      </mat-card>
+    <mat-tab label="New Entry">
+      <app-entry-detail></app-entry-detail>
+    </mat-tab>
+    <mat-tab label="Charts">
+      <app-charts></app-charts>
+    </mat-tab>
+  </mat-tab-group>
 
-    </div>
-
-    <div fxLayout="row" fxLayoutAlign="space-around center">
-      <mat-card fxFlex="30"class='example-card'>
-        <mat-card-header>
-          Entries Past Arrival Dates
-        </mat-card-header>
-        <mat-card-content>
-          <app-entries-summary></app-entries-summary>
-        </mat-card-content>
-      </mat-card>
-      <mat-card fxFlex="30"class='example-card'>
-        <mat-card-header>
-          Duty Payments Due
-        </mat-card-header>
-        <mat-card-content>
-          <app-entries-summary></app-entries-summary>
-        </mat-card-content>
-      </mat-card>
-      <mat-card fxFlex="30"class='example-card'>
-        <mat-card-header>
-          Liquidated Entries
-        </mat-card-header>
-        <mat-card-content>
-          <app-entries-summary></app-entries-summary>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </mat-tab>
-
-  <mat-tab label="New Entry">
-    <app-entry-detail></app-entry-detail>
-  </mat-tab>
-  <mat-tab label="Charts">
-    <app-charts></app-charts>
-  </mat-tab>
-</mat-tab-group>
-
-
-<button type="button" class="btn btn-link" routerLink="/home/nav/">Back to Mainpage</button>
+  <button type="button" class="btn btn-link" routerLink="/home/nav/">
+    Back to Mainpage
+  </button>
+</div>

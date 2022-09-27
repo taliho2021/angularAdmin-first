@@ -1,20 +1,29 @@
-<h1 style="font-weight: bolder; background-color: rgb(209, 209, 193); text-align: center;">Ocean Export</h1>
+<div class="outerContainer">
+  <h1
+    style="
+      font-weight: bolder;
+      background-color: rgb(209, 209, 193);
+      text-align: center;
+    "
+  >
+    Ocean Export
+  </h1>
 
-<mat-tab-group mat-align-tabs="start">
-  <mat-tab label="Ocean Export Dashboard">
-    <app-ocean-export-dashboard></app-ocean-export-dashboard>
-  </mat-tab>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Ocean Export Dashboard">
+      <app-ocean-export-dashboard></app-ocean-export-dashboard>
+    </mat-tab>
 
-  <mat-tab label="Ocean Export Grid">
-    <app-oe-grid></app-oe-grid>
-  </mat-tab>
+    <mat-tab label="Ocean Export Grid">
+      <app-oe-grid></app-oe-grid>
+    </mat-tab>
 
-  <mat-tab label="New Ocean Export">
-    <app-ocean-export-detail></app-ocean-export-detail>
-  </mat-tab>
+    <mat-tab label="New Ocean Export">
+      <app-ocean-export-detail></app-ocean-export-detail>
+    </mat-tab>
+  </mat-tab-group>
 
-</mat-tab-group>
-
-
-<button type="button" class="btn btn-link" routerLink="/home/nav/">Back to Mainpage</button>
-
+  <button type="button" class="btn btn-link" routerLink="/home/nav/">
+    Back to Mainpage
+  </button>
+</div>

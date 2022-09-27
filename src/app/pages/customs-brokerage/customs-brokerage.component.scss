@@ -14,7 +14,15 @@ mat-tab {
   color: plum;
 }
 
-body { 
-  background: url(../../../assets/images/Antelope02.jpg) no-repeat center fixed; 
+body {
+  background: url(../../../assets/images/Antelope02.jpg) no-repeat center fixed;
   background-size: cover;
+}
+
+.outerContainer {
+  padding: 5px;
+  border: 1px solid #b6b6b6;
+  box-sizing: content-box;
+  max-width: 90%;
+  margin: auto;
 }

@@ -1,106 +1,108 @@
-<h1 style="font-weight: bolder; background-color: yellow; text-align: center">
-  Track And Trace
-</h1>
-<div class="container">
-  <mat-chip-list aria-label="Track and Trace">
-    <mat-chip routerLink="airImport">
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      Air Import
-    </mat-chip>
-    <mat-chip
-      color="primary"
-      [routerLink]="['airExport']"
-      routerLinkActive="router-link-active"
-    >
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      Air Export
-    </mat-chip>
-    <mat-chip
-      color="accent"
-      [routerLink]="['oceanImport']"
-      routerLinkActive="router-link-active"
-    >
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      Ocean Import
-    </mat-chip>
+<div class="outerContainer">
+  <h1 style="font-weight: bolder; background-color: yellow; text-align: center">
+    Track And Trace
+  </h1>
+  <div class="container">
+    <mat-chip-list aria-label="Track and Trace">
+      <mat-chip routerLink="airImport">
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        Air Import
+      </mat-chip>
+      <mat-chip
+        color="primary"
+        [routerLink]="['airExport']"
+        routerLinkActive="router-link-active"
+      >
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        Air Export
+      </mat-chip>
+      <mat-chip
+        color="accent"
+        [routerLink]="['oceanImport']"
+        routerLinkActive="router-link-active"
+      >
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        Ocean Import
+      </mat-chip>
 
-    <mat-chip
-      [routerLink]="['oceanExport']"
-      routerLinkActive="router-link-active"
-    >
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      Ocean Export
-    </mat-chip>
-    <mat-chip color="primary">
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      Deliveries
-    </mat-chip>
-    <mat-chip
-      color="accent"
-      [routerLink]="['entries']"
-      routerLinkActive="router-link-active"
-    >
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      Customs Entries
-    </mat-chip>
+      <mat-chip
+        [routerLink]="['oceanExport']"
+        routerLinkActive="router-link-active"
+      >
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        Ocean Export
+      </mat-chip>
+      <mat-chip color="primary">
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        Deliveries
+      </mat-chip>
+      <mat-chip
+        color="accent"
+        [routerLink]="['entries']"
+        routerLinkActive="router-link-active"
+      >
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        Customs Entries
+      </mat-chip>
 
-    <mat-chip>
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      By B/L No
-    </mat-chip>
-    <mat-chip color="primary">
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      By Entry No
-    </mat-chip>
-    <mat-chip color="accent">
-      <mat-chip-avatar>
-        <img
-          src="https://material.angular.io/assets/img/examples/shiba1.jpg"
-          alt="Photo of a Shiba Inu"
-        />
-      </mat-chip-avatar>
-      By Container No
-    </mat-chip>
-  </mat-chip-list>
+      <mat-chip>
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        By B/L No
+      </mat-chip>
+      <mat-chip color="primary">
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        By Entry No
+      </mat-chip>
+      <mat-chip color="accent">
+        <mat-chip-avatar>
+          <img
+            src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+            alt="Photo of a Shiba Inu"
+          />
+        </mat-chip-avatar>
+        By Container No
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

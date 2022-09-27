@@ -1,20 +1,26 @@
-<h1 style="font-weight: bolder; background-color: yellow; text-align: center;">Air Import</h1>
+<div class="outerContainer">
+  <h1 style="font-weight: bolder; background-color: yellow; text-align: center">
+    Air Import
+  </h1>
 
-<mat-tab-group mat-align-tabs="start">
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab style="background-color: green" label="Air Import Dashboard">
+      <app-air-import-dashboard></app-air-import-dashboard>
+    </mat-tab>
 
-<mat-tab style="background-color:green" label="Air Import Dashboard">
-  <app-air-import-dashboard></app-air-import-dashboard>
-</mat-tab>
+    <mat-tab style="background-color: green" label="Air Import Grid">
+      <app-ai-grid></app-ai-grid>
+    </mat-tab>
 
-<mat-tab style="background-color:green" label="Air Import Grid">
-  <app-ai-grid></app-ai-grid>
-</mat-tab>
+    <mat-tab
+      style="background-color: blue; padding: 1em"
+      label="New Air Import"
+    >
+      <app-air-import-detail></app-air-import-detail>
+    </mat-tab>
+  </mat-tab-group>
 
-<mat-tab style="background-color: blue; padding:1em" label="New Air Import">
-    <app-air-import-detail></app-air-import-detail>
-  </mat-tab>
-
-</mat-tab-group>
-
-
-<button type="button" class="btn btn-link" routerLink="/home/nav/">Back to Mainpage</button>
+  <button type="button" class="btn btn-link" routerLink="/home/nav/">
+    Back to Mainpage
+  </button>
+</div>

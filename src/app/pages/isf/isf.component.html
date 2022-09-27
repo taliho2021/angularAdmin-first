@@ -1,17 +1,28 @@
-<h1 style="font-weight: bolder; background-color: rgb(255, 0, 170); text-align: center;">Importer Security Filing</h1>
+<div class="outerContainer">
+  <h1
+    style="
+      font-weight: bolder;
+      background-color: rgb(255, 0, 170);
+      text-align: center;
+    "
+  >
+    Importer Security Filing
+  </h1>
 
-<mat-tab-group mat-align-tabs="start">
-  <mat-tab label="Shipment Information">
-    <app-isf-grid></app-isf-grid>
-  </mat-tab>
-  <mat-tab label="Related Parties">
-    <app-shipment></app-shipment>
-    <app-parties></app-parties>
-  </mat-tab>
-  <mat-tab label="HTS Info">
-    <app-hts></app-hts>
-  </mat-tab>
-</mat-tab-group>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Shipment Information">
+      <app-isf-grid></app-isf-grid>
+    </mat-tab>
+    <mat-tab label="Related Parties">
+      <app-shipment></app-shipment>
+      <app-parties></app-parties>
+    </mat-tab>
+    <mat-tab label="HTS Info">
+      <app-hts></app-hts>
+    </mat-tab>
+  </mat-tab-group>
 
-
-<button type="button" class="btn btn-link" routerLink="/home/nav/">Back to Mainpage</button>
+  <button type="button" class="btn btn-link" routerLink="/home/nav/">
+    Back to Mainpage
+  </button>
+</div>

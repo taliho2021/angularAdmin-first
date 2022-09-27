@@ -1,21 +1,29 @@
+<div class="outerContainer">
+  <h1
+    style="
+      font-weight: bolder;
+      background-color: rgb(139, 139, 136);
+      text-align: center;
+    "
+  >
+    Air Import
+  </h1>
 
-<h1 style="font-weight: bolder; background-color: rgb(139, 139, 136); text-align: center;">Air Import</h1>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Ocean Import Dashboard">
+      <app-ocean-import-dashboard></app-ocean-import-dashboard>
+    </mat-tab>
 
-<mat-tab-group mat-align-tabs="start">
-  <mat-tab label="Ocean Import Dashboard">
-    <app-ocean-import-dashboard></app-ocean-import-dashboard>
-  </mat-tab>
+    <mat-tab label="Ocean Import Grid">
+      <app-oi-grid></app-oi-grid>
+    </mat-tab>
 
-  <mat-tab label="Ocean Import Grid">
-    <app-oi-grid></app-oi-grid>
-  </mat-tab>
+    <mat-tab label="New Ocean Import">
+      <app-ocean-import-detail></app-ocean-import-detail>
+    </mat-tab>
+  </mat-tab-group>
 
-
-  <mat-tab label="New Ocean Import">
-    <app-ocean-import-detail></app-ocean-import-detail>
-  </mat-tab>
-
-</mat-tab-group>
-
-
-<button type="button" class="btn btn-link" routerLink="/home/nav/">Back to Mainpage</button>
+  <button type="button" class="btn btn-link" routerLink="/home/nav/">
+    Back to Mainpage
+  </button>
+</div>
