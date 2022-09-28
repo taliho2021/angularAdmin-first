@@ -1,59 +1,43 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ColDef } from 'ag-grid-community';
-import Entry from '../../../../assets/data/entrySummary.json';
-import { HttpClient } from '@angular/common/http';
+import { airImport } from '../../interfaces/airimport';
+import AirImport from '../../../../assets/data/airImport.json';
+import { ActivatedRoute, Router } from '@angular/router';
 
-interface ENTRY  {
-  refNo: Number;
-  entryNo: String;
-  entryType: String;
-  importer: String;
-  mot: String;
-  custRefNo: String;
-  entryDate: String;
-  rlseDate: String;
-  stmtDate: String;
-  entryPort: String;
-  description: String;
-  vessel: String;
-  user: String;
-  arAmt: String;
-  apAmt: String
-}
 @Component({
   selector: 'app-ai-grid',
   templateUrl: './ai-grid.component.html',
-  styleUrls: ['./ai-grid.component.scss']
+  styleUrls: ['./ai-grid.component.scss'],
 })
-
 export class AiGridComponent {
+  rowSelection: 'single' | 'multiple' = 'single';
 
-  rowSelection: 'single' | 'multiple' ='single'
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   columnDefs: ColDef[] = [
-    { field: 'refNo', sortable: true, filter: true, resizable: true, checkboxSelection: true  },
-    { field: 'entryNo', sortable: true, filter: true, resizable: true },
-    { field: 'entryType', sortable: true, filter: true, resizable: true, checkboxSelection: true },
-    { field: 'importer', sortable: true, filter: true, resizable: true },
-    { field: 'mot', sortable: true, filter: true, resizable: true },
-    { field: 'custRefNo', sortable: true, filter: true, resizable: true },
-    { field: 'entryDate', sortable: true, filter: true, resizable: true  },
-    { field: 'rlseDate', sortable: true, filter: true, resizable: true  },
-    { field: 'stmtDate', sortable: true, filter: true, resizable: true  },
-    { field: 'entryPort', sortable: true, filter: true, resizable: true  },
-    { field: 'description', sortable: true, filter: true, resizable: true  },
-    { field: 'vessel', sortable: true, filter: true, resizable: true  },
-    { field: 'user', sortable: true, filter: true, resizable: true  },
-    { field: 'arAmt', sortable: true, filter: true, resizable: true},
-    { field: 'apAmt', sortable: true, filter: true, resizable: true},
+    {
+      field: 'seqNo',
+      checkboxSelection: true,
+    },
+    { field: 'refNo' },
+    {
+      field: 'carrier',
+      checkboxSelection: true,
+    },
+    { field: 'carrierName' },
+    { field: 'flightNo1' },
+    { field: 'locationCode' },
+    { field: 'address1' },
+    { field: 'refDate' },
+    { field: 'user' },
   ];
 
-  rowData: ENTRY[] = Entry;
+  defaultColDef = {
+    sortable: true,
+    filter: true,
+    resizable: true,
+  };
 
-  constructor(private http: HttpClient) {
-    console.dir(this.rowData);
-     ;
-
-  }
+  rowData: airImport[] = AirImport;
 }

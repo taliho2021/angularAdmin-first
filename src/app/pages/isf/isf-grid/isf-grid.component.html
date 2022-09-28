@@ -1,15 +1,15 @@
 <ag-grid-angular
-    style="width: auto; height: 700px;"
-    class="ag-theme-alpine"
-    [rowData]="rowData"
-    [columnDefs]="columnDefs"
-    [pagination]=true
-    [paginationPageSize]=20
-    [animateRows]=true
-    [sideBar]="true"
-    [colWidth]="120"
-    [rowSelection]="rowSelection"
-    (rowClicked)="onRowClicked($event)"
+  style="width: auto; height: 700px"
+  class="ag-theme-alpine"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [pagination]="true"
+  [paginationPageSize]="20"
+  [animateRows]="true"
+  [sideBar]="true"
+  [colWidth]="120"
+  [rowSelection]="rowSelection"
+  (rowClicked)="onRowClicked($event)"
 >
 </ag-grid-angular>
-
