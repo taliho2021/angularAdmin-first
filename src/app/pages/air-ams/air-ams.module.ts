@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
@@ -30,7 +31,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     AmsDetailComponent,
     AirAmsSummaryComponent,
     AirAmsGridComponent,
-    AirAmsDashboardComponent
+    AirAmsDashboardComponent,
   ],
   imports: [
     CommonModule,
@@ -50,9 +51,9 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     MatCardModule,
     MatButtonModule,
     MatRadioModule,
+    MatSelectModule,
     AgGridModule,
-    WidgetsModule
-
-  ]
+    WidgetsModule,
+  ],
 })
-export class AirAmsModule { }
+export class AirAmsModule {}
