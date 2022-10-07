@@ -235,15 +235,47 @@
   <fieldset formGroupName="relatedParties" style="color: red">
     <legend>Related Parties</legend>
     <div fxLayout="row" fxLayoutAlign="space-around start">
-      <div class="card" fxFlex="24" formGroupName="shipper">
+      <div
+        class="card"
+        fxFlex="24"
+        formGroupName="shipper"
+        id="search-component"
+      >
         <mat-form-field appearance="fill">
           <mat-label>Shipper Code</mat-label>
           <input
+            #searchBox
+            id="search-box"
+            (input)="searchCust(searchBox.value)"
             matInput
             placeholder="Shipper Code"
             formControlName="shipperCode"
           />
+          <mat-option
+            matNativeControl
+            *ngFor="let cust of cust$ | async"
+            [value]="cust.custName"
+          >
+          </mat-option>
         </mat-form-field>
+
+        <!-- <mat-form-field appearance="fill">
+          <mat-label>Shipper Code</mat-label>
+          <mat-select
+            placeholder="Shipper Code"
+            [(ngModel)]="selectedValue"
+            formControlName="shipperCode"
+          >
+            <input [(ngModel)]="searchTxt" maInput placeholder="search" />
+            <mat-option
+              matNativeControl
+              *ngFor="let cust of custs | search: searchTxt"
+              [value]="cust.custName"
+            >
+            </mat-option>
+          </mat-select>
+        </mat-form-field> -->
+
         <mat-form-field appearance="fill">
           <mat-label>Shipper Name</mat-label>
           <input matInput placeholder="Shipper Name" formControlName="name" />

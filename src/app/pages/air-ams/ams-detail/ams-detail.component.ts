@@ -1,5 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, UntypedFormBuilder, Validators } from '@angular/forms';
+import {
+  catchError,
+  debounceTime,
+  distinctUntilChanged,
+  Observable,
+  of,
+  Subject,
+  switchMap,
+  tap,
+} from 'rxjs';
+import { Customer } from 'src/app/models/cust';
 
 @Component({
   selector: 'app-ams-detail',
@@ -8,6 +20,8 @@ import { FormArray, UntypedFormBuilder, Validators } from '@angular/forms';
 })
 export class AmsDetailComponent implements OnInit {
   selected!: string;
+  cust$!: Observable<Customer[]>;
+  private searchTerms = new Subject<string>();
 
   amsForm = this.fb.group({
     bl: this.fb.group({
@@ -95,7 +109,7 @@ export class AmsDetailComponent implements OnInit {
   amends: string[] = [
     'New entry',
     'Add a bill of lading',
-    'Delte a bill of lading',
+    'Delete a bill of lading',
     'Replace manifest quantiy',
   ];
 
@@ -108,9 +122,22 @@ export class AmsDetailComponent implements OnInit {
 
   payload = ''; // To alert form value when onSubmit() is called
 
-  constructor(private fb: UntypedFormBuilder) {}
+  searchTxt: any;
+  selectedValue: any;
 
-  ngOnInit(): void {}
+  constructor(private fb: UntypedFormBuilder, private http: HttpClient) {}
+
+  search(term: string): void {
+    this.searchTerms.next(term);
+  }
+
+  ngOnInit(): void {
+    this.cust$ = this.searchTerms.pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+      switchMap((term: string) => this.searchCust(term))
+    );
+  }
 
   onSubmit() {
     this.payload = JSON.stringify(this.amsForm.getRawValue());
@@ -118,5 +145,27 @@ export class AmsDetailComponent implements OnInit {
 
   clearForm(): void {
     this.amsForm.reset();
+  }
+
+  searchCust(term: string): Observable<Customer[]> {
+    const custUrl = 'assets/data/cust.json';
+    if (!term.trim()) {
+      return of([]);
+    }
+    return this.http.get<Customer[]>(`${custUrl}/?custName=${term}`).pipe(
+      tap((x) =>
+        x.length
+          ? console.log(`found customer "${term}"`)
+          : console.log(`no customer matching "${term}"`)
+      ),
+      catchError(this.handleError<Customer[]>('serachCust', []))
+    );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    };
   }
 }

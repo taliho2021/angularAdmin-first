@@ -24,6 +24,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { WidgetsModule } from 'src/app/widgets/widgets.module';
+import { SearchPipe } from 'src/app/pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     AirAmsSummaryComponent,
     AirAmsGridComponent,
     AirAmsDashboardComponent,
+    SearchPipe,
   ],
   imports: [
     CommonModule,
