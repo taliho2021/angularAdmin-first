@@ -1,17 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormArray, UntypedFormBuilder, Validators } from '@angular/forms';
+import {
+  FormArray,
+  FormControl,
+  UntypedFormBuilder,
+  Validators,
+} from '@angular/forms';
 import {
   catchError,
   debounceTime,
   distinctUntilChanged,
   Observable,
   of,
+  startWith,
   Subject,
   switchMap,
   tap,
 } from 'rxjs';
+import 'rxjs/operator/filter';
 import { Customer } from 'src/app/models/cust';
+import custData from '../../../../assets/data/cust.json';
 
 @Component({
   selector: 'app-ams-detail',
@@ -22,6 +30,7 @@ export class AmsDetailComponent implements OnInit {
   selected!: string;
   cust$!: Observable<Customer[]>;
   private searchTerms = new Subject<string>();
+  custControl = new FormControl('');
 
   amsForm = this.fb.group({
     bl: this.fb.group({
@@ -132,10 +141,22 @@ export class AmsDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cust$ = this.searchTerms.pipe(
-      debounceTime(300),
-      distinctUntilChanged(),
-      switchMap((term: string) => this.searchCust(term))
+    this.cust$ = this.custControl.valueChanges.pipe(
+      startWith(''),
+      map((value: any) => this._filter(value || ''))
+    );
+    // this.cust$ = this.searchTerms.pipe(
+    //   debounceTime(300),
+    //   distinctUntilChanged(),
+    //   switchMap((term: string) => this.searchCust(term))
+    // );
+  }
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.cust$.filter((cust$: string) =>
+      cust$.toLowerCase().includes(filterValue)
     );
   }
 
