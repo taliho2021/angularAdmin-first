@@ -16,6 +16,9 @@ import {
   Subject,
   switchMap,
   tap,
+  filter,
+  map,
+  async,
 } from 'rxjs';
 import 'rxjs/operator/filter';
 import { Customer } from 'src/app/models/cust';
@@ -141,15 +144,15 @@ export class AmsDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cust$ = this.custControl.valueChanges.pipe(
-      startWith(''),
-      map((value: any) => this._filter(value || ''))
-    );
-    // this.cust$ = this.searchTerms.pipe(
-    //   debounceTime(300),
-    //   distinctUntilChanged(),
-    //   switchMap((term: string) => this.searchCust(term))
+    // this.cust$? =  this.custControl.valueChanges.pipe(
+    //   startWith(''),
+    //   map((value: any) => this._filter(value || ''))
     // );
+    this.cust$ = this.searchTerms.pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+      switchMap((term: string) => this.searchCust(term))
+    );
   }
 
   private _filter(value: string): string[] {
@@ -169,7 +172,7 @@ export class AmsDetailComponent implements OnInit {
   }
 
   searchCust(term: string): Observable<Customer[]> {
-    const custUrl = 'assets/data/cust.json';
+    const custUrl = 'src/assets/data/cust.json';
     if (!term.trim()) {
       return of([]);
     }
