@@ -282,20 +282,16 @@
 
         <!-- <mat-form-field appearance="fill">
           <mat-label>Shipper Code</mat-label>
-          <mat-select
-            placeholder="Shipper Code"
-            [(ngModel)]="selectedValue"
-            formControlName="shipperCode"
-          >
+          <mat-select placeholder="Shipper Code" formControlName="shipperCode">
             <input [(ngModel)]="searchTxt" maInput placeholder="search" />
             <mat-option
               matNativeControl
-              *ngFor="let cust of custs | search: searchTxt"
+              *ngFor="let cust of cust$ | async"
               [value]="cust.custName"
             >
             </mat-option>
-          </mat-select>
-        </mat-form-field> -->
+          </mat-select> -->
+        <!-- </mat-form-field> -->
 
         <mat-form-field appearance="fill">
           <mat-label>Shipper Name</mat-label>
@@ -309,6 +305,7 @@
             formControlName="address"
           />
         </mat-form-field>
+
         <mat-form-field appearance="fill">
           <mat-label>Shipper Tel No</mat-label>
           <input
