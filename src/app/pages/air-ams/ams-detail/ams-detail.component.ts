@@ -20,7 +20,6 @@ import {
   map,
   async,
 } from 'rxjs';
-import 'rxjs/operator/filter';
 import { Customer } from 'src/app/models/cust';
 import custData from '../../../../assets/data/cust.json';
 
@@ -155,13 +154,13 @@ export class AmsDetailComponent implements OnInit {
     );
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
+  // private _filter(value: string): string[] {
+  //   const filterValue = value.toLowerCase();
 
-    return this.cust$.filter((cust$: string) =>
-      cust$.toLowerCase().includes(filterValue)
-    );
-  }
+  //   return this.cust$.filter((cust$: string) =>
+  //     cust$.toLowerCase().includes(filterValue)
+  //   );
+  // }
 
   onSubmit() {
     this.payload = JSON.stringify(this.amsForm.getRawValue());
