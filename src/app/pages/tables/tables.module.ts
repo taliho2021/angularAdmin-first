@@ -1,4 +1,4 @@
-import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatLegacyCard as MatCard, MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 
 import { AddCvdComponent } from './add-cvd/add-cvd.component';
 import { CarriersComponent } from './carriers/carriers.component';
@@ -10,9 +10,9 @@ import { FirmsComponent } from './firms/firms.component';
 import { ForeignPortsComponent } from './foreign-ports/foreign-ports.component';
 import { HTSComponent } from './hts/hts.component';
 import { ManufacturersComponent } from './manufacturers/manufacturers.component';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatLegacyPaginatorModule as MatPaginatorModule } from '@angular/material/legacy-paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
+import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
 import { NgModule } from '@angular/core';
 import { PortsComponent } from './ports/ports.component';
 import { ProductsComponent } from './products/products.component';

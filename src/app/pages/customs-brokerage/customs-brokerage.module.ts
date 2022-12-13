@@ -8,9 +8,9 @@ import { EntriesSummaryComponent } from './entries-summary/entries-summary.compo
 import { EntryDetailComponent } from './entry-detail/entry-detail.component';
 import { EntryGridComponent } from './entry-grid/entry-grid.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatCardModule } from '@angular/material/card';
+import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WidgetsModule } from 'src/app/widgets/widgets.module';

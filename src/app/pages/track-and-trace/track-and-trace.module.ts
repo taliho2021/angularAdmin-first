@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
-import { MatChipsModule } from '@angular/material/chips';
+import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
+import { MatLegacyChipsModule as MatChipsModule } from '@angular/material/legacy-chips';
 import { NgModule } from '@angular/core';
 import { TrackAndTraceComponent } from './track-and-trace.component';
 import { TrackAndTraceRoutingModule } from './track-and-trace-routing.module';

@@ -2,11 +2,11 @@ import { CmsqComponent } from './cmsq.component';
 import { CmsqRoutingModule } from './cmsq-routing.module';
 import { CommonModule } from '@angular/common';
 import { Grid01Component } from './grid01/grid01.component';
-import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
+import { MatLegacyCheckboxModule as MatCheckboxModule } from '@angular/material/legacy-checkbox';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatTableModule } from '@angular/material/table';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
+import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
 import { NgModule } from '@angular/core';
 
 @NgModule({
