@@ -12,12 +12,8 @@ import { ExtrapagesModule } from './extrapages/extrapages.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeModule } from './home/home.module';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
-import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
-import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgChartsModule } from 'ng2-charts';
@@ -38,13 +34,9 @@ import 'ag-grid-enterprise';
     AgGridModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule,
     MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
     AppRoutingModule,
     PagesModule,
     ExtrapagesModule,
