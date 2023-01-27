@@ -1,4 +1,4 @@
-<mat-form-field appearance="standard">
+<mat-form-field appearance="outline">
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
   </mat-form-field>
@@ -64,7 +64,7 @@
   <mat-divider></mat-divider>
 
   <div fxLayout="row" fxLayoutAlign="space-around center">
-    <mat-card fxFlex="33">
+    <mat-card appearance="outlined" fxFlex="33">
         <mat-card-title>Add New</mat-card-title>
         <mat-card-content></mat-card-content>
         <mat-card-actions>
@@ -73,7 +73,7 @@
       </mat-card>
       <br>
 
-      <mat-card fxFlex="33">
+      <mat-card appearance="outlined" fxFlex="33">
         <mat-card-title>From Template</mat-card-title>
         <mat-card-content></mat-card-content>
         <mat-card-actions>
@@ -81,7 +81,7 @@
         </mat-card-actions>
       </mat-card>
 
-      <mat-card fxFlex="33">
+      <mat-card appearance="outlined" fxFlex="33">
         <mat-card-title>Consolidator</mat-card-title>
         <mat-card-content></mat-card-content>
         <mat-card-actions>

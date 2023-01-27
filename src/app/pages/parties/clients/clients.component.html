@@ -1,6 +1,7 @@
 <div class="container">
   <h1>Clients</h1>
   <mat-card
+    appearance="outlined"
     fxLayout="row"
     fxLayoutAlign="space-around center"
     style="background-color: lightblue"
@@ -17,7 +18,7 @@
   <br />
   <form [formGroup]="importerForm" novalidate (ngSubmit)="onSubmit()">
     <div fxLayout="row" fxLayoutAlign="space-around start">
-      <mat-card fxFlex="30">
+      <mat-card appearance="outlined" fxFlex="30">
         <mat-card-header>
           <mat-card-title>Address Information</mat-card-title>
         </mat-card-header>
@@ -176,7 +177,7 @@
         </mat-card-content>
       </mat-card>
 
-      <mat-card fxFlex="30">
+      <mat-card appearance="outlined" fxFlex="30">
         <mat-card-header>
           <mat-card-title>Tax & Bond Information</mat-card-title>
         </mat-card-header>
@@ -250,7 +251,7 @@
         </mat-card-content>
       </mat-card>
 
-      <mat-card fxFlex="30">
+      <mat-card appearance="outlined" fxFlex="30">
         <mat-card-header>
           <mat-card-title>Other Information</mat-card-title>
         </mat-card-header>
