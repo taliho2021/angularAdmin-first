@@ -1,4 +1,5 @@
-import { HttpClient } from '@angular/common/http';
+import 'rxjs/operator/filter';
+
 import { Component, OnInit } from '@angular/core';
 import {
   FormArray,
@@ -7,18 +8,19 @@ import {
   Validators,
 } from '@angular/forms';
 import {
+  Observable,
+  Subject,
   catchError,
   debounceTime,
   distinctUntilChanged,
-  Observable,
   of,
   startWith,
-  Subject,
   switchMap,
   tap,
 } from 'rxjs';
-import 'rxjs/operator/filter';
+
 import { Customer } from 'src/app/models/cust';
+import { HttpClient } from '@angular/common/http';
 import custData from '../../../../assets/data/cust.json';
 
 @Component({
