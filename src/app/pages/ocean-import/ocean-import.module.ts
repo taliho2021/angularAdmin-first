@@ -1,8 +1,8 @@
 import { AgGridModule } from 'ag-grid-angular';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
-import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { OceanImportComponent } from './ocean-import.component';
 import { OceanImportDashboardComponent } from './ocean-import-dashboard/ocean-import-dashboard.component';
@@ -18,7 +18,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     OceanImportDetailComponent,
     OceanImportSummaryComponent,
     OiGridComponent,
-    OceanImportDashboardComponent
+    OceanImportDashboardComponent,
   ],
   imports: [
     CommonModule,
@@ -27,7 +27,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     MatCardModule,
     FlexLayoutModule,
     AgGridModule,
-    WidgetsModule
-  ]
+    WidgetsModule,
+  ],
 })
-export class OceanImportModule { }
+export class OceanImportModule {}

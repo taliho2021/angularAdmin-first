@@ -1,13 +1,14 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
 import { FdaProductDataSource, FdaProductItem } from './fda-product-datasource';
+
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-fda-product',
   templateUrl: './fda-product.component.html',
-  styleUrls: ['./fda-product.component.scss']
+  styleUrls: ['./fda-product.component.scss'],
 })
 export class FdaProductComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

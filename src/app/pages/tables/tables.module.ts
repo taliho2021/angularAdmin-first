@@ -1,5 +1,3 @@
-import { MatLegacyCard as MatCard, MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
-
 import { AddCvdComponent } from './add-cvd/add-cvd.component';
 import { CarriersComponent } from './carriers/carriers.component';
 import { CommonModule } from '@angular/common';
@@ -10,9 +8,10 @@ import { FirmsComponent } from './firms/firms.component';
 import { ForeignPortsComponent } from './foreign-ports/foreign-ports.component';
 import { HTSComponent } from './hts/hts.component';
 import { ManufacturersComponent } from './manufacturers/manufacturers.component';
-import { MatLegacyPaginatorModule as MatPaginatorModule } from '@angular/material/legacy-paginator';
+import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
+import { MatTableModule } from '@angular/material/table';
 import { NgModule } from '@angular/core';
 import { PortsComponent } from './ports/ports.component';
 import { ProductsComponent } from './products/products.component';
@@ -36,7 +35,7 @@ import { VesselComponent } from './vessel/vessel.component';
     FdaProductComponent,
     CurrencyComponent,
     VesselComponent,
-    ProductsComponent
+    ProductsComponent,
   ],
   imports: [
     CommonModule,
@@ -44,7 +43,7 @@ import { VesselComponent } from './vessel/vessel.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatCardModule
-  ]
+    MatCardModule,
+  ],
 })
-export class TablesModule { }
+export class TablesModule {}

@@ -8,10 +8,10 @@ import { ExtrapagesComponent } from './extrapages.component';
 import { ExtrapagesRoutingModule } from './extrapages-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { IsfFormComponent } from './isf-form/isf-form.component';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
+import { MatInputModule } from '@angular/material/input';
 import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
 import { Page404Component } from './page404/page404.component';
@@ -24,7 +24,7 @@ import { WidgetsModule } from '../widgets/widgets.module';
     ComingsoonComponent,
     IsfFormComponent,
     AeFormComponent,
-    Chart01Component
+    Chart01Component,
   ],
   imports: [
     CommonModule,
@@ -38,7 +38,6 @@ import { WidgetsModule } from '../widgets/widgets.module';
     NgChartsModule,
     WidgetsModule,
     ExtrapagesRoutingModule,
-
-  ]
+  ],
 })
-export class ExtrapagesModule { }
+export class ExtrapagesModule {}

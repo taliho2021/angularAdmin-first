@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { Country, CountryDataSource } from './country-datasource';
 
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-country',
   templateUrl: './country.component.html',
-  styleUrls: ['./country.component.scss']
+  styleUrls: ['./country.component.scss'],
 })
 export class CountryComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -1,13 +1,14 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
 import { VesselDataSource, VesselItem } from './vessel-datasource';
+
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-vessel',
   templateUrl: './vessel.component.html',
-  styleUrls: ['./vessel.component.scss']
+  styleUrls: ['./vessel.component.scss'],
 })
 export class VesselComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

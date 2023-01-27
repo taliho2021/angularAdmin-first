@@ -1,9 +1,9 @@
 import { AddCvdDataSource, AddCvdItem } from './add-cvd-datasource';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
+import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-add-cvd',

@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 
-import {MatLegacyPaginator as MatPaginator} from '@angular/material/legacy-paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatLegacyTableDataSource as MatTableDataSource} from '@angular/material/legacy-table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface UserData {
   id: string;
@@ -51,10 +51,18 @@ const NAMES: string[] = [
 @Component({
   selector: 'app-ams-summary',
   templateUrl: './ams-summary.component.html',
-  styleUrls: ['./ams-summary.component.scss']
+  styleUrls: ['./ams-summary.component.scss'],
 })
 export class AmsSummaryComponent {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit', 'price', 'in-stock', 'store'];
+  displayedColumns: string[] = [
+    'id',
+    'name',
+    'progress',
+    'fruit',
+    'price',
+    'in-stock',
+    'store',
+  ];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -63,7 +71,7 @@ export class AmsSummaryComponent {
 
   constructor() {
     // Create 100 users
-    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+    const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);

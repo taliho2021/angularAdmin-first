@@ -1,13 +1,14 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
 import { CurrencyDataSource, CurrencyItem } from './currency-datasource';
+
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-currency',
   templateUrl: './currency.component.html',
-  styleUrls: ['./currency.component.scss']
+  styleUrls: ['./currency.component.scss'],
 })
 export class CurrencyComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -9,8 +9,8 @@ import { AirImportRoutingModule } from './air-import-routing.module';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
-import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WidgetsModule } from 'src/app/widgets/widgets.module';
@@ -20,7 +20,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     AirImportComponent,
     AirImportDetailComponent,
     AiGridComponent,
-    AirImportDashboardComponent
+    AirImportDashboardComponent,
   ],
   imports: [
     CommonModule,
@@ -31,7 +31,7 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     AgGridModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    WidgetsModule
-  ]
+    WidgetsModule,
+  ],
 })
-export class AirImportModule { }
+export class AirImportModule {}

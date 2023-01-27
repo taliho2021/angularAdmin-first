@@ -1,13 +1,14 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
 import { StatesDataSource, StatesItem } from './states-datasource';
+
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-states',
   templateUrl: './states.component.html',
-  styleUrls: ['./states.component.scss']
+  styleUrls: ['./states.component.scss'],
 })
 export class StatesComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

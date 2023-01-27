@@ -2,12 +2,12 @@ import { CarriersComponent } from './carriers/carriers.component';
 import { ClientsComponent } from './clients/clients.component';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { MatLegacyRadioModule as MatRadioModule } from '@angular/material/legacy-radio';
-import { MatLegacySelectModule as MatSelectModule } from '@angular/material/legacy-select';
-import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { PartiesComponent } from './parties.component';
 import { PartiesRoutingModule } from './parties-routing.module';
@@ -19,7 +19,7 @@ import { VendorsComponent } from './vendors/vendors.component';
     PartiesComponent,
     ClientsComponent,
     VendorsComponent,
-    CarriersComponent
+    CarriersComponent,
   ],
   imports: [
     CommonModule,
@@ -31,7 +31,7 @@ import { VendorsComponent } from './vendors/vendors.component';
     MatCardModule,
     MatTabsModule,
     FlexLayoutModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class PartiesModule { }
+export class PartiesModule {}
