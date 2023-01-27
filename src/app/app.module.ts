@@ -1,5 +1,6 @@
+import 'ag-grid-enterprise';
+
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AgGridModule } from 'ag-grid-angular';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthInterceptor } from './helpers/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { Dashboard02Component } from './dashboard02/dashboard02.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ExtrapagesModule } from './extrapages/extrapages.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -19,17 +21,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
 import { PagesModule } from './pages/pages.module';
+import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { WidgetsModule } from './widgets/widgets.module';
-import { Dashboard02Component } from './dashboard02/dashboard02.component';
-
-import 'ag-grid-enterprise';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, Dashboard02Component],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule,
     HttpClientModule,
     AgGridModule,
     FlexLayoutModule,
@@ -45,6 +46,8 @@ import 'ag-grid-enterprise';
     WidgetsModule,
     NgChartsModule,
     TranslateModule.forRoot(),
+    DashboardComponent,
+    Dashboard02Component,
   ],
 
   exports: [MatIconModule, MatSidenavModule, MatToolbarModule],
