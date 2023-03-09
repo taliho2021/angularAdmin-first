@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Customer } from '../models/cust';
 
 @Pipe({
-  name: 'search',
+    name: 'search',
+    standalone: true
 })
 export class SearchPipe implements PipeTransform {
   transform(items: Customer[], searchTxt: string): any[] {

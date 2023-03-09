@@ -12,14 +12,14 @@ describe('HTSComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ HTSComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        HTSComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

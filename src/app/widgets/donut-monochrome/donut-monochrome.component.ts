@@ -1,10 +1,4 @@
-import {
-  ApexChart,
-  ApexNonAxisChartSeries,
-  ApexResponsive,
-  ApexTheme,
-  ApexTitleSubtitle
-} from "ng-apexcharts";
+import { ApexChart, ApexNonAxisChartSeries, ApexResponsive, ApexTheme, ApexTitleSubtitle, NgApexchartsModule } from "ng-apexcharts";
 import { Component, ViewChild } from "@angular/core";
 
 import { ChartComponent } from "ng-apexcharts";
@@ -19,9 +13,11 @@ export type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-donut-monochrome',
-  templateUrl: './donut-monochrome.component.html',
-  styleUrls: ['./donut-monochrome.component.scss']
+    selector: 'app-donut-monochrome',
+    templateUrl: './donut-monochrome.component.html',
+    styleUrls: ['./donut-monochrome.component.scss'],
+    standalone: true,
+    imports: [NgApexchartsModule]
 })
 export class DonutMonochromeComponent {
   @ViewChild("chart") chart!: ChartComponent;

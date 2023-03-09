@@ -6,7 +6,6 @@ import { ReportsComponent } from './reports.component';
 import { ReportsRoutingModule } from './reports-routing.module';
 
 @NgModule({
-  declarations: [ReportsComponent],
-  imports: [CommonModule, MatCardModule, NgbModule, ReportsRoutingModule],
+    imports: [CommonModule, MatCardModule, NgbModule, ReportsRoutingModule, ReportsComponent]
 })
 export class ReportsModule {}

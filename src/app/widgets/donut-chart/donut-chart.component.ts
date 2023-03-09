@@ -1,15 +1,4 @@
-import {
-  ApexChart,
-  ApexDataLabels,
-  ApexLegend,
-  ApexNonAxisChartSeries,
-  ApexPlotOptions,
-  ApexResponsive,
-  ApexStates,
-  ApexStroke,
-  ApexTheme,
-  ApexTitleSubtitle
-} from "ng-apexcharts";
+import { ApexChart, ApexDataLabels, ApexLegend, ApexNonAxisChartSeries, ApexPlotOptions, ApexResponsive, ApexStates, ApexStroke, ApexTheme, ApexTitleSubtitle, NgApexchartsModule } from "ng-apexcharts";
 import { Component, ViewChild } from '@angular/core';
 
 import { ChartComponent } from "ng-apexcharts";
@@ -30,9 +19,11 @@ export type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-donut-chart',
-  templateUrl: './donut-chart.component.html',
-  styleUrls: ['./donut-chart.component.scss']
+    selector: 'app-donut-chart',
+    templateUrl: './donut-chart.component.html',
+    styleUrls: ['./donut-chart.component.scss'],
+    standalone: true,
+    imports: [NgApexchartsModule]
 })
 export class DonutChartComponent {
   @ViewChild("chart") chart!: ChartComponent;

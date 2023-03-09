@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-comingsoon',
-  templateUrl: './comingsoon.component.html',
-  styleUrls: ['./comingsoon.component.scss']
+    selector: 'app-comingsoon',
+    templateUrl: './comingsoon.component.html',
+    styleUrls: ['./comingsoon.component.scss'],
+    standalone: true,
+    imports: [RouterLink]
 })
 export class ComingsoonComponent implements OnInit {
 

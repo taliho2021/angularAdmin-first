@@ -1,10 +1,4 @@
-import {
-  ApexAxisChartSeries,
-  ApexChart,
-  ApexTitleSubtitle,
-  ApexXAxis,
-  ChartComponent
-} from "ng-apexcharts";
+import { ApexAxisChartSeries, ApexChart, ApexTitleSubtitle, ApexXAxis, ChartComponent, NgApexchartsModule } from "ng-apexcharts";
 import { Component, ViewChild } from '@angular/core';
 
 export type ChartOptions = {
@@ -15,9 +9,11 @@ export type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-apex-chart',
-  templateUrl: './apex-chart.component.html',
-  styleUrls: ['./apex-chart.component.scss']
+    selector: 'app-apex-chart',
+    templateUrl: './apex-chart.component.html',
+    styleUrls: ['./apex-chart.component.scss'],
+    standalone: true,
+    imports: [NgApexchartsModule]
 })
 export class ApexChartComponent  {
   @ViewChild("chart") chart!: ChartComponent;

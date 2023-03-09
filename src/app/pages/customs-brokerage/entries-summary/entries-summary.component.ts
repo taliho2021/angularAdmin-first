@@ -1,9 +1,10 @@
 import { Component, PipeTransform } from '@angular/core';
 import { map, startWith } from 'rxjs/operators';
 
-import { DecimalPipe } from '@angular/common';
-import { UntypedFormControl } from '@angular/forms';
+import { DecimalPipe, NgFor, AsyncPipe } from '@angular/common';
+import { UntypedFormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 
 interface Country {
   name: string;
@@ -48,10 +49,12 @@ function search(text: string, pipe: PipeTransform): Country[] {
   });
 }
 @Component({
-  selector: 'app-entries-summary',
-  templateUrl: './entries-summary.component.html',
-  styleUrls: ['./entries-summary.component.scss'],
-  providers: [DecimalPipe]
+    selector: 'app-entries-summary',
+    templateUrl: './entries-summary.component.html',
+    styleUrls: ['./entries-summary.component.scss'],
+    providers: [DecimalPipe],
+    standalone: true,
+    imports: [ReactiveFormsModule, FormsModule, NgFor, NgbTypeaheadModule, AsyncPipe, DecimalPipe]
 })
 export class EntriesSummaryComponent {
   

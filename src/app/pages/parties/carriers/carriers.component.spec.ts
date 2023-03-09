@@ -15,8 +15,7 @@ describe('CarriersComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarriersComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         ReactiveFormsModule,
         MatButtonModule,
@@ -24,8 +23,9 @@ describe('CarriersComponent', () => {
         MatInputModule,
         MatRadioModule,
         MatSelectModule,
-      ]
-    }).compileComponents();
+        CarriersComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

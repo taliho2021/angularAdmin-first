@@ -8,8 +8,8 @@ describe('OeGridComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OeGridComponent ]
-    })
+    imports: [OeGridComponent]
+})
     .compileComponents();
   });
 

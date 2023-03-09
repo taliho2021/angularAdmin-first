@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UntypedFormBuilder } from '@angular/forms';
+import { UntypedFormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { NgFor, NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-todo02',
-  templateUrl: './todo02.component.html',
-  styleUrls: ['./todo02.component.scss']
+    selector: 'app-todo02',
+    templateUrl: './todo02.component.html',
+    styleUrls: ['./todo02.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgFor, NgClass]
 })
 export class Todo02Component implements OnInit {
 

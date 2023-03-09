@@ -12,25 +12,21 @@ import { NgModule } from '@angular/core';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [
-
-    RegisterComponent
-  ],
-  exports: [
-    RegisterComponent
-  ],
-
-  imports: [
-    CommonModule,
-    AccountRoutingModule,
-    AuthModule,
-    FormsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatDividerModule,
-    MatInputModule,
-    ReactiveFormsModule
-  ]
+    exports: [
+        RegisterComponent
+    ],
+    imports: [
+        CommonModule,
+        AccountRoutingModule,
+        AuthModule,
+        FormsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatDividerModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        RegisterComponent
+    ]
 })
 export class AccountModule { }

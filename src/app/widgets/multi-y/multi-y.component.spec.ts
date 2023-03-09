@@ -8,8 +8,8 @@ describe('MultiYComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MultiYComponent ]
-    })
+    imports: [MultiYComponent]
+})
     .compileComponents();
   });
 

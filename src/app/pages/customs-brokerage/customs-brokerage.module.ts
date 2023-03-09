@@ -13,16 +13,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { WidgetsModule } from 'src/app/widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    CustomsBrokerageComponent,
-    EntriesSummaryComponent,
-    EntryDetailComponent,
-    EntryGridComponent,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -33,7 +27,10 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     FlexLayoutModule,
     AgGridModule,
     CustomsBrokerageRoutingModule,
-    WidgetsModule,
-  ],
+    CustomsBrokerageComponent,
+    EntriesSummaryComponent,
+    EntryDetailComponent,
+    EntryGridComponent
+]
 })
 export class CustomsBrokerageModule {}

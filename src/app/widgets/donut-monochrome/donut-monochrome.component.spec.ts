@@ -8,8 +8,8 @@ describe('DonutMonochromeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DonutMonochromeComponent ]
-    })
+    imports: [DonutMonochromeComponent]
+})
     .compileComponents();
   });
 

@@ -1,10 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, UntypedFormBuilder, Validators } from '@angular/forms';
+import { FormArray, UntypedFormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { NgFor, JsonPipe } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexModule } from '@angular/flex-layout/flex';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-ams-detail',
-  templateUrl: './ams-detail.component.html',
-  styleUrls: ['./ams-detail.component.scss']
+    selector: 'app-ams-detail',
+    templateUrl: './ams-detail.component.html',
+    styleUrls: ['./ams-detail.component.scss'],
+    standalone: true,
+    imports: [MatCardModule, FlexModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, NgFor, JsonPipe]
 })
 export class AmsDetailComponent implements OnInit {
   amsForm = this.fb.group({

@@ -1,10 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { NgFor, JsonPipe } from '@angular/common';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexModule } from '@angular/flex-layout/flex';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-ams-detail',
-  templateUrl: './ams-detail.component.html',
-  styleUrls: ['./ams-detail.component.scss']
+    selector: 'app-ams-detail',
+    templateUrl: './ams-detail.component.html',
+    styleUrls: ['./ams-detail.component.scss'],
+    standalone: true,
+    imports: [MatCardModule, FlexModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatRadioModule, NgFor, JsonPipe]
 })
 export class AmsDetailComponent implements OnInit {
 

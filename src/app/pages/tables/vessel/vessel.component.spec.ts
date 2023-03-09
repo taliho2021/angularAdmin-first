@@ -12,14 +12,14 @@ describe('VesselComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VesselComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        VesselComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

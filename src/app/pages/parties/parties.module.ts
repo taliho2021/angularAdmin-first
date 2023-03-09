@@ -15,23 +15,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { VendorsComponent } from './vendors/vendors.component';
 
 @NgModule({
-  declarations: [
-    PartiesComponent,
-    ClientsComponent,
-    VendorsComponent,
-    CarriersComponent,
-  ],
-  imports: [
-    CommonModule,
-    PartiesRoutingModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
-    MatTabsModule,
-    FlexLayoutModule,
-    ReactiveFormsModule,
-  ],
+    imports: [
+        CommonModule,
+        PartiesRoutingModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSelectModule,
+        MatRadioModule,
+        MatCardModule,
+        MatTabsModule,
+        FlexLayoutModule,
+        ReactiveFormsModule,
+        PartiesComponent,
+        ClientsComponent,
+        VendorsComponent,
+        CarriersComponent
+    ]
 })
 export class PartiesModule {}

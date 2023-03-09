@@ -10,24 +10,21 @@ import { OceanImportDetailComponent } from './ocean-import-detail/ocean-import-d
 import { OceanImportRoutingModule } from './ocean-import-routing.module';
 import { OceanImportSummaryComponent } from './ocean-import-summary/ocean-import-summary.component';
 import { OiGridComponent } from './oi-grid/oi-grid.component';
-import { WidgetsModule } from 'src/app/widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    OceanImportComponent,
-    OceanImportDetailComponent,
-    OceanImportSummaryComponent,
-    OiGridComponent,
-    OceanImportDashboardComponent,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     OceanImportRoutingModule,
     MatTabsModule,
     MatCardModule,
     FlexLayoutModule,
     AgGridModule,
-    WidgetsModule,
-  ],
+    OceanImportComponent,
+    OceanImportDetailComponent,
+    OceanImportSummaryComponent,
+    OiGridComponent,
+    OceanImportDashboardComponent
+]
 })
 export class OceanImportModule {}

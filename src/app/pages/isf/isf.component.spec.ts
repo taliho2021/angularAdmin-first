@@ -8,8 +8,8 @@ describe('IsfComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IsfComponent ]
-    })
+    imports: [IsfComponent]
+})
     .compileComponents();
   });
 

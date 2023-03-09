@@ -8,8 +8,8 @@ describe('AirAmsSummaryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AirAmsSummaryComponent ]
-    })
+    imports: [AirAmsSummaryComponent]
+})
     .compileComponents();
   });
 

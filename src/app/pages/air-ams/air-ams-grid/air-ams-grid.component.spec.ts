@@ -8,8 +8,8 @@ describe('AirAmsGridComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AirAmsGridComponent ]
-    })
+    imports: [AirAmsGridComponent]
+})
     .compileComponents();
   });
 

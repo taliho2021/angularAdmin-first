@@ -8,8 +8,8 @@ describe('EntryGridComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EntryGridComponent ]
-    })
+    imports: [EntryGridComponent]
+})
     .compileComponents();
   });
 

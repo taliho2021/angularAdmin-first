@@ -8,8 +8,8 @@ describe('AeFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AeFormComponent ]
-    })
+    imports: [AeFormComponent]
+})
     .compileComponents();
   });
 

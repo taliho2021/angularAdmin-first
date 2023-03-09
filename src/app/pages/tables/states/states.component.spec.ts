@@ -12,14 +12,14 @@ describe('StatesComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ StatesComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        StatesComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

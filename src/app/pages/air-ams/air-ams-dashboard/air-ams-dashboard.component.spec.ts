@@ -8,8 +8,8 @@ describe('AirAmsDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AirAmsDashboardComponent ]
-    })
+    imports: [AirAmsDashboardComponent]
+})
     .compileComponents();
   });
 

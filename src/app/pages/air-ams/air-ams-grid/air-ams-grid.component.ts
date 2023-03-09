@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 import { ColDef } from 'ag-grid-community';
 import { CurrencyPipe } from '@angular/common';
+import { AgGridModule } from 'ag-grid-angular';
 
 @Component({
-  selector: 'app-air-ams-grid',
-  templateUrl: './air-ams-grid.component.html',
-  styleUrls: ['./air-ams-grid.component.scss']
+    selector: 'app-air-ams-grid',
+    templateUrl: './air-ams-grid.component.html',
+    styleUrls: ['./air-ams-grid.component.scss'],
+    standalone: true,
+    imports: [AgGridModule]
 })
 export class AirAmsGridComponent  {
 

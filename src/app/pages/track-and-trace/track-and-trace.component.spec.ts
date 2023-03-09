@@ -8,8 +8,8 @@ describe('TrackAndTraceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TrackAndTraceComponent ]
-    })
+    imports: [TrackAndTraceComponent]
+})
     .compileComponents();
   });
 

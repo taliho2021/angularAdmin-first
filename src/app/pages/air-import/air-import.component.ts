@@ -3,6 +3,11 @@ import { Component } from '@angular/core';
 //Fetch remote data
 import { HttpClient } from '@angular/common/http';
 import  Ports  from '../../../assets/data/ports.json'
+import { RouterLink } from '@angular/router';
+import { AirImportDetailComponent } from './air-import-detail/air-import-detail.component';
+import { AiGridComponent } from './ai-grid/ai-grid.component';
+import { AirImportDashboardComponent } from './air-import-dashboard/air-import-dashboard.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 interface PORT  {
   No: number;
@@ -23,9 +28,11 @@ interface PORT  {
   Active: Number
 }
 @Component({
-  selector: 'app-air-import',
-  templateUrl: './air-import.component.html',
-  styleUrls: ['./air-import.component.scss']
+    selector: 'app-air-import',
+    templateUrl: './air-import.component.html',
+    styleUrls: ['./air-import.component.scss'],
+    standalone: true,
+    imports: [MatTabsModule, AirImportDashboardComponent, AiGridComponent, AirImportDetailComponent, RouterLink]
 })
 
 export class AirImportComponent {

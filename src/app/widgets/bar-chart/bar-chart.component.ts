@@ -1,16 +1,4 @@
-import {
-  ApexAxisChartSeries,
-  ApexChart,
-  ApexDataLabels,
-  ApexFill,
-  ApexLegend,
-  ApexPlotOptions,
-  ApexStroke,
-  ApexTooltip,
-  ApexXAxis,
-  ApexYAxis,
-  ChartComponent
-} from "ng-apexcharts";
+import { ApexAxisChartSeries, ApexChart, ApexDataLabels, ApexFill, ApexLegend, ApexPlotOptions, ApexStroke, ApexTooltip, ApexXAxis, ApexYAxis, ChartComponent, NgApexchartsModule } from "ng-apexcharts";
 import { Component, ViewChild } from "@angular/core";
 
 export type ChartOptions = {
@@ -27,9 +15,11 @@ export type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-bar-chart',
-  templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.scss']
+    selector: 'app-bar-chart',
+    templateUrl: './bar-chart.component.html',
+    styleUrls: ['./bar-chart.component.scss'],
+    standalone: true,
+    imports: [NgApexchartsModule]
 })
 export class BarChartComponent {
   @ViewChild("chart") chart!: ChartComponent;

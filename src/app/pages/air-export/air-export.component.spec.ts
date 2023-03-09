@@ -8,8 +8,8 @@ describe('AirExportComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AirExportComponent ]
-    })
+    imports: [AirExportComponent]
+})
     .compileComponents();
   });
 

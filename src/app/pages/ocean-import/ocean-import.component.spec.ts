@@ -8,8 +8,8 @@ describe('OceanImportComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OceanImportComponent ]
-    })
+    imports: [OceanImportComponent]
+})
     .compileComponents();
   });
 

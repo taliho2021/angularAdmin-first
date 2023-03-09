@@ -8,8 +8,8 @@ describe('CmsqComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CmsqComponent ]
-    })
+    imports: [CmsqComponent]
+})
     .compileComponents();
   });
 

@@ -15,8 +15,7 @@ describe('VendorsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VendorsComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         ReactiveFormsModule,
         MatButtonModule,
@@ -24,8 +23,9 @@ describe('VendorsComponent', () => {
         MatInputModule,
         MatRadioModule,
         MatSelectModule,
-      ]
-    }).compileComponents();
+        VendorsComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

@@ -4,11 +4,14 @@ import { Component } from '@angular/core';
 
 import { ISF } from '../../interfaces/isf';
 import Isf from '../../../../assets/data/isf.json';
+import { AgGridModule } from 'ag-grid-angular';
 
 @Component({
-  selector: 'app-isf-grid',
-  templateUrl: './isf-grid.component.html',
-  styleUrls: ['./isf-grid.component.scss'],
+    selector: 'app-isf-grid',
+    templateUrl: './isf-grid.component.html',
+    styleUrls: ['./isf-grid.component.scss'],
+    standalone: true,
+    imports: [AgGridModule]
 })
 export class IsfGridComponent {
   rowSelection: 'single' | 'multiple' = 'single';

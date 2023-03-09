@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 
 import { Importer } from 'src/app/models/importer';
 import { ImportersService } from 'src/app/services/importers.service';
 import  States from '../../../../assets/data/states.json'
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { NgIf, NgFor, JsonPipe, CurrencyPipe } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexModule } from '@angular/flex-layout/flex';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-vendors',
-  templateUrl: './vendors.component.html',
-  styleUrls: ['./vendors.component.scss']
+    selector: 'app-vendors',
+    templateUrl: './vendors.component.html',
+    styleUrls: ['./vendors.component.scss'],
+    standalone: true,
+    imports: [MatCardModule, FlexModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, NgIf, MatButtonModule, MatSelectModule, NgFor, MatOptionModule, JsonPipe, CurrencyPipe]
 })
 export class VendorsComponent {
   cust: string = 'Hy Trading'

@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { NgChartsModule } from 'ng2-charts';
 
 @Component({
-  selector: 'app-charts',
-  templateUrl: './charts.component.html',
-  styleUrls: ['./charts.component.scss']
+    selector: 'app-charts',
+    templateUrl: './charts.component.html',
+    styleUrls: ['./charts.component.scss'],
+    standalone: true,
+    imports: [NgChartsModule]
 })
 export class ChartsComponent implements OnInit {
 

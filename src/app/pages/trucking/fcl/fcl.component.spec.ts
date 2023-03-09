@@ -8,8 +8,8 @@ describe('FclComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FclComponent ]
-    })
+    imports: [FclComponent]
+})
     .compileComponents();
   });
 

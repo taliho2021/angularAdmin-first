@@ -15,16 +15,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NgModule } from '@angular/core';
 import { PagesModule } from '../pages/pages.module';
-import { WidgetsModule } from '../widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    DashboardComponent,
-    HeaderComponent,
-    NavigationComponent,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     HomeRoutingModule,
     MatSidenavModule,
@@ -37,7 +31,10 @@ import { WidgetsModule } from '../widgets/widgets.module';
     MatButtonModule,
     PagesModule,
     FlexLayoutModule,
-    WidgetsModule,
-  ],
+    HomeComponent,
+    DashboardComponent,
+    HeaderComponent,
+    NavigationComponent
+]
 })
 export class HomeModule {}

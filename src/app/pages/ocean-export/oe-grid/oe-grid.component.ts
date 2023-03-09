@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ColDef } from 'ag-grid-community';
+import { AgGridModule } from 'ag-grid-angular';
 
 @Component({
-  selector: 'app-oe-grid',
-  templateUrl: './oe-grid.component.html',
-  styleUrls: ['./oe-grid.component.scss']
+    selector: 'app-oe-grid',
+    templateUrl: './oe-grid.component.html',
+    styleUrls: ['./oe-grid.component.scss'],
+    standalone: true,
+    imports: [AgGridModule]
 })
 export class OeGridComponent {
 

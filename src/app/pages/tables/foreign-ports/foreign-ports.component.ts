@@ -4,14 +4,16 @@ import {
   ForeignPortsItem,
 } from './foreign-ports-datasource';
 
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTable, MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-foreign-ports',
-  templateUrl: './foreign-ports.component.html',
-  styleUrls: ['./foreign-ports.component.scss'],
+    selector: 'app-foreign-ports',
+    templateUrl: './foreign-ports.component.html',
+    styleUrls: ['./foreign-ports.component.scss'],
+    standalone: true,
+    imports: [MatTableModule, MatSortModule, MatPaginatorModule]
 })
 export class ForeignPortsComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

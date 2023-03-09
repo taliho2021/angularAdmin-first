@@ -13,16 +13,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { WidgetsModule } from 'src/app/widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    AirImportComponent,
-    AirImportDetailComponent,
-    AiGridComponent,
-    AirImportDashboardComponent,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     HttpClientModule,
     AirImportRoutingModule,
@@ -31,7 +25,10 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     AgGridModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    WidgetsModule,
-  ],
+    AirImportComponent,
+    AirImportDetailComponent,
+    AiGridComponent,
+    AirImportDashboardComponent
+]
 })
 export class AirImportModule {}

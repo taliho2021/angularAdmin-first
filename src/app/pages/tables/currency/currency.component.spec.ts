@@ -12,14 +12,14 @@ describe('CurrencyComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CurrencyComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        CurrencyComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

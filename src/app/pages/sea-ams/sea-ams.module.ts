@@ -20,16 +20,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SeaAmsComponent } from './sea-ams.component';
 import { SeaAmsDashboardComponent } from './sea-ams-dashboard/sea-ams-dashboard.component';
 import { SeaAmsRoutingModule } from './sea-ams-routing.module';
-import { WidgetsModule } from 'src/app/widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    SeaAmsComponent,
-    AmsDetailComponent,
-    AmsSummaryComponent,
-    SeaAmsDashboardComponent,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     ReactiveFormsModule,
     MatTabsModule,
@@ -45,8 +39,11 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     MatCardModule,
     MatButtonModule,
     MatRadioModule,
-    WidgetsModule,
     SeaAmsRoutingModule,
-  ],
+    SeaAmsComponent,
+    AmsDetailComponent,
+    AmsSummaryComponent,
+    SeaAmsDashboardComponent
+]
 })
 export class SeaAmsModule {}

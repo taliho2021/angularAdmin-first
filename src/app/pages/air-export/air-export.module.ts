@@ -16,16 +16,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { WidgetsModule } from 'src/app/widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    AirExportComponent,
-    ExportSummaryComponent,
-    AirExportDetailComponent,
-    AirExportDashboardComponent,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     AirExportRoutingModule,
     ReactiveFormsModule,
@@ -39,7 +33,10 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     MatTableModule,
     MatCardModule,
     MatButtonModule,
-    WidgetsModule,
-  ],
+    AirExportComponent,
+    ExportSummaryComponent,
+    AirExportDetailComponent,
+    AirExportDashboardComponent
+]
 })
 export class AirExportModule {}

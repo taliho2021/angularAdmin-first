@@ -12,14 +12,14 @@ describe('CarriersComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarriersComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        CarriersComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

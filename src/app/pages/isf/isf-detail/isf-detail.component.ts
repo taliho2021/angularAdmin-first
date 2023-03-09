@@ -4,15 +4,19 @@ import { Component, OnInit } from '@angular/core';
 import { ISF } from '../../interfaces/isf';
 import Isf from '../../../../assets/data/isf.json';
 import { IsfService } from '../isf.service';
-import { Location } from '@angular/common';
+import { Location, NgIf } from '@angular/common';
 import { findIndex } from 'rxjs';
+import { PartiesComponent } from '../parties/parties.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 //will need later to process the Observable route parameters
 
 @Component({
-  selector: 'app-isf-detail',
-  templateUrl: './isf-detail.component.html',
-  styleUrls: ['./isf-detail.component.scss']
+    selector: 'app-isf-detail',
+    templateUrl: './isf-detail.component.html',
+    styleUrls: ['./isf-detail.component.scss'],
+    standalone: true,
+    imports: [NgIf, ReactiveFormsModule, FormsModule, PartiesComponent]
 })
 
 export class IsfDetailComponent implements OnInit {

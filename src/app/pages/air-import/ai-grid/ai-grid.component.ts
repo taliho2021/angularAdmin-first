@@ -4,11 +4,14 @@ import { ColDef } from 'ag-grid-community';
 import { airImport } from '../../interfaces/airimport';
 import AirImport from '../../../../assets/data/airImport.json';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AgGridModule } from 'ag-grid-angular';
 
 @Component({
-  selector: 'app-ai-grid',
-  templateUrl: './ai-grid.component.html',
-  styleUrls: ['./ai-grid.component.scss'],
+    selector: 'app-ai-grid',
+    templateUrl: './ai-grid.component.html',
+    styleUrls: ['./ai-grid.component.scss'],
+    standalone: true,
+    imports: [AgGridModule]
 })
 export class AiGridComponent {
   rowSelection: 'single' | 'multiple' = 'single';

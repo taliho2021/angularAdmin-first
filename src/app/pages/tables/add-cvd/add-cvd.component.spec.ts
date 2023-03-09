@@ -12,14 +12,14 @@ describe('AddCvdComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddCvdComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        AddCvdComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

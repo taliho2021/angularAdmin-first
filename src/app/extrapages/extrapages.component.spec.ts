@@ -8,8 +8,8 @@ describe('ExtrapagesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExtrapagesComponent ]
-    })
+    imports: [ExtrapagesComponent]
+})
     .compileComponents();
   });
 

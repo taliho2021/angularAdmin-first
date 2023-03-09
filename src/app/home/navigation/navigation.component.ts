@@ -5,13 +5,23 @@ import { map, shareReplay } from 'rxjs/operators';
 import { AuthService } from '../../services/auth.service'
 import { MenuService } from '../../services/menu.service';
 import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { SideBarMenuItem } from '../../layouts/sidebar/sidebar.menu.model';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { MatListModule } from '@angular/material/list';
+import { ExtendedModule } from '@angular/flex-layout/extended';
+import { NgFor, NgStyle, NgIf, AsyncPipe } from '@angular/common';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+    selector: 'app-navigation',
+    templateUrl: './navigation.component.html',
+    styleUrls: ['./navigation.component.scss'],
+    standalone: true,
+    imports: [MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, NgFor, NgStyle, ExtendedModule, MatListModule, RouterLink, NgIf, DashboardComponent, RouterOutlet, AsyncPipe]
 })
 
 

@@ -15,18 +15,10 @@ import { MatInputModule } from '@angular/material/input';
 import { NgChartsModule } from 'ng2-charts';
 import { NgModule } from '@angular/core';
 import { Page404Component } from './page404/page404.component';
-import { WidgetsModule } from '../widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    ExtrapagesComponent,
-    Page404Component,
-    ComingsoonComponent,
-    IsfFormComponent,
-    AeFormComponent,
-    Chart01Component,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
@@ -36,8 +28,13 @@ import { WidgetsModule } from '../widgets/widgets.module';
     MatInputModule,
     MatCardModule,
     NgChartsModule,
-    WidgetsModule,
     ExtrapagesRoutingModule,
-  ],
+    ExtrapagesComponent,
+    Page404Component,
+    ComingsoonComponent,
+    IsfFormComponent,
+    AeFormComponent,
+    Chart01Component
+]
 })
 export class ExtrapagesModule {}

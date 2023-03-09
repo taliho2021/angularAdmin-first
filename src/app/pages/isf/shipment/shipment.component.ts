@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormArray, UntypedFormBuilder, FormControl } from '@angular/forms';
+import { UntypedFormArray, UntypedFormBuilder, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { FlexibleConnectedPositionStrategy } from '@angular/cdk/overlay';
+import { MatOptionModule } from '@angular/material/core';
+import { NgFor } from '@angular/common';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexModule } from '@angular/flex-layout/flex';
 
 interface ShipType {
   value: string;
@@ -19,9 +25,11 @@ interface mot {
   value: string;
 }
 @Component({
-  selector: 'app-shipment',
-  templateUrl: './shipment.component.html',
-  styleUrls: ['./shipment.component.scss']
+    selector: 'app-shipment',
+    templateUrl: './shipment.component.html',
+    styleUrls: ['./shipment.component.scss'],
+    standalone: true,
+    imports: [FlexModule, MatFormFieldModule, MatInputModule, MatSelectModule, ReactiveFormsModule, FormsModule, NgFor, MatOptionModule]
 })
 export class ShipmentComponent implements OnInit {
 

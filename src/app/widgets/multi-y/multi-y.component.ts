@@ -1,15 +1,4 @@
-import {
-  ApexAxisChartSeries,
-  ApexChart,
-  ApexDataLabels,
-  ApexFill,
-  ApexLegend,
-  ApexTitleSubtitle,
-  ApexTooltip,
-  ApexXAxis,
-  ApexYAxis,
-  ChartComponent
-} from "ng-apexcharts";
+import { ApexAxisChartSeries, ApexChart, ApexDataLabels, ApexFill, ApexLegend, ApexTitleSubtitle, ApexTooltip, ApexXAxis, ApexYAxis, ChartComponent, NgApexchartsModule } from "ng-apexcharts";
 import { Component, ViewChild } from "@angular/core";
 
 export type ChartOptions = {
@@ -27,9 +16,11 @@ export type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-multi-y',
-  templateUrl: './multi-y.component.html',
-  styleUrls: ['./multi-y.component.scss']
+    selector: 'app-multi-y',
+    templateUrl: './multi-y.component.html',
+    styleUrls: ['./multi-y.component.scss'],
+    standalone: true,
+    imports: [NgApexchartsModule]
 })
 export class MultiYComponent {
   @ViewChild("chart") chart!: ChartComponent;

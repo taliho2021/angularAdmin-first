@@ -15,8 +15,7 @@ describe('DomesticComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DomesticComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         ReactiveFormsModule,
         MatButtonModule,
@@ -24,8 +23,9 @@ describe('DomesticComponent', () => {
         MatInputModule,
         MatRadioModule,
         MatSelectModule,
-      ]
-    }).compileComponents();
+        DomesticComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

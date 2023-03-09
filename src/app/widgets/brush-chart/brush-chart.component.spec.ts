@@ -8,8 +8,8 @@ describe('BrushChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BrushChartComponent ]
-    })
+    imports: [BrushChartComponent]
+})
     .compileComponents();
   });
 

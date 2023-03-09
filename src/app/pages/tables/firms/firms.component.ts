@@ -1,14 +1,16 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { FirmsDataSource, FirmsItem } from './firms-datasource';
 
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTable, MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-firms',
-  templateUrl: './firms.component.html',
-  styleUrls: ['./firms.component.scss'],
+    selector: 'app-firms',
+    templateUrl: './firms.component.html',
+    styleUrls: ['./firms.component.scss'],
+    standalone: true,
+    imports: [MatTableModule, MatSortModule, MatPaginatorModule]
 })
 export class FirmsComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -15,24 +15,22 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [
-    RecoverpwdComponent,
-    ProfileComponent,
-    Login02Component,
-    FooterComponent,
-    HeaderComponent,
-  ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    NgbAlertModule,
-    MatCardModule,
-    MatInputModule,
-    FlexLayoutModule,
-    MatToolbarModule,
-    AuthRoutingModule,
-  ],
-  exports: [RecoverpwdComponent, ProfileComponent, Login02Component],
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        NgbAlertModule,
+        MatCardModule,
+        MatInputModule,
+        FlexLayoutModule,
+        MatToolbarModule,
+        AuthRoutingModule,
+        RecoverpwdComponent,
+        ProfileComponent,
+        Login02Component,
+        FooterComponent,
+        HeaderComponent
+    ],
+    exports: [RecoverpwdComponent, ProfileComponent, Login02Component]
 })
 export class AuthModule {}

@@ -8,8 +8,8 @@ describe('VerticalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerticalComponent ]
-    })
+    declarations: [VerticalComponent]
+})
     .compileComponents();
   });
 

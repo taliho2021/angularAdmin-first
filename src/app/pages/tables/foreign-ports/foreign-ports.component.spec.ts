@@ -12,14 +12,14 @@ describe('ForeignPortsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ForeignPortsComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        ForeignPortsComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

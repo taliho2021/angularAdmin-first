@@ -8,8 +8,8 @@ describe('LclComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LclComponent ]
-    })
+    imports: [LclComponent]
+})
     .compileComponents();
   });
 

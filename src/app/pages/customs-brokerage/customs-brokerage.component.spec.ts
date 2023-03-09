@@ -8,8 +8,8 @@ describe('CustomsBrokerageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomsBrokerageComponent ]
-    })
+    imports: [CustomsBrokerageComponent]
+})
     .compileComponents();
   });
 

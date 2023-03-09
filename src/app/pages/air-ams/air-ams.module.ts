@@ -24,18 +24,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { SearchPipe } from 'src/app/pipes/search.pipe';
-import { WidgetsModule } from 'src/app/widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    AirAmsComponent,
-    AmsDetailComponent,
-    AirAmsSummaryComponent,
-    AirAmsGridComponent,
-    AirAmsDashboardComponent,
-    SearchPipe,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
@@ -55,7 +47,12 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     MatRadioModule,
     MatSelectModule,
     AgGridModule,
-    WidgetsModule,
-  ],
+    AirAmsComponent,
+    AmsDetailComponent,
+    AirAmsSummaryComponent,
+    AirAmsGridComponent,
+    AirAmsDashboardComponent,
+    SearchPipe
+]
 })
 export class AirAmsModule {}

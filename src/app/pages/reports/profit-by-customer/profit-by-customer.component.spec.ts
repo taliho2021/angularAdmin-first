@@ -8,8 +8,8 @@ describe('ProfitByCustomerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfitByCustomerComponent ]
-    })
+    declarations: [ProfitByCustomerComponent]
+})
     .compileComponents();
   });
 

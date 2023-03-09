@@ -12,14 +12,14 @@ describe('FdaProductComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ FdaProductComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        FdaProductComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

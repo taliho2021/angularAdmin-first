@@ -11,19 +11,17 @@ import { TrackAndTraceComponent } from './track-and-trace.component';
 import { TrackAndTraceRoutingModule } from './track-and-trace-routing.module';
 
 @NgModule({
-  declarations: [
-    TrackAndTraceComponent,
-    AirImportComponent,
-    AirExportComponent,
-    OceanImportComponent,
-    OceanExportComponent,
-    EntriesComponent,
-  ],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatChipsModule,
-    TrackAndTraceRoutingModule,
-  ],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatChipsModule,
+        TrackAndTraceRoutingModule,
+        TrackAndTraceComponent,
+        AirImportComponent,
+        AirExportComponent,
+        OceanImportComponent,
+        OceanExportComponent,
+        EntriesComponent
+    ]
 })
 export class TrackAndTraceModule {}

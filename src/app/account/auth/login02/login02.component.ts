@@ -1,14 +1,20 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { NgForm, UntypedFormBuilder, Validators } from '@angular/forms';
+import { NgForm, UntypedFormBuilder, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AuthService } from 'src/app/services/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexModule } from '@angular/flex-layout/flex';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-login02',
-  templateUrl: './login02.component.html',
-  styleUrls: ['./login02.component.scss'],
+    selector: 'app-login02',
+    templateUrl: './login02.component.html',
+    styleUrls: ['./login02.component.scss'],
+    standalone: true,
+    imports: [MatCardModule, FlexModule, ReactiveFormsModule, FormsModule, MatFormFieldModule, MatInputModule, RouterLink]
 })
 export class Login02Component implements OnInit {
   @ViewChild('loginform', { static: false }) loginform!: NgForm;

@@ -1,14 +1,16 @@
 import { AddCvdDataSource, AddCvdItem } from './add-cvd-datasource';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTable, MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-add-cvd',
-  templateUrl: './add-cvd.component.html',
-  styleUrls: ['./add-cvd.component.scss'],
+    selector: 'app-add-cvd',
+    templateUrl: './add-cvd.component.html',
+    styleUrls: ['./add-cvd.component.scss'],
+    standalone: true,
+    imports: [MatTableModule, MatSortModule, MatPaginatorModule]
 })
 export class AddCvdComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

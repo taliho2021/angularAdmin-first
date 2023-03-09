@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
+import { RouterLink } from '@angular/router';
+import { Grid01Component } from './grid01/grid01.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTabsModule } from '@angular/material/tabs';
 
 export interface PeriodicElement {
   name: string;
@@ -22,9 +26,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 @Component({
-  selector: 'app-cmsq',
-  templateUrl: './cmsq.component.html',
-  styleUrls: ['./cmsq.component.scss'],
+    selector: 'app-cmsq',
+    templateUrl: './cmsq.component.html',
+    styleUrls: ['./cmsq.component.scss'],
+    standalone: true,
+    imports: [MatTabsModule, MatTableModule, MatCheckboxModule, Grid01Component, RouterLink]
 })
 export class CmsqComponent {
   displayedColumns: string[] = [

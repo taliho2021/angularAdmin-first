@@ -1,14 +1,16 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { VesselDataSource, VesselItem } from './vessel-datasource';
 
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTable, MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-vessel',
-  templateUrl: './vessel.component.html',
-  styleUrls: ['./vessel.component.scss'],
+    selector: 'app-vessel',
+    templateUrl: './vessel.component.html',
+    styleUrls: ['./vessel.component.scss'],
+    standalone: true,
+    imports: [MatTableModule, MatSortModule, MatPaginatorModule]
 })
 export class VesselComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

@@ -8,8 +8,8 @@ describe('BubbleChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BubbleChartComponent ]
-    })
+    imports: [BubbleChartComponent]
+})
     .compileComponents();
   });
 

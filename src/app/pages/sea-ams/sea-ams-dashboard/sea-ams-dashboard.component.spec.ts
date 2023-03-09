@@ -8,8 +8,8 @@ describe('SeaAmsDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SeaAmsDashboardComponent ]
-    })
+    imports: [SeaAmsDashboardComponent]
+})
     .compileComponents();
   });
 

@@ -12,14 +12,14 @@ describe('ManufacturersComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManufacturersComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        ManufacturersComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

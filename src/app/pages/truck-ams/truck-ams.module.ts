@@ -20,16 +20,10 @@ import { NgModule } from '@angular/core';
 import { TruckAmsComponent } from './truck-ams.component';
 import { TruckAmsDashboardComponent } from './truck-ams-dashboard/truck-ams-dashboard.component';
 import { TruckAmsRoutingModule } from './truck-ams-routing.module';
-import { WidgetsModule } from 'src/app/widgets/widgets.module';
+
 
 @NgModule({
-  declarations: [
-    TruckAmsComponent,
-    AmsSummaryComponent,
-    AmsDetailComponent,
-    TruckAmsDashboardComponent,
-  ],
-  imports: [
+    imports: [
     CommonModule,
     ReactiveFormsModule,
     MatTabsModule,
@@ -46,8 +40,11 @@ import { WidgetsModule } from 'src/app/widgets/widgets.module';
     MatCardModule,
     MatButtonModule,
     MatRadioModule,
-    WidgetsModule,
     TruckAmsRoutingModule,
-  ],
+    TruckAmsComponent,
+    AmsSummaryComponent,
+    AmsDetailComponent,
+    TruckAmsDashboardComponent
+]
 })
 export class TruckAmsModule {}

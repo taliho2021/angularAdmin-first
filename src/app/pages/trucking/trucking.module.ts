@@ -14,13 +14,13 @@ import { TruckingComponent } from './trucking.component';
 import { TruckingRoutingModule } from './trucking-routing.module';
 
 @NgModule({
-  declarations: [TruckingComponent, AirComponent, FclComponent, LclComponent],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatButtonModule,
-    MatGridListModule,
-    TruckingRoutingModule,
-  ],
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatButtonModule,
+        MatGridListModule,
+        TruckingRoutingModule,
+        TruckingComponent, AirComponent, FclComponent, LclComponent
+    ]
 })
 export class TruckingModule {}

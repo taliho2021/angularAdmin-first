@@ -8,8 +8,8 @@ describe('ApexChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApexChartComponent ]
-    })
+    imports: [ApexChartComponent]
+})
     .compileComponents();
   });
 

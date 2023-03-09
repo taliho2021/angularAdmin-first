@@ -8,8 +8,8 @@ describe('HorizontalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HorizontalComponent ]
-    })
+    declarations: [HorizontalComponent]
+})
     .compileComponents();
   });
 

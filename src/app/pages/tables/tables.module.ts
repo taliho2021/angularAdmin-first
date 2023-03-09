@@ -21,29 +21,27 @@ import { TablesRoutingModule } from './tables-routing.module';
 import { VesselComponent } from './vessel/vessel.component';
 
 @NgModule({
-  declarations: [
-    TablesComponent,
-    CarriersComponent,
-    PortsComponent,
-    ForeignPortsComponent,
-    CountryComponent,
-    StatesComponent,
-    FirmsComponent,
-    HTSComponent,
-    ManufacturersComponent,
-    AddCvdComponent,
-    FdaProductComponent,
-    CurrencyComponent,
-    VesselComponent,
-    ProductsComponent,
-  ],
-  imports: [
-    CommonModule,
-    TablesRoutingModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatCardModule,
-  ],
+    imports: [
+        CommonModule,
+        TablesRoutingModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatCardModule,
+        TablesComponent,
+        CarriersComponent,
+        PortsComponent,
+        ForeignPortsComponent,
+        CountryComponent,
+        StatesComponent,
+        FirmsComponent,
+        HTSComponent,
+        ManufacturersComponent,
+        AddCvdComponent,
+        FdaProductComponent,
+        CurrencyComponent,
+        VesselComponent,
+        ProductsComponent
+    ]
 })
 export class TablesModule {}

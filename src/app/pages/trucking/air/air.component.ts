@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgFor } from '@angular/common';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 export interface Tile {
   color: string;
@@ -8,9 +10,11 @@ export interface Tile {
 }
 
 @Component({
-  selector: 'app-air',
-  templateUrl: './air.component.html',
-  styleUrls: ['./air.component.scss']
+    selector: 'app-air',
+    templateUrl: './air.component.html',
+    styleUrls: ['./air.component.scss'],
+    standalone: true,
+    imports: [MatGridListModule, NgFor]
 })
 export class AirComponent {
 

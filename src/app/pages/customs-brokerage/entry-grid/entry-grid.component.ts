@@ -8,11 +8,14 @@ import {
 import { Component, OnInit } from '@angular/core';
 import { entrySummary } from '../../interfaces/entrySummary';
 import Entry from '../../../../assets/data/entrySummary.json';
+import { AgGridModule } from 'ag-grid-angular';
 
 @Component({
-  selector: 'app-entry-grid',
-  templateUrl: './entry-grid.component.html',
-  styleUrls: ['./entry-grid.component.scss'],
+    selector: 'app-entry-grid',
+    templateUrl: './entry-grid.component.html',
+    styleUrls: ['./entry-grid.component.scss'],
+    standalone: true,
+    imports: [AgGridModule]
 })
 export class EntryGridComponent {
   rowSelection: 'single' | 'multiple' = 'single';

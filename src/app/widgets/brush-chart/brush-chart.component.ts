@@ -1,13 +1,4 @@
-import {
-  ApexAxisChartSeries,
-  ApexChart,
-  ApexDataLabels,
-  ApexPlotOptions,
-  ApexStroke,
-  ApexXAxis,
-  ApexYAxis,
-  ChartComponent
-} from "ng-apexcharts";
+import { ApexAxisChartSeries, ApexChart, ApexDataLabels, ApexPlotOptions, ApexStroke, ApexXAxis, ApexYAxis, ChartComponent, NgApexchartsModule } from "ng-apexcharts";
 import { Component, ViewChild } from '@angular/core';
 import { seriesData, seriesDataLinear } from "./ohlc";
 
@@ -23,9 +14,11 @@ export type ChartOptions = {
 
 
 @Component({
-  selector: 'app-brush-chart',
-  templateUrl: './brush-chart.component.html',
-  styleUrls: ['./brush-chart.component.scss']
+    selector: 'app-brush-chart',
+    templateUrl: './brush-chart.component.html',
+    styleUrls: ['./brush-chart.component.scss'],
+    standalone: true,
+    imports: [NgApexchartsModule]
 })
 export class BrushChartComponent  {
 

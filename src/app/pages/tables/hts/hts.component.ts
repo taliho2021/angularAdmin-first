@@ -6,9 +6,10 @@ interface HTS {
 }
 
 @Component({
-  selector: 'app-hts',
-  templateUrl: './hts.component.html',
-  styleUrls: ['./hts.component.scss'],
+    selector: 'app-hts',
+    templateUrl: './hts.component.html',
+    styleUrls: ['./hts.component.scss'],
+    standalone: true
 })
 export class HTSComponent {
   rowData: HTS[] = [];

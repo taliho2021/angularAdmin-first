@@ -10,15 +10,15 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 
 @NgModule({
-  declarations: [CmsqComponent, Grid01Component],
-  imports: [
-    CommonModule,
-    CmsqRoutingModule,
-    MatTabsModule,
-    MatCardModule,
-    MatGridListModule,
-    MatCheckboxModule,
-    MatTableModule,
-  ],
+    imports: [
+        CommonModule,
+        CmsqRoutingModule,
+        MatTabsModule,
+        MatCardModule,
+        MatGridListModule,
+        MatCheckboxModule,
+        MatTableModule,
+        CmsqComponent, Grid01Component
+    ]
 })
 export class CmsqModule {}

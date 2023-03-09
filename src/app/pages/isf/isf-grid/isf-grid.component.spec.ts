@@ -8,8 +8,8 @@ describe('IsfGridComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IsfGridComponent ]
-    })
+    imports: [IsfGridComponent]
+})
     .compileComponents();
   });
 

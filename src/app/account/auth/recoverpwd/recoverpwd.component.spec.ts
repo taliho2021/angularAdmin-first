@@ -8,8 +8,8 @@ describe('RecoverpwdComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RecoverpwdComponent ]
-    })
+    imports: [RecoverpwdComponent]
+})
     .compileComponents();
   });
 

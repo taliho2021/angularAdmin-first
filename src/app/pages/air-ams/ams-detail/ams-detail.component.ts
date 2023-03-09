@@ -1,11 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {
-  FormArray,
-  FormControl,
-  UntypedFormBuilder,
-  Validators,
-} from '@angular/forms';
+import { FormArray, FormControl, UntypedFormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import {
   catchError,
   debounceTime,
@@ -22,11 +17,23 @@ import {
 } from 'rxjs';
 import { Customer } from 'src/app/models/cust';
 import custData from '../../../../assets/data/cust.json';
+import { MatButtonModule } from '@angular/material/button';
+import { MatRadioModule } from '@angular/material/radio';
+import { NgFor, AsyncPipe, JsonPipe } from '@angular/common';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexModule } from '@angular/flex-layout/flex';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-ams-detail',
-  templateUrl: './ams-detail.component.html',
-  styleUrls: ['./ams-detail.component.scss'],
+    selector: 'app-ams-detail',
+    templateUrl: './ams-detail.component.html',
+    styleUrls: ['./ams-detail.component.scss'],
+    standalone: true,
+    imports: [MatCardModule, FlexModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatOptionModule, MatAutocompleteModule, NgFor, MatRadioModule, MatButtonModule, AsyncPipe, JsonPipe]
 })
 export class AmsDetailComponent implements OnInit {
   selected!: string;

@@ -8,8 +8,8 @@ describe('Page404Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Page404Component ]
-    })
+    imports: [Page404Component]
+})
     .compileComponents();
   });
 

@@ -8,8 +8,8 @@ describe('LiquidationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LiquidationComponent ]
-    })
+    declarations: [LiquidationComponent]
+})
     .compileComponents();
   });
 

@@ -12,14 +12,14 @@ describe('PortsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PortsComponent ],
-      imports: [
+    imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
         MatSortModule,
         MatTableModule,
-      ]
-    }).compileComponents();
+        PortsComponent
+    ]
+}).compileComponents();
   }));
 
   beforeEach(() => {

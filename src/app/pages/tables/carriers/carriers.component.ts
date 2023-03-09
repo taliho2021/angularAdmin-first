@@ -1,14 +1,16 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { CarriersDataSource, CarriersItem } from './carriers-datasource';
 
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTable, MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-carriers',
-  templateUrl: './carriers.component.html',
-  styleUrls: ['./carriers.component.scss'],
+    selector: 'app-carriers',
+    templateUrl: './carriers.component.html',
+    styleUrls: ['./carriers.component.scss'],
+    standalone: true,
+    imports: [MatTableModule, MatSortModule, MatPaginatorModule]
 })
 export class CarriersComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;

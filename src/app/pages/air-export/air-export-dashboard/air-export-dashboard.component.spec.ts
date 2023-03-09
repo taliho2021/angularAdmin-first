@@ -8,8 +8,8 @@ describe('AirExportDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AirExportDashboardComponent ]
-    })
+    imports: [AirExportDashboardComponent]
+})
     .compileComponents();
   });
 

@@ -23,31 +23,29 @@ import { PartiesComponent } from './parties/parties.component';
 import { ShipmentComponent } from './shipment/shipment.component';
 
 @NgModule({
-  declarations: [
-    IsfComponent,
-    ShipmentComponent,
-    PartiesComponent,
-    HtsComponent,
-    DomesticComponent,
-    ForeignComponent,
-    IsfGridComponent,
-    IsfDetailComponent,
-  ],
-  imports: [
-    CommonModule,
-    MatTabsModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatRadioModule,
-    MatCardModule,
-    MatDividerModule,
-    ReactiveFormsModule,
-    FormsModule,
-    FlexLayoutModule,
-    MatButtonModule,
-    MatSelectModule,
-    AgGridModule,
-    IsfRoutingModule,
-  ],
+    imports: [
+        CommonModule,
+        MatTabsModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatRadioModule,
+        MatCardModule,
+        MatDividerModule,
+        ReactiveFormsModule,
+        FormsModule,
+        FlexLayoutModule,
+        MatButtonModule,
+        MatSelectModule,
+        AgGridModule,
+        IsfRoutingModule,
+        IsfComponent,
+        ShipmentComponent,
+        PartiesComponent,
+        HtsComponent,
+        DomesticComponent,
+        ForeignComponent,
+        IsfGridComponent,
+        IsfDetailComponent
+    ]
 })
 export class IsfModule {}

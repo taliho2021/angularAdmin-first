@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { User } from '../../models/users'
+import { NgFor } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-ae-form',
-  templateUrl: './ae-form.component.html',
-  styleUrls: ['./ae-form.component.scss']
+    selector: 'app-ae-form',
+    templateUrl: './ae-form.component.html',
+    styleUrls: ['./ae-form.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, FormsModule, NgFor]
 })
 export class AeFormComponent  {
 

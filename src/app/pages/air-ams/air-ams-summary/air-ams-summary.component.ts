@@ -1,8 +1,14 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { FlexModule } from '@angular/flex-layout/flex';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 export interface UserData {
   id: string;
@@ -49,9 +55,11 @@ const NAMES: string[] = [
  */
 
 @Component({
-  selector: 'app-air-ams-summary',
-  templateUrl: './air-ams-summary.component.html',
-  styleUrls: ['./air-ams-summary.component.scss'],
+    selector: 'app-air-ams-summary',
+    templateUrl: './air-ams-summary.component.html',
+    styleUrls: ['./air-ams-summary.component.scss'],
+    standalone: true,
+    imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatPaginatorModule, MatDividerModule, FlexModule, MatCardModule, MatButtonModule]
 })
 export class AirAmsSummaryComponent implements AfterViewInit {
   displayedColumns: string[] = [

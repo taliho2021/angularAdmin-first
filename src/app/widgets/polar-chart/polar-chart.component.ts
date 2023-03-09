@@ -1,10 +1,4 @@
-import {
-  ApexChart,
-  ApexFill,
-  ApexNonAxisChartSeries,
-  ApexResponsive,
-  ApexStroke
-} from "ng-apexcharts";
+import { ApexChart, ApexFill, ApexNonAxisChartSeries, ApexResponsive, ApexStroke, NgApexchartsModule } from "ng-apexcharts";
 import { Component, ViewChild } from "@angular/core";
 
 import { ChartComponent } from "ng-apexcharts";
@@ -20,9 +14,11 @@ export type ChartOptions = {
 
 
 @Component({
-  selector: 'app-polar-chart',
-  templateUrl: './polar-chart.component.html',
-  styleUrls: ['./polar-chart.component.scss']
+    selector: 'app-polar-chart',
+    templateUrl: './polar-chart.component.html',
+    styleUrls: ['./polar-chart.component.scss'],
+    standalone: true,
+    imports: [NgApexchartsModule]
 })
 export class PolarChartComponent {
   @ViewChild("chart") chart!: ChartComponent;

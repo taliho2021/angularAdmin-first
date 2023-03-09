@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { NgChartsModule } from 'ng2-charts';
 
 @Component({
-  selector: 'app-radar-chart',
-  templateUrl: './radar-chart.component.html',
-  styleUrls: ['./radar-chart.component.scss']
+    selector: 'app-radar-chart',
+    templateUrl: './radar-chart.component.html',
+    styleUrls: ['./radar-chart.component.scss'],
+    standalone: true,
+    imports: [NgChartsModule]
 })
 export class RadarChartComponent implements OnInit {
   public radarChartLabels = ['Q1', 'Q2', 'Q3', 'Q4'];

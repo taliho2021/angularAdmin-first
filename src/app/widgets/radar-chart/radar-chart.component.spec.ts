@@ -8,8 +8,8 @@ describe('RadarChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RadarChartComponent ]
-    })
+    imports: [RadarChartComponent]
+})
     .compileComponents();
   });
 

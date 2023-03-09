@@ -2,11 +2,16 @@ import { Component } from '@angular/core';
 
 import { of } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    standalone: true,
+    imports: [MatSidenavModule, HeaderComponent, RouterOutlet]
 })
 export class HomeComponent {
   title = 'admin-panel-layout';

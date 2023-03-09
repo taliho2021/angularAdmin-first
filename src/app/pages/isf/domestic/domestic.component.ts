@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
-import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { UntypedFormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { NgIf, NgFor } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
-  selector: 'app-domestic',
-  templateUrl: './domestic.component.html',
-  styleUrls: ['./domestic.component.scss']
+    selector: 'app-domestic',
+    templateUrl: './domestic.component.html',
+    styleUrls: ['./domestic.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatInputModule, NgIf, MatButtonModule, MatSelectModule, NgFor, MatOptionModule]
 })
 export class DomesticComponent {
   addressForm = this.fb.group({

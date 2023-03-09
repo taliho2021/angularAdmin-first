@@ -8,8 +8,8 @@ describe('TruckAmsDashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TruckAmsDashboardComponent ]
-    })
+    imports: [TruckAmsDashboardComponent]
+})
     .compileComponents();
   });
 

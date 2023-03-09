@@ -13,20 +13,20 @@ import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
-  declarations: [PagesComponent],
-  imports: [
-    CommonModule,
-    PagesRoutingModule,
-    MatCardModule,
-    MatButtonModule,
-    MatIconModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatDividerModule,
-    MatListModule,
-    AgGridModule,
-  ],
-  exports: [PagesComponent],
+    imports: [
+        CommonModule,
+        PagesRoutingModule,
+        MatCardModule,
+        MatButtonModule,
+        MatIconModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatDividerModule,
+        MatListModule,
+        AgGridModule,
+        PagesComponent
+    ],
+    exports: [PagesComponent]
 })
 export class PagesModule {}

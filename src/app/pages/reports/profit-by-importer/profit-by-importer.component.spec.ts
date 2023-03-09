@@ -8,8 +8,8 @@ describe('ProfitByImporterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfitByImporterComponent ]
-    })
+    declarations: [ProfitByImporterComponent]
+})
     .compileComponents();
   });
 
